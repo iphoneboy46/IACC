@@ -1,0 +1,158 @@
+.breadcrumbs {
+    overflow: hidden;
+
+    &-wrap {
+        @include max(1201px) {
+            padding: 1rem 0;
+        }
+    }
+
+    &-list {
+        @include flex;
+        align-items: center;
+        margin: 0 -1.6rem;
+    }
+
+    &-item {
+        position: relative;
+        padding: 0 1.6rem;
+        height: 2.4rem;
+        @include mid-flex;
+
+        &.current {
+            a {
+                padding: 0.45rem 1.2rem 0.35rem;
+                opacity: 1;
+                background: rgba(55, 167, 107, 0.15);
+                border-radius: 12rem;
+                pointer-events: none;
+                
+            }
+        }
+
+        &:not(:last-child) {
+            &::before {
+                position: absolute;
+                content: "";
+                background: url("../assets/images/arrow-breadcrumb.svg");
+                background-size: contain;
+                background-repeat: no-repeat;
+                width: 1.6rem;
+                height: 1.6rem;
+                top: 50%;
+                right: 0;
+                transform: translate(50%, -50%);
+            }
+        }
+
+        a {
+            font-size: 1.2rem;
+            line-height: 1.5;
+            // color: white;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            letter-spacing: 0.005em;
+            
+    
+            // max-width: 9rem;
+
+            img {
+                width: 1.4rem;
+            }
+
+            @include min(1201px) {
+                &:hover {
+                    color: $color-second;
+                }
+            }
+
+            @include max(600px) {
+                font-size: 1.2rem;
+            }
+
+
+        }
+
+        &.active {
+            a {
+                opacity: 1;
+
+                @include min(1201px) {
+                    &:hover {
+                        color: $color-black;
+                    }
+                }
+            }
+        }
+
+        &:not(:last-child) {
+            a {
+                width: max-content;
+            }
+        }
+    }
+
+    &.pd-t {
+        padding-top: 1.5rem;
+    }
+
+    &.other {
+        padding-top: 0.8rem;
+
+        a {
+            color: $color-text;
+        }
+
+        .breadcrumbs-list {
+            position: relative;
+            padding-bottom: 0.8rem;
+
+            &::before {
+                position: absolute;
+                content: "";
+                width: 100vw;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                border-bottom: 0.1rem solid #D1D8DC;
+            }
+        }
+    }
+
+    &Sec.section {
+        padding-top: var(--pdGen);
+        overflow: hidden;
+    }
+}
+
+.breadcrumbs-inside {
+    position: relative;
+
+    .breadcrumbs {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        
+    }
+
+    .breadcrumbs.other .breadcrumbs-list::before {
+        display: none;
+    }
+}
+
+.breadcrumbs-white {
+    .breadcrumbs.other a {
+        color: white;
+
+        @include hover {
+            color: $color-third;
+        }
+    }
+
+    .breadcrumbs-item:not(:last-child)::before {
+        filter: brightness(0) invert(1);
+    }
+}

@@ -1,0 +1,144 @@
+.recruitct {
+    padding-top: 3rem;
+    padding-bottom: 11.2rem;
+    .mona-content {
+        p {
+            margin: 1.6rem 0;
+
+            @include max(600px) {
+                font-size: 1.4rem;
+            }
+        }
+
+        .d-wrap {
+            margin-top: var(--pdGen2);
+            margin-bottom: var(--pdGen2);
+        }
+
+        ul {
+            margin-bottom: var(--pdGen2);
+            margin-top: 0.8rem;
+
+            li {
+                @include flex;
+
+                &::before {
+                    position: relative;
+                    content: "";
+                    width: 2rem;
+                    height: 2rem;
+                    background: url(../assets/images/check-icon.svg);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: contain;
+                    display: inline-block;
+                    margin-top: 0.2rem;
+                    margin-right: 0.8rem;
+                    flex-shrink: 0;
+                }
+
+                &:not(:last-child) {
+                    margin-bottom: 2rem;
+
+                    @include max(1201px) {
+                        margin-bottom: 1rem;
+                    }
+                }
+            }
+        }
+
+        .tit {
+            color: $color-text2;
+            font-weight: 700;
+            @include fz-20;
+            line-height: 1.3;
+            margin-bottom: 0.8rem;
+            margin-top: var(--pdGen2);
+        }
+
+    }
+
+    &-wrap {
+        width: calc(100% * 10 /12);
+        margin-left: auto;
+        margin-right: auto;
+
+        @include max(1201px) {
+            width: 100%;
+        }
+    }
+
+    &-box {
+        width: calc(100% * 11 / 12);
+        margin-left: auto;
+
+        @include max(1201px) {
+            width: 100%;
+        }
+    }
+}
+
+.recruit {
+    padding-bottom: 11.2rem;
+
+    @include max(1201px) {
+        padding-bottom: 6rem;
+    }
+
+    &-list{
+        .recruit-item{
+            @media only screen and (max-width:350px){
+                padding-bottom: 0.8rem;
+            }
+        }
+    }
+
+    
+}
+
+.recruitct{
+    &-wrap{
+        .genTop{
+            &-item{
+                .news-label{
+                   
+                    background: #37A76B;
+                    margin-bottom: 0.4rem;
+
+                    @media only screen and (max-width:800px){
+                        margin: 0.4rem 0;
+                    }
+                }
+            }
+        }
+
+        .recruitct-content{
+            .content.mona-content{
+
+                .img-recru{
+                    @media only screen and (max-width:800px){
+                       padding-top: 1.2rem;
+                    }
+
+                    @media only screen and (max-width:600px){
+                        padding-top: 0.6rem;
+                     }
+                }
+
+                ul{
+                    @media only screen and (max-width:800px){
+                        @include fz-14
+                    }
+                    li{
+                        &::before{
+                            @media only screen and (max-width:800px){
+                               width: 1.6rem;
+                               height: 1.6rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,131 @@
+.glr {
+    .swiper {
+        // &-wrapper {
+        //     display: grid;
+        //     grid-template-columns: repeat(auto-fill, minmax(min(282px, 25%), 1fr));
+        //     grid-template-rows: repeat(2, 1fr);
+        //     grid-auto-flow: column;
+        //     overflow-x: scroll;
+        // }
+
+        // &-slide {
+
+        //     &.w-2.h-2 {
+        //         grid-column: auto / span 2;
+        //         grid-row: auto / span 2;
+        //     }
+        // }
+
+        &-navigation {
+            &.pri.next {
+                @include max(1350px) {
+                    top: auto;
+                    right: 50%;
+                    bottom: 0;
+                    transform: translate(calc(100% + var(--pdGen)), 0);
+                }
+            }
+
+            &.pri.prev {
+                @include max(1350px) {
+                    top: auto;
+                    left: 50%;
+                    bottom: 0;
+                    transform: translate(calc(-100% - var(--pdGen)), 0);
+                }
+            }
+        }
+    }
+
+    &-sl {
+        padding-bottom: 4rem;
+    }
+
+    &-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    &-item {
+        margin-bottom: var(--pdGen2);
+
+        @include max(400px) {
+            padding: 0 0.4rem;
+            margin-bottom: 0.8rem;
+        }
+
+        &.w-2.h-2 {
+            grid-column: auto / span 2;
+            grid-row: auto / span 2;
+            margin-bottom: 0
+        }
+
+        &-wrap {
+            border-radius: 1.2rem;
+            overflow: hidden;
+
+            @include max(600px) {
+                border-radius: 0.8rem
+            }
+
+            .img-inner {
+                @include imgPd(1, 1);
+
+                &::before {
+                    pointer-events: none;
+                    background: rgba(55, 173, 177, 0.4);
+                }
+            }
+
+            img {
+                @include imgCover;
+            }
+
+            .content {
+                position: absolute;
+                z-index: 10;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                @include mid-flex;
+                flex-direction: column;
+                pointer-events: none;
+
+                .icon {
+                    display: block;
+                    width: 5.8rem;
+                    height: 5.8rem;
+                    position: relative;
+                    margin-bottom: 1.6rem;
+                    transform: translateY(7rem);
+                    opacity: 0;
+                    transition: all 0.3s ease-in-out;;
+
+                }
+
+                .name {
+                    font-weight: 700;
+                    color: white;
+                    transform: translateY(7rem);
+                    opacity: 0;
+                    transition: all 0.3s ease-in-out;
+                }
+
+            }
+        }
+
+        @include hover {
+            .content {
+                .icon, .name {
+                    opacity: 1;
+                    transform: none;
+                }
+                .name {
+                    transition-delay: 0.15s;
+                }
+            }
+        }
+    }
+}

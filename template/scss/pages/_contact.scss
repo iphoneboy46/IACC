@@ -1,0 +1,239 @@
+.contact {
+    &-item {
+        margin-bottom: 2rem;
+
+        &:not(:last-child) {
+            border-right: 0.1rem solid rgba($color: $color-second, $alpha: 0.2);
+
+            @include max(800px) {
+                border: none;
+            }
+        }
+
+        @include max(600px) {
+            width: 100%;
+        }
+
+        &-icon {
+            width: 3rem;
+            height: 3rem;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 3rem;
+        }
+
+        &-tit {
+            font-style: normal;
+            font-weight: 700;
+            @include fz-20;
+            line-height: 1.2;
+            color: $color-second;
+            margin-bottom: 2rem;
+        }
+
+        &-text {
+            max-width: 24.8rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+.crform {
+    padding: 4rem 0 11.2rem;
+
+    &-form {
+        position: relative;
+        padding: 5.1rem 5.2rem 5.4rem 4.8rem;
+
+        @include max(1201px) {
+            padding: 5.1rem 3.2rem 5.4rem;
+        }
+
+        @include max(1024px) {
+            padding: 4rem 1.6rem 4rem;
+        }
+    }
+
+    &-wrap {
+        padding: 0 1.2rem;
+
+        @include max(1201px) {
+            padding: 0 0.6rem;
+        }
+    }
+
+    &-right {
+        background: white;
+        position: relative;
+
+        @include max(800px) {
+            width: 100%;
+        }
+    }
+
+    &-left {
+        .crform-info {
+            .branch-list {
+                .branch-item {
+                    padding: 0;
+                }
+            }
+        }
+        @include flex;
+        flex-direction: column;
+
+        @include max(800px) {
+            width: 100%;
+        }
+    }
+
+    &-title {
+        opacity: 0.7;
+        line-height: 1.38;
+    }
+
+    &-desc {
+        opacity: 0.7;
+        color: $color-text2;
+        font-weight: 500;
+    }
+
+    &-info {
+        height: 50%;
+        padding-top: 5.1rem;
+        padding-left: 3.9rem;
+        padding-bottom: 2.2rem;
+
+        @include max(1201px) {
+            padding-top: 3.2rem;
+            padding-left: 2.4rem;
+            padding-bottom: 1.6rem;
+        }
+
+        @include max(800px) {
+            height: auto;
+        }
+
+        &-title {
+            opacity: 0.7;
+        }
+
+        .footer-list {
+            max-width: 36.5rem;
+        }
+
+        .footer-item {
+            &:not(:last-child) {
+                margin-bottom: 2rem;
+            }
+        }
+
+        .footer-link .text {
+            font-weight: 400;
+            @include fz-20;
+            line-height: 1;
+            letter-spacing: 0.005em;
+            color: #ffffff;
+            opacity: 0.7;
+        }
+
+        .footer-link img {
+            filter: brightness(0) invert(1);
+        }
+
+        .footer-link-wrap {
+            align-items: unset;
+        }
+    }
+
+    &-box {
+        background-image: url("../assets/images/ct-bg.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        border-radius: 3.2rem;
+        box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.1);
+
+        @include max(1024px) {
+            border-radius: 2.8rem;
+        }
+
+        @include max(450px) {
+            border-radius: 2.4rem;
+        }
+    }
+
+    &-map {
+        height: 50%;
+        position: relative;
+
+        @include max(800px) {
+            height: 38rem;
+        }
+
+        iframe {
+            position: absolute;
+            width: calc(100% + 3rem);
+            height: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 0;
+        }
+    }
+
+    .container {
+        max-width: 131.5rem;
+    }
+
+    .form-input {
+        height: 4rem;
+        padding: 0 1.6rem;
+        background: rgba($color: $color-pri, $alpha: 0.1);
+        border-radius: 0.4rem;
+        border: 0.1rem solid rgba($color: $color-pri, $alpha: 0.1);
+
+        &:focus {
+            border: 0.1rem solid rgba($color: $color-third, $alpha: 0.9);
+        }
+
+        &::placeholder {
+            font-weight: 500;
+            letter-spacing: 0.005em;
+            color: $color-text2;
+            opacity: 0.5;
+        }
+    }
+
+    .form-text {
+        padding: 0.8rem 1.6rem;
+        background: rgba($color: $color-pri, $alpha: 0.1);
+        border-radius: 0.4rem;
+        border: 0.1rem solid rgba($color: $color-pri, $alpha: 0.1);
+        height: 13.8rem;
+
+        &:focus {
+            border: 0.1rem solid rgba($color: $color-third, $alpha: 0.9);
+        }
+
+        &::placeholder {
+            font-weight: 500;
+            letter-spacing: 0.005em;
+            color: $color-text2;
+            opacity: 0.5;
+        }
+    }
+
+    .security {
+        font-weight: 500;
+        letter-spacing: 0.005em;
+        color: $color-text2;
+        opacity: 0.5;
+    }
+}
+
+body:has(.crform) {
+    .breadcrumbs {
+        padding-top: 1.3rem;
+    }
+}

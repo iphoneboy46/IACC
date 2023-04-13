@@ -1,0 +1,39 @@
+.catalouge {
+    padding: 8.2rem 0 8rem;
+    overflow: hidden;
+    background: linear-gradient(90deg, #3F7D73 3.67%, #255361 71.67%, #1E2F5E 102.67%);
+
+
+    &-img {
+      
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: var(--pdGen2);
+        filter: drop-shadow(0.4rem 0.8rem 1.6rem rgba(0, 0, 0, 0.08));
+        border-radius: 0.8rem;
+        overflow: hidden;
+    }
+
+    &-text {
+        font-weight: 500;
+        @include fz-20;
+        line-height: 1.6;
+        letter-spacing: 0.005em;
+    }
+
+    &-dc {
+        top: 4rem;
+        right: calc((100vw - 120rem)/2 - 1.5rem);
+        // transform: translateX(50%);
+        max-width: 58.1rem;
+        width: calc(100% - 3rem);
+        margin-right: max(((100vw - 120rem)/-2), -26rem);
+
+        @include max(1201px) {
+            margin: 0;
+            right: 50%;
+            transform: translateX(50%);
+        }
+
+    }
+}
