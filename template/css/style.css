@@ -13167,8 +13167,8 @@ button[aria-label="Toggle autoplay"] {
     border-radius: 50%;
   }
   .about-staff-con .list-slide .swiper-slide .item-slide .img-staff:hover::after {
-    background: #FF3C79;
-    box-shadow: 0 0 2rem rgba(255, 60, 121, 0.8);
+    background: linear-gradient(180deg, #FF3C79 0%, #ADC4ED 100%);
+    box-shadow: 0 0 3rem rgba(255, 60, 121, 0.8);
   }
   .about-staff-con .list-slide .swiper-slide .item-slide .img-staff:hover img {
     transform: scale(0.9);
