@@ -35,6 +35,7 @@ import AnimationModule from "./module/AnimationModule.min.js";
 import SwiperModule from "./module/SwiperModule.js";
 import Hover from "./module/Hover.js";
 import Links from "./module/Links.js";
+import LinksMain from "./module/linksMain.js";
 
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -75,4 +76,5 @@ window.addEventListener("DOMContentLoaded", () => {
     SwipeFun();
     ProductModule();
     Links();
+    LinksMain();
 });
