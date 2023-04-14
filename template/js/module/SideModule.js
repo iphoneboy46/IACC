@@ -57,7 +57,7 @@ export default function SideModule() {
     
   }
 
-  const sidebar = document.querySelector(".genSec-sidebar .side-fixed")
+  const sidebar = document.querySelector(".prolist .side-fixed")
 
   if (sidebar) {
     const open = document.querySelector(".proFilter-cate-open")

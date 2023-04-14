@@ -1,0 +1,93 @@
+.procate {
+    padding-top: 4.8rem;
+    padding-bottom: 2.4rem;
+
+    &-item {
+        &-wrap {
+            display: block;
+            border-radius: 1.6em;
+            overflow: hidden;
+            position: relative;
+        }
+
+        &-img {
+            @include imgPd(165, 282);
+
+            &::before {
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+                top: 0;
+                left: 0;
+                z-index: 5;
+            }
+
+            img {
+                @include imgCover;
+            }
+        }
+
+        &-name {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            transform: translate(-50%, -50%);
+            @include mid-flex;
+            text-align: center;
+            font-weight: 600;
+            @include fz-24;
+            line-height: 1.3;
+            color: #FFFFFF;
+            z-index: 10;
+        }
+    }
+}
+
+.prolist {
+    padding: 2.4rem 0 8rem;
+
+    &-left {
+        width: calc(100% * 3 / 12);
+
+        @include max(1201px) {
+            width: 0;
+            padding: 0;
+        }
+    }
+
+    &-right {
+        flex: 1;
+    }
+
+    .side-fixed-wrap {
+        padding: 0;
+    }
+
+    .side-close {
+        background: $color-third;
+        color: white;
+        border-radius: 0.4rem;
+
+        .icon {
+            font-weight: 500;
+        }
+    }
+
+    &-top {
+        .d-item {
+            @include max(1201px) {
+                margin-bottom: 0.8rem;
+            }
+        }
+    }
+
+    .result {
+        @include max(800px) {
+            font-size: 1.4rem;
+        }
+    }
+}

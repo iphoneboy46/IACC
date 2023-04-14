@@ -1,47 +1,30 @@
-.decor {
-    &-1 {
-        width: calc(100% * 700 / 1728);
-        top: 0;
-        bottom: 0;
-        left: calc((100vw - 120rem) / 2);
-        transform: translateX(-35%);
-        z-index: -1;
-        max-width: 70rem;
+.sec-decor {
+    position: relative;
+    overflow: hidden;
 
-        img {
-            display: block;
-        }
-    }
-
-    &-2 {
-        width: calc(100% * 487 / 1728);
-        // top: 20%;
-        right: calc((100vw - 120rem) / 2);
-        // left: calc(100vw - 60rem)
-        transform: translateX(50%);
-        bottom: 0;
-        max-width: 47.8rem;
-    }
-
-    &-3 {
-        top: 0;
+    &::before,
+    &::after {
+        position: absolute;
+        content: "";
+        width: 19rem;
+        height: 32rem;
+        background: url("../assets/images/Union-1.svg");
+        z-index: 10;
+        bottom: -13rem;
         left: 0;
-
-        &.other {
-            transform: scale(1.5);
-            transform-origin: left top;
-        }
-        
+        background-repeat: no-repeat;
+        background-size: contain;
     }
 
-    &-4 {
-        top: 10%;
-        left: -14%;
-        @include max(1024px) {
-            top: 50%;
-            left: auto;
-            right: 10%;
-            transform: translateY(-50%);
+    &::after {
+        right: 0;
+        left: auto;
+        transform: scaleX(-1);
+    }
+
+    &.other {
+        &::before, &::after {
+            bottom: -10rem;
         }
     }
 }

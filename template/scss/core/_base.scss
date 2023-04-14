@@ -1,4 +1,5 @@
 @import url("../assets/font/WorkSan/stylesheet.css");
+@import url("../assets/font/Lobster/stylesheet.css");
 @import url("../js/library/jquery-ui/jquery-ui.min.css");
 
 
@@ -93,7 +94,6 @@ button {
 
 .main {
   min-height: 50vh;
-  background: $color-pri;
 }
 
 input:-webkit-autofill,

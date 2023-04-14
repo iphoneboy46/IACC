@@ -22,10 +22,10 @@
 }
 
 .t-title-xl {
-  font-size: 8rem;
+  font-size: 8.7rem;
   line-height: 1.2;
 
-  @include max(1201px) {
+  @include max(1200.15rem) {
     font-size: 6rem;
   }
 
@@ -364,9 +364,12 @@
   }
 
   &-stroke {
-    -webkit-text-stroke-width: 0.1rem;
-    -webkit-text-stroke-color: $color-pri;
-    color: transparent;
+    // -webkit-text-stroke-width: 0.1rem;
+    // -webkit-text-stroke-color: white;
+    // color: transparent;
+    text-shadow: 0 0 0.15rem white, 0 0 0.15rem white, 0 0 0.15rem white, 0 0 0.15rem white, 0 0 0.15rem white, 0 0 0.15rem white, 0 0 0.15rem white, 0 0 0.15rem white, 0 0 0.15rem white, 0 0 0.15rem white, 0 0 0.15rem white, 0 0 0.15rem white, 0 0 0.15rem white, 0 0 0.15rem white, 0 0 0.15rem white, 0 0 0.15rem white, 0 0 0.15rem black, 0 0 0.15rem white, 0 0 0.15rem white, 0 0 0.15rem white;
+    -webkit-font-smoothing: antialiased;
+    color: $color-second;
   }
 
   &-pre-line {

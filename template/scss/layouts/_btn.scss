@@ -5,10 +5,11 @@
   background: $color-third;
   cursor: pointer;
   overflow: hidden;
-  transition: all 0.5s; 
+  transition: all 0.8s, color 0.3s 0.3s, transform 0.3s;
   display: block;
   user-select: none;
   border-radius: 12rem;
+  color: white;
   flex-shrink: 0;
   -webkit-mask-image: -webkit-radial-gradient(white, black);
 
@@ -32,41 +33,39 @@
     position: relative;
   }
 
-  &::before {
-    position: absolute;
-    content: "";
-    width: 125%;
-    height: 102%;
-    top: 0;
-    left: -13%;
-    background: $color-pri;
-    transition: transform 0.6s 0.1s;
-    z-index: 1;
-    transform-origin: right;
-    transform: skew(30deg) scaleX(0);
-  }
+  // &::before {
+  //   position: absolute;
+  //   content: "";
+  //   width: 125%;
+  //   height: 102%;
+  //   top: 0;
+  //   left: -13%;
+  //   background: $color-pri;
+  //   transition: transform 0.6s 0.1s;
+  //   z-index: 1;
+  //   transform-origin: right;
+  //   transform: skew(30deg) scaleX(0);
+  // }
 
-  &:after {
-    position: absolute;
-    content: "";
-    width: 120%;
-    height: 102%;
-    top: 0;
-    left: -13%;
-    background: rgba(0, 0, 0, 0.2);
-    transition: transform 0.6s;
-    z-index: 0;
-    transform-origin: right;
-    transform: skew(30deg) scaleX(0);
-  }
+  // &:after {
+  //   position: absolute;
+  //   content: "";
+  //   width: 120%;
+  //   height: 102%;
+  //   top: 0;
+  //   left: -13%;
+  //   background: rgba(0, 0, 0, 0.2);
+  //   transition: transform 0.6s;
+  //   z-index: 0;
+  //   transform-origin: right;
+  //   transform: skew(30deg) scaleX(0);
+  // }
 
   &-inner {
     position: relative;
     z-index: 4;
-    color: white;
     text-align: center;
-    @include transition(0.3s, ease-in-out);
-    padding: 1.05rem 1.6rem 0.9rem;
+    padding: 1.0rem 1.6rem 0.95rem;
     border-radius: 0.4rem;
     @include fz-16;
     line-height: 1.5;
@@ -75,7 +74,6 @@
     letter-spacing: 0.02em;
     white-space: nowrap;
     -webkit-mask-image: -webkit-radial-gradient(white, black);
-    // height: 4rem;
 
     @include max(400px) {
       padding: 1rem 1.6rem 0.9rem;
@@ -86,15 +84,18 @@
 
   @media (min-width: 1200px) {
     &:hover {
-      &::before {
-        transform: skew(30deg) scaleX(1);
-        transform-origin: left;
-      }
+      // &::before {
+      //   transform: skew(30deg) scaleX(1);
+      //   transform-origin: left;
+      // }
 
-      &::after {
-        transform: skew(30deg) scaleX(1);
-        transform-origin: left;
-      }
+      // &::after {
+      //   transform: skew(30deg) scaleX(1);
+      //   transform-origin: left;
+      // }
+      color: white;
+      box-shadow: 16rem 0 0 0 $color-second inset, -16rem 0 0 0 $color-second inset;
+      // box-shadow: 0 8rem 0 0 $color-second inset, 0 -8rem 0 0 $color-second  inset;
     }
   }
 
@@ -260,6 +261,10 @@
 
   &.bg-white {
     background: white;
+
+    @include hover {
+      box-shadow: 23rem 0 0 0 $color-pri inset, -23rem 0 0 0 $color-pri inset;
+    }
   }
 
   &.no-bg {

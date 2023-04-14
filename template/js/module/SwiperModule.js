@@ -108,7 +108,7 @@ export default function SwiperModule() {
             disableOnInteraction: false,
           },
         });
-        if (!eleFree.querySelector(".swiper").classList.contains("--auto")) {
+        if (!ele.querySelector(".swiper").classList.contains("--auto")) {
           swiper2.autoplay.stop();
         }
       });
