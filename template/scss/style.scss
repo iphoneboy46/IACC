@@ -48,6 +48,8 @@
 @import "./components/lang";
 @import "./components/circletext";
 @import "./components/slideCus";
+@import "./components/contact";
+
 // Layout
 @import "./layouts/banner";
 @import "./layouts/btn";
@@ -86,6 +88,9 @@
 // Pages
 @import "./pages/home";
 @import "./pages/pro";
+@import "./pages/contact";
+@import "./pages/about";
+
 
 
 :root {
