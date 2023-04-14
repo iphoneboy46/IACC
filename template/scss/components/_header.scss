@@ -565,5 +565,13 @@
       margin-bottom: 1.2rem;
 
     }
+
+    .btn {
+      width: 100%;
+
+      &:not(:last-child) {
+        margin-bottom: 1.6rem;
+      }
+    }
   }
 }

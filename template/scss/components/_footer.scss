@@ -1,17 +1,18 @@
 .footer {
-  overflow: hidden;
-  padding: 8rem 0;
-  position: relative;
-  background: white;
-
-  @include max(1201px) {
-    padding: 4rem 0;
+  &-inner {
+    overflow: hidden;
+    padding: 8rem 0;
+    position: relative;
+    background: white;
+    @include max(1201px) {
+      padding: 4rem 0;
+    }
   }
 
   &-sign {
     padding-bottom: 3.2rem;
     border-bottom: 0.1rem solid #E6E6E6;
-    
+
     &-wrap {
       margin-left: auto;
       width: calc(100% - 31.6rem);
@@ -19,6 +20,8 @@
 
     .footer-title {
       margin-bottom: 0;
+      display: flex;
+      align-items: center;
     }
   }
 
@@ -69,7 +72,7 @@
   }
 
   &-wrap {
-
+    padding-bottom: 1.6rem;
   }
 
   &-content {
@@ -149,16 +152,25 @@
     margin-bottom: var(--pdGen2);
   }
 
-  &-copyright {
-    // margin-top: var(--pdGen2);
-    
-    padding-top: 3.2rem;
+  &-bottom {
     border-top: 0.1rem solid rgba(118, 49, 120, 0.2);
+    padding-top: 2.4rem
+  }
+
+  &-copyright {
+    
     @include flex;
     justify-content: center;
 
     .text {
       margin-right: 0.5rem;
+      @include flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .img {
+      margin-left: 0.8rem;
     }
   }
 
@@ -242,6 +254,13 @@
   &-sc {
     .text {
       margin-right: 1.6rem;
+    }
+  }
+
+  &.bodder {
+    background: $color-second;
+    .footer-inner {
+      border-radius: 12rem 12rem 0px 0px;
     }
   }
 }
