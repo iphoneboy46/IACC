@@ -13558,7 +13558,7 @@ button[aria-label="Toggle autoplay"] {
 }
 .account-box-right .account-main-history-content-content {
   margin: 0 auto;
-  max-width: 73.8rem;
+  max-width: 73.6rem;
   overflow-x: auto;
 }
 .account-box-right .account-main-history-content-content::-webkit-scrollbar {
