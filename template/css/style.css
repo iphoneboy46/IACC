@@ -14487,6 +14487,243 @@ table.table-cus td a {
   height: 4.8rem;
 }
 
+.sign-up {
+  padding: 10rem 0rem;
+  background-color: rgba(249, 123, 85, 0.05);
+}
+.sign-up-con {
+  align-items: start;
+}
+.sign-up-con .left {
+  height: 100%;
+}
+.sign-up-con .left-img {
+  max-width: 61.2rem;
+  height: 100%;
+  border-radius: 6rem;
+}
+.sign-up-con .left-img img {
+  border-radius: 6rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media only screen and (max-width: 800px) {
+  .sign-up-con .left-img {
+    width: 100%;
+    max-width: none;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .sign-up-con .left {
+    width: 100%;
+  }
+}
+.sign-up-con .right {
+  padding: 5.8rem 7.8rem 5.8rem 5.4rem;
+}
+.sign-up-con .right .title {
+  padding-bottom: 1.6rem;
+}
+.sign-up-con .right .title-text {
+  font-weight: 600;
+  font-size: 2.4rem;
+  line-height: 1.3;
+  color: #1a1a1a;
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 1200px) {
+  .sign-up-con .right .title-text {
+    font-size: 2rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .sign-up-con .right .title-text {
+    font-size: 1.7rem;
+  }
+}
+.sign-up-con .right .text-con {
+  padding-bottom: 2.4rem;
+}
+.sign-up-con .right .text-con .text {
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.4;
+  color: #878787;
+}
+.sign-up-con .right .form-sign {
+  padding-bottom: 2.4rem;
+  width: 100%;
+}
+.sign-up-con .right .form-sign input {
+  width: 100%;
+  padding: 1.4rem 1.6rem;
+  border: 0.5px solid rgba(0, 0, 0, 0.2);
+  background: #f5f5f5;
+  border-radius: 10rem;
+  transition: all 0.5s linear;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.4;
+  color: #878787;
+}
+.sign-up-con .right .form-sign input:focus {
+  border-color: #ff3c79;
+}
+.sign-up-con .right .form-sign.lock {
+  cursor: pointer;
+  position: relative;
+  padding-bottom: 1.6rem;
+  transition: all 0.4s ease-in-out;
+}
+.sign-up-con .right .form-sign.lock .hide-pass, .sign-up-con .right .form-sign.lock .re-hide-pass {
+  position: absolute;
+  right: 5%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+  height: 50%;
+}
+.sign-up-con .right .form-sign.lock .hide-pass i, .sign-up-con .right .form-sign.lock .re-hide-pass i {
+  color: #878787;
+  font-size: 1.8rem;
+}
+@media only screen and (max-width: 1200px) {
+  .sign-up-con .right .form-sign.lock .hide-pass i, .sign-up-con .right .form-sign.lock .re-hide-pass i {
+    font-size: 1.6rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .sign-up-con .right .form-sign.lock .hide-pass i, .sign-up-con .right .form-sign.lock .re-hide-pass i {
+    font-size: 1.5rem;
+  }
+}
+.sign-up-con .right .form-sign.lock .show-pass, .sign-up-con .right .form-sign.lock .re-show-pass {
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+  display: none;
+  position: absolute;
+  right: 3%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+  height: 50%;
+}
+.sign-up-con .right .form-sign.lock .show-pass i, .sign-up-con .right .form-sign.lock .re-show-pass i {
+  color: #878787;
+  font-size: 1.8rem;
+}
+@media only screen and (max-width: 1200px) {
+  .sign-up-con .right .form-sign.lock .show-pass i, .sign-up-con .right .form-sign.lock .re-show-pass i {
+    font-size: 1.6rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .sign-up-con .right .form-sign.lock .show-pass i, .sign-up-con .right .form-sign.lock .re-show-pass i {
+    font-size: 1.5rem;
+  }
+}
+.sign-up-con .right .forgot {
+  display: block;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.4;
+  color: #f97b55;
+  text-align: end;
+  padding-bottom: 4.4rem;
+}
+@media (min-width: 1201px) {
+  .sign-up-con .right .forgot:hover {
+    color: #6cbfc5;
+  }
+}
+.sign-up-con .right .btn {
+  margin: 0 auto;
+  margin-bottom: 3.2rem;
+}
+.sign-up-con .right .note {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sign-up-con .right .note-text {
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.4;
+  color: #878787;
+}
+.sign-up-con .right .note-link {
+  display: block;
+  margin-left: 0.5rem;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.4;
+  color: #f97b55;
+}
+@media (min-width: 1201px) {
+  .sign-up-con .right .note-link:hover {
+    color: #6cbfc5;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .sign-up-con .right {
+    padding: 5.8rem 2.8rem 5.8rem 2.4rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .sign-up-con .right {
+    width: 100%;
+    padding: 3.8rem 1.2rem 3.8rem 1.2rem;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .sign-up-con {
+    align-items: center;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .sign-up-con {
+    padding: 5rem 0rem;
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .sign-up {
+    padding: 2rem 0rem;
+  }
+}
+
+.forgot-pass .sign-up-con .right {
+  padding: 6.1rem 7.8rem 14.1rem 5.4rem;
+}
+@media only screen and (max-width: 1024px) {
+  .forgot-pass .sign-up-con .right {
+    padding: 5.8rem 2.8rem 5.8rem 2.4rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .forgot-pass .sign-up-con .right {
+    width: 100%;
+    padding: 3.8rem 1.2rem 3.8rem 1.2rem;
+  }
+}
+
+.sign-in .sign-up-con .right {
+  padding: 6.1rem 7.8rem 14.1rem 6rem;
+}
+.sign-in .sign-up-con .right .form-sign.lock {
+  padding-bottom: 2.4rem;
+}
+@media only screen and (max-width: 1024px) {
+  .sign-in .sign-up-con .right {
+    padding: 5.8rem 2.8rem 5.8rem 2.4rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .sign-in .sign-up-con .right {
+    width: 100%;
+    padding: 3.8rem 1.2rem 3.8rem 1.2rem;
+  }
+}
+
 :root {
   --pdGen: 1.2rem;
   --pdGen2: 2.4rem;
