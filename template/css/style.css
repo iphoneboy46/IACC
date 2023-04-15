@@ -13391,47 +13391,51 @@ button[aria-label="Toggle autoplay"] {
 }
 .account-box-right .account-main {
   padding: 2.7rem 0 3.3rem;
-  overflow-x: auto;
   padding-left: 1rem;
 }
-.account-box-right .account-main::-webkit-scrollbar {
-  height: 0.5rem;
-}
-.account-box-right .account-main-content {
+.account-box-right .account-main-title {
+  max-width: 73.6rem;
   margin: 0 auto;
-  width: 73.8rem;
 }
-.account-box-right .account-main-content .title {
+.account-box-right .account-main-title .title {
   padding-bottom: 0.4rem;
 }
-.account-box-right .account-main-content .title-text {
+.account-box-right .account-main-title .title-text {
   font-weight: 600;
   font-size: 2.4rem;
   line-height: 1.3;
   color: #1a1a1a;
 }
 @media only screen and (max-width: 1200px) {
-  .account-box-right .account-main-content .title-text {
+  .account-box-right .account-main-title .title-text {
     font-size: 2rem;
   }
 }
 @media only screen and (max-width: 800px) {
-  .account-box-right .account-main-content .title-text {
+  .account-box-right .account-main-title .title-text {
     font-size: 1.7rem;
   }
 }
-.account-box-right .account-main-content .note {
+.account-box-right .account-main-title .note {
   padding-bottom: 3rem;
   border-bottom: 0.1rem solid rgba(135, 135, 135, 0.25);
 }
-.account-box-right .account-main-content .note-text {
+.account-box-right .account-main-title .note-text {
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.5;
   color: #878787;
 }
+.account-box-right .account-main-content {
+  margin: 0 auto;
+  max-width: 73.8rem;
+  overflow-x: auto;
+}
+.account-box-right .account-main-content::-webkit-scrollbar {
+  height: 0.5rem;
+}
 .account-box-right .account-main-content .content-table {
-  width: 100%;
+  width: 73.8rem;
 }
 .account-box-right .account-main-content .content-table-header {
   display: flex;
@@ -13541,9 +13545,8 @@ button[aria-label="Toggle autoplay"] {
   line-height: 1.5;
 }
 .account-box-right .account-main-history-content {
-  width: 73.6rem;
+  max-width: 73.6rem;
   margin: 0 auto;
-  overflow-x: auto;
 }
 .account-box-right .account-main-history-content::-webkit-scrollbar {
   height: 0.5rem;
@@ -13595,8 +13598,16 @@ button[aria-label="Toggle autoplay"] {
   width: 2.4rem;
   height: 2.4rem;
 }
+.account-box-right .account-main-history-content-content {
+  margin: 0 auto;
+  max-width: 73.6rem;
+  overflow-x: auto;
+}
+.account-box-right .account-main-history-content-content::-webkit-scrollbar {
+  height: 0.5rem;
+}
 .account-box-right .account-main-history-content-content .content-table {
-  width: 100%;
+  width: 73.6rem;
 }
 .account-box-right .account-main-history-content-content .content-table-header {
   display: flex;
@@ -13679,7 +13690,7 @@ button[aria-label="Toggle autoplay"] {
   font-size: 1.6rem;
   line-height: 1.5;
 }
-.account-box-right .account-main-history-content-content .content-table-footer {
+.account-box-right .account-main-history-content-footer {
   padding-right: 2.3rem;
   display: flex;
   align-items: center;
@@ -13687,7 +13698,7 @@ button[aria-label="Toggle autoplay"] {
   padding-top: 2.4rem;
   border-top: 0.1rem solid rgba(135, 135, 135, 0.25);
 }
-.account-box-right .account-main-history-content-content .content-table-footer .title-text {
+.account-box-right .account-main-history-content-footer .title-text {
   font-weight: 700;
   font-size: 1.6rem;
   line-height: 1.5;
@@ -13701,6 +13712,24 @@ button[aria-label="Toggle autoplay"] {
   font-weight: 400;
   font-size: 1.4rem;
   line-height: 1.4;
+}
+@media only screen and (max-width: 800px) {
+  .account .prolist-bott {
+    justify-content: space-between;
+  }
+  .account .prolist-bott .text {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 350px) {
+  .account .prolist-bott {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .account .prolist-bott .text {
+    margin-top: 2rem;
+  }
 }
 .account-aside {
   padding: 3.2rem 0;
