@@ -5201,6 +5201,48 @@ body:has(.seclect2-seach-show) .select2-container .select2-dropdown .select2-res
 .bn-sm .breadcrumbs-list {
   justify-content: center;
 }
+.bn-lg {
+  padding: 30rem 0 26rem;
+  border-radius: 0px 0px 6rem 6rem;
+}
+.bn-lg .bn-ct {
+  color: white;
+  position: relative;
+}
+.bn-lg .bn-title {
+  font-weight: 600;
+  font-size: 4rem;
+  line-height: 1.2;
+}
+@media only screen and (max-width: 1200px) {
+  .bn-lg .bn-title {
+    font-size: 3.5rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .bn-lg .bn-title {
+    font-size: 2.7rem;
+  }
+}
+.bn-lg .bn-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.bn-lg .bn-img::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  top: 0;
+  left: 0;
+}
+.bn-lg .breadcrumbs-list {
+  justify-content: center;
+}
 
 @keyframes fadeCus {
   0% {
