@@ -752,8 +752,9 @@
                             }
 
                             &::after {
-                                background: $color-third;
-                                box-shadow: 0 0 2rem rgba($color: $color-third, $alpha: 0.8);
+                                // background: $color-third;
+                                background: linear-gradient(180deg, #FF3C79 0%, #ADC4ED 100%);
+                                box-shadow: 0 0 3rem rgba($color: $color-third, $alpha: 0.8);
                             }
 
                             img {
