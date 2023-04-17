@@ -1,6 +1,6 @@
 .about-us {
     padding-top: 10.4rem;
-    padding-bottom: 13rem;
+    padding-bottom: 8rem;
 
     &-content {
         &-left {
@@ -307,6 +307,8 @@
 }
 
 .about-tiktok {
+    padding-top: 8rem;
+    background-color: #F5F5F5;
     &-con {
         &-left {
             padding-right: 6rem;
@@ -495,7 +497,7 @@
             }
 
             .btn {
-                margin: 0 auto;
+                // margin: 0 auto;
             }
 
             .img-qr-box {
@@ -574,6 +576,10 @@
         @media only screen and (max-width: 800px) {
             flex-direction: column-reverse;
         }
+    }
+
+    @media only screen and (max-width:800px){
+        padding-top: 4rem;
     }
 }
 
