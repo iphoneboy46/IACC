@@ -12492,7 +12492,7 @@ button[aria-label="Toggle autoplay"] {
   font-weight: 600;
   font-size: 2.4rem;
   line-height: 1.3;
-  color: #FFFFFF;
+  color: #ffffff;
   z-index: 10;
 }
 @media only screen and (max-width: 1200px) {
@@ -12554,6 +12554,35 @@ button[aria-label="Toggle autoplay"] {
 .product-relate {
   padding-top: 5.6rem;
   padding-bottom: 8rem;
+}
+.product-relate .title {
+  padding-bottom: 4.8rem;
+}
+.product-relate .title-text {
+  font-weight: 600;
+  font-size: 2.4rem;
+  line-height: 1.3;
+  color: #f97b55;
+}
+@media only screen and (max-width: 1200px) {
+  .product-relate .title-text {
+    font-size: 2rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .product-relate .title-text {
+    font-size: 1.7rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .product-relate-con .swiper-slide {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .product-relate-con .swiper-slide {
+    width: 100%;
+  }
 }
 
 .prodt {
@@ -12639,7 +12668,7 @@ button[aria-label="Toggle autoplay"] {
   z-index: -1;
   width: 100%;
   height: 100%;
-  background: linear-gradient(-90deg, #39b16c 2.67%, #38af6b 3.67%, #255361 71.67%, #1e2f5e 102.67%);
+  background: #6CBFC5;
 }
 .prodt-thumbs .swiper-slide-thumb-active .prodt-img::before, .prodt-thumbs .swiper-slide-thumb-active .prodt-img::after {
   opacity: 1;
@@ -12743,8 +12772,13 @@ button[aria-label="Toggle autoplay"] {
   display: inline-flex;
 }
 .proInfo-ct {
-  background: #F5F5F5;
+  background: #f5f5f5;
   padding: 5.6rem 0;
+}
+@media only screen and (max-width: 1230px) {
+  .proInfo-ct .img-list {
+    flex-wrap: wrap;
+  }
 }
 .proInfo-left {
   width: 58.3333333333%;
@@ -12794,7 +12828,7 @@ button[aria-label="Toggle autoplay"] {
   display: flex;
   align-items: center;
   padding: 0.6rem 1.6rem;
-  background: #FFFFFF;
+  background: #ffffff;
   border-radius: 50rem;
   cursor: pointer;
   line-height: 1;
