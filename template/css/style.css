@@ -12643,6 +12643,10 @@ button[aria-label="Toggle autoplay"] {
   padding: 1.4rem 2rem;
   width: 100%;
   transition: all 0.3s linear;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.4;
+  color: #878787;
 }
 .proInfo-right .proInfo-form .proInfo-control .proInfo-input:focus {
   border-color: #ff3c79;
