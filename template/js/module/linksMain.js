@@ -1,9 +1,13 @@
 export default function LinksMain() {
   try {
     const scrollTop = document.querySelector(".scroll-to-top");
-    scrollTop.onclick = () => {
-      document.body.scrollIntoView({ behavior: "smooth", block: "start" });
-    };
+
+    if (scrollTop) {
+      scrollTop.addEventListener("click", ()=> {
+        document.body.scrollIntoView({ behavior: "smooth", block: "start" });
+      })
+      
+    }
 
     const menuListLink = document.querySelector(".links-main");
     window.addEventListener("scroll", () => {

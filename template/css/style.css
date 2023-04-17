@@ -11560,9 +11560,21 @@ button[aria-label="Toggle autoplay"] {
   transform: translateY(100%);
   transition: all 1s, color 0.3s 0.3s, transform 0.3s;
 }
-.pro-item-add:hover {
-  color: white;
-  box-shadow: 300px 0 0 0 #6cbfc5 inset, -300px 0 0 0 #6cbfc5 inset;
+@media screen and (max-width: 1201px) {
+  .pro-item-add {
+    transform: none;
+  }
+}
+@media screen and (max-width: 400px) {
+  .pro-item-add {
+    height: 3.2rem;
+  }
+}
+@media (min-width: 1201px) {
+  .pro-item-add:hover {
+    color: white;
+    box-shadow: 300px 0 0 0 #6cbfc5 inset, -300px 0 0 0 #6cbfc5 inset;
+  }
 }
 @media (min-width: 1201px) {
   .pro-item:hover .pro-item-add {
@@ -11983,6 +11995,11 @@ button[aria-label="Toggle autoplay"] {
   position: relative;
   overflow: hidden;
 }
+@media screen and (max-width: 400px) {
+  .join-item-wrap {
+    border-radius: 0px 0px 1.2rem 1.2rem;
+  }
+}
 .join-item-img {
   display: block;
   padding-top: calc((509 / 384) * 100%);
@@ -12017,6 +12034,12 @@ button[aria-label="Toggle autoplay"] {
 @media only screen and (max-width: 800px) {
   .join-item-text {
     font-size: 1.7rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .join-item-text {
+    padding: 1rem 0.8rem;
+    font-size: 1.5rem;
   }
 }
 .join-sc {
@@ -15307,6 +15330,11 @@ table.table-cus td a {
     padding: 4.8rem 1.6rem 2.4rem;
   }
 }
+@media screen and (max-width: 400px) {
+  .scsec {
+    padding: 4.8rem 0.8rem 1.2rem;
+  }
+}
 .scsec-desc {
   max-width: 47.8rem;
   margin-left: auto;
@@ -15659,6 +15687,33 @@ table.table-cus td a {
 }
 .transf-txt:not(:last-child) {
   margin-bottom: 0.8rem;
+}
+
+.check-style .checkbox {
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 50%;
+  border: 0.2rem solid #878787;
+  display: block;
+  flex-shrink: 0;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-align-items: center;
+  justify-content: center;
+  -webkit-justify-content: center;
+}
+.check-style .checkbox::before {
+  content: "";
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background: #ff3c79;
+  display: block;
 }
 
 :root {

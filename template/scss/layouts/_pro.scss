@@ -77,11 +77,19 @@
       transform: translateY(100%);
       transition: all 1s, color 0.3s 0.3s, transform 0.3s;
 
-      &:hover {
+      @include max(1201px) {
+        // position: static;
+        transform: none;
+      }
+
+      @include max(400px) {
+        height: 3.2rem;
+      }
+
+      @include hover {
         color: white;
         // box-shadow: 0 8rem 0 0 $color-second inset, 0 -8rem 0 0 $color-second  inset;
         box-shadow: 300px 0 0 0 $color-second inset, -300px 0 0 0 $color-second inset;
-
       }
     }
 

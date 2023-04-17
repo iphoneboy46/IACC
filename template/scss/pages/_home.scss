@@ -47,6 +47,10 @@
             border-radius: 0px 0px 2.4rem 2.4rem;
             position: relative;
             overflow: hidden;
+
+            @include max(400px) {
+                border-radius: 0px 0px 1.2rem 1.2rem;
+            }
         }
 
         &-img {
@@ -67,6 +71,11 @@
             font-weight: 500;
             @include fz-24;
             line-height: 1.5;
+
+            @include max(600px) {
+                padding: 1rem 0.8rem;
+                font-size: 1.5rem;
+            }
         }
     }
 
