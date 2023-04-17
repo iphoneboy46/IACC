@@ -1,4 +1,7 @@
+import ShowHideModule from "./ShowHideModule.js";
+
 export default function TabModule() {
+ try {
   let tab = document.querySelectorAll(".tabJS");
   if (tab) {
     tab.forEach((t) => {
@@ -36,7 +39,7 @@ export default function TabModule() {
   $(".tab-item").first().addClass("current");
   const listTab = document.querySelectorAll(".tabJS2 .tab-item");
 
-  $(".tabJS2 .tabs .swiper-slide").click(function (g) {
+  $(".tabJS2 .tabs .tab-item").click(function (g) {
     var index = $(this).index();
     var tab = $(this).closest(".tabJS2");
 
@@ -87,4 +90,7 @@ export default function TabModule() {
       $(".toggleOnclick.active").next(".toggleHide").stop().slideToggle();
     }
   });
+ } catch (error) {
+  console.log(error)
+ }
 }

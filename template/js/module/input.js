@@ -1,4 +1,5 @@
 export default function inputForm() {
+try {
   const inputPass = document.querySelector(".pass");
   const show = document.querySelector(".hide-pass");
   const hidden = document.querySelector(".show-pass");
@@ -35,5 +36,8 @@ export default function inputForm() {
     showRe.style.display = "block";
     hiddenRe.style.display = "none";
   });
+} catch (error) {
+  console.log(error)
+}
 
 }

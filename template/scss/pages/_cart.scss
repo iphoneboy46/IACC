@@ -1,0 +1,155 @@
+.cartsec {
+    background: #F5F5F5;
+    padding: 6.4rem 0;
+}
+
+.carti {
+    background: #FFFFFF;
+    border: 0.1rem solid rgba(0, 0, 0, 0.15);
+    border-radius: 1.6rem;
+    padding: 3.6rem 7.8rem;
+
+    &-row {
+        @include flex;
+        align-items: center;
+    }
+
+    &-hd {
+        font-weight: 700;
+    }
+
+
+    &-col {
+        width: calc(100% / 5.8);
+
+        &:not(:last-child) {
+            padding-right: var(--pdGen2);
+        }
+
+        &:first-child {
+            width: calc(10.2rem + var(--pdGen2));
+        }
+
+        &:nth-child(2) {
+            width: calc(100% * 3 / 10);
+        }
+
+        &:last-child {
+            width: 10rem;
+        }
+    }
+
+    &-img {
+        width: 10.2rem;
+        height: 10.2rem;
+        border-radius: 0.8rem;
+        overflow: hidden;
+    }
+
+    &-bd {
+        .carti-row {
+            padding: 3.2rem 0;
+            border-bottom: 0.1rem solid rgba(0, 0, 0, 0.15);
+        }
+    }
+
+    &-remove {
+        width: 2.4rem;
+        height: 2.4rem;
+        @include mid-flex;
+        margin-left: auto;
+        margin-right: auto;
+        cursor: pointer;
+    }
+
+    &-ft {
+        .carti-row {
+            justify-content: space-between;
+            padding-top: 3.2rem;
+        }
+    }
+
+    &-price {
+        margin-right: 6.8rem;
+    }
+}
+
+.billdlvr {
+    padding: 4rem 7.8rem;
+    background: #FFFFFF;
+    border: 0.1rem solid rgba(0, 0, 0, 0.15);
+    border-radius: 1.6rem;
+
+    &-title {
+        padding-bottom: 1.6rem;
+        border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
+    }
+
+    &-list {
+        padding-bottom: 3.2rem;
+        border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
+    }
+
+
+    &-item {
+        &:not(:last-child) {
+            margin-bottom: var(--pdGen2);
+        }
+        &-wrap {
+            @include flex;
+            flex-wrap: wrap;
+        }
+
+        &-img {
+            width: 10.2rem;
+            height: 10.2rem;
+            border-radius: 0.8rem;
+            overflow: hidden;
+        }
+
+        &-ct {
+            padding-left: var(--pdGen2);
+            flex: 1;
+        }
+
+        &-link {
+            display: block;
+            margin-bottom: 0.8rem;
+        }
+    }
+
+    &-bill {
+        padding-bottom: 0.8rem;
+        border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
+        margin-bottom: 3.2rem;
+        &-item {
+            margin-bottom: var(--pdGen2);
+            @include flex;
+            justify-content: space-between;
+        }
+    }
+}
+
+.scsec {
+    position: relative;
+    background: white;
+    padding: 7.8rem 10rem 5.6rem;
+    margin-top: 8.8rem;
+    &-icon {
+        width: 15.4rem;
+        height: 15.4rem;
+        padding-top: 2.6rem;
+        position: absolute;
+        border-radius: 50%;
+        left: 50%;
+        top: 0;
+        transform: translate(-50%, - 8.8rem);
+        background: white;
+
+        img {
+            width: 8rem;
+            height: 8rem;
+            margin: auto;
+        }
+    }
+}
