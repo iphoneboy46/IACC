@@ -410,6 +410,10 @@
                     border-radius: 10rem;
                     padding: 1.4rem 2rem;
                     width: 100%;
+                    transition: all 0.3s linear;
+                    &:focus{
+                        border-color: $color-third;
+                    }
                 }
 
                 .proInfo-textarea {
@@ -419,6 +423,10 @@
                     border-radius: 1.6rem;
                     padding: 1.4rem 2rem;
                     width: 100%;
+                    transition: all 0.3s linear;
+                    &:focus{
+                        border-color: $color-third;
+                    }
                 }
 
                 &:first-child {
@@ -469,6 +477,11 @@
         img {
             margin: 0 !important;
         }
+
+        @media only screen and (max-width:600px){
+            width: 5rem;
+            height: 5rem;
+        }
     }
 
     &-name {
@@ -483,6 +496,17 @@
         img {
             margin: 0 !important;
             margin-left: 0.4rem !important;
+        }
+
+        @media only screen and (max-width: 600px) {
+           
+            margin-bottom: 0rem;
+         }
+    }
+
+    &-ct{
+        @media only screen and (max-width: 600px) {
+           font-size: 1.2rem !important;
         }
     }
 }

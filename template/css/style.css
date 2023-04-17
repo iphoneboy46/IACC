@@ -3151,7 +3151,7 @@ body:has(.seclect2-seach-show) .select2-container .select2-dropdown .select2-res
 }
 @media screen and (min-width: 1201px) {
   .breadcrumbs-item a:hover {
-    color: #6cbfc5;
+    color: #f97b55;
   }
 }
 @media screen and (max-width: 600px) {
@@ -5243,6 +5243,9 @@ body:has(.seclect2-seach-show) .select2-container .select2-dropdown .select2-res
 .bn-lg .breadcrumbs-list {
   justify-content: center;
 }
+.bn .breadcrumbs-list .breadcrumbs-item.current a {
+  color: #f97b55 !important;
+}
 
 @keyframes fadeCus {
   0% {
@@ -5297,8 +5300,8 @@ body:has(.seclect2-seach-show) .select2-container .select2-dropdown .select2-res
   position: absolute;
   content: "";
   border-radius: 50%;
-  background: #FFFFFF;
-  border: 0.1rem solid #FFFFFF;
+  background: #ffffff;
+  border: 0.1rem solid #ffffff;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -5310,8 +5313,8 @@ body:has(.seclect2-seach-show) .select2-container .select2-dropdown .select2-res
 }
 .play-vd-inner,
 .pause-vd-inner {
-  background: #FFFFFF;
-  border: 0.1rem solid #FFFFFF;
+  background: #ffffff;
+  border: 0.1rem solid #ffffff;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -5336,8 +5339,8 @@ body:has(.seclect2-seach-show) .select2-container .select2-dropdown .select2-res
   content: "";
   pointer-events: none;
   border-radius: 50%;
-  background: #FFFFFF;
-  border: 1px solid #FFFFFF;
+  background: #ffffff;
+  border: 1px solid #ffffff;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -12578,6 +12581,10 @@ button[aria-label="Toggle autoplay"] {
   border-radius: 10rem;
   padding: 1.4rem 2rem;
   width: 100%;
+  transition: all 0.3s linear;
+}
+.proInfo-right .proInfo-form .proInfo-control .proInfo-input:focus {
+  border-color: #ff3c79;
 }
 .proInfo-right .proInfo-form .proInfo-control .proInfo-textarea {
   margin-top: 1.1rem;
@@ -12586,6 +12593,10 @@ button[aria-label="Toggle autoplay"] {
   border-radius: 1.6rem;
   padding: 1.4rem 2rem;
   width: 100%;
+  transition: all 0.3s linear;
+}
+.proInfo-right .proInfo-form .proInfo-control .proInfo-textarea:focus {
+  border-color: #ff3c79;
 }
 .proInfo-right .proInfo-form .proInfo-control:first-child {
   width: 60%;
@@ -12635,6 +12646,12 @@ button[aria-label="Toggle autoplay"] {
 .cmt-avt img {
   margin: 0 !important;
 }
+@media only screen and (max-width: 600px) {
+  .cmt-avt {
+    width: 5rem;
+    height: 5rem;
+  }
+}
 .cmt-name {
   margin-top: 0 !important;
   margin-bottom: 0.4rem !important;
@@ -12646,6 +12663,16 @@ button[aria-label="Toggle autoplay"] {
 .cmt-star img {
   margin: 0 !important;
   margin-left: 0.4rem !important;
+}
+@media only screen and (max-width: 600px) {
+  .cmt-star {
+    margin-bottom: 0rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .cmt-ct {
+    font-size: 1.2rem !important;
+  }
 }
 
 .rvcheck-item {
@@ -12795,7 +12822,7 @@ button[aria-label="Toggle autoplay"] {
 
 .about-us {
   padding-top: 10.4rem;
-  padding-bottom: 13rem;
+  padding-bottom: 8rem;
 }
 .about-us-content-left {
   width: 41.6666666667%;
@@ -13107,6 +13134,10 @@ button[aria-label="Toggle autoplay"] {
   }
 }
 
+.about-tiktok {
+  padding-top: 8rem;
+  background-color: #F5F5F5;
+}
 .about-tiktok-con-left {
   padding-right: 6rem;
   width: 58.3333333333%;
@@ -13304,9 +13335,6 @@ button[aria-label="Toggle autoplay"] {
   color: #1a1a1a;
   padding-bottom: 2rem;
   text-align: justify;
-}
-.about-tiktok-con-right .btn {
-  margin: 0 auto;
 }
 .about-tiktok-con-right .img-qr-box {
   margin-top: 4.8rem;
