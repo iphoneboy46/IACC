@@ -10,23 +10,19 @@
     &-list {
         @include flex;
         align-items: center;
-        margin: 0 -1.6rem;
+        margin: 0 1rem;
     }
 
     &-item {
         position: relative;
-        padding: 0 1.6rem;
+        // padding: 0 1.6rem;
         height: 2.4rem;
         @include mid-flex;
 
         &.current {
             a {
-                padding: 0.45rem 1.2rem 0.35rem;
-                opacity: 1;
-                background: rgba(55, 167, 107, 0.15);
-                border-radius: 12rem;
+                color: white !important;
                 pointer-events: none;
-                
             }
         }
 
@@ -54,8 +50,7 @@
             -webkit-box-orient: vertical;
             overflow: hidden;
             letter-spacing: 0.005em;
-            
-    
+
             // max-width: 9rem;
 
             img {
@@ -71,8 +66,6 @@
             @include max(600px) {
                 font-size: 1.2rem;
             }
-
-
         }
 
         &.active {
@@ -99,25 +92,34 @@
     }
 
     &.other {
-        padding-top: 0.8rem;
-
+        padding-top: 1.6rem;
+        background-color: $color-pri;
         a {
-            color: $color-text;
+            
+            font-weight: 400;
+            font-size: 1.6rem;
+            line-height: 1.5;
+           
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        span {
+            color: white;
         }
 
         .breadcrumbs-list {
             position: relative;
-            padding-bottom: 0.8rem;
+            padding-bottom: 1.6rem;
 
-            &::before {
-                position: absolute;
-                content: "";
-                width: 100vw;
-                bottom: 0;
-                left: 50%;
-                transform: translateX(-50%);
-                border-bottom: 0.1rem solid #D1D8DC;
-            }
+            // &::before {
+            //     position: absolute;
+            //     content: "";
+            //     width: 100vw;
+            //     bottom: 0;
+            //     left: 50%;
+            //     transform: translateX(-50%);
+            //     border-bottom: 0.1rem solid #d1d8dc;
+            // }
         }
     }
 
@@ -135,7 +137,6 @@
         width: 100%;
         top: 0;
         left: 0;
-        
     }
 
     .breadcrumbs.other .breadcrumbs-list::before {
