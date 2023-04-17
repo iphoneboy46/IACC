@@ -12543,6 +12543,11 @@ button[aria-label="Toggle autoplay"] {
 .proInfo-right {
   flex: 1;
 }
+@media only screen and (max-width: 600px) {
+  .proInfo-right .rvcheck-list {
+    justify-content: center;
+  }
+}
 .proInfo-right .proInfo-form {
   display: flex;
   flex-wrap: wrap;
