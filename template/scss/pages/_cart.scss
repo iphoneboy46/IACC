@@ -3,6 +3,11 @@
     border: 0.1rem solid rgba(0, 0, 0, 0.15);
     border-radius: 1.6rem;
     padding: 3.6rem 7.8rem;
+    
+    @media only screen and (max-width:1024px){
+        padding:3.6rem;
+    }
+
 
     &-row {
         @include flex;
@@ -60,11 +65,45 @@
         .carti-row {
             justify-content: space-between;
             padding-top: 3.2rem;
+
+
+            @media only screen and (max-width: 500px) {
+                flex-wrap: wrap;
+                .text{
+                    width: 50%;
+                }
+
+
+                .carti-price{
+                    width: 50%;
+                    margin-right: 0;
+                    text-align: end;
+                }
+
+                .btn{
+                   
+                    margin:2rem auto 0;
+                }
+            }
         }
     }
 
     &-price {
         margin-right: 6.8rem;
+    }
+
+    .carti-con{
+        max-width: 104.4rem;
+        overflow: auto;
+
+        &::-webkit-scrollbar {
+           height: 0.5rem;
+          }
+    }
+
+    &-tb{
+        min-width: 104.4rem;
+       
     }
 }
 
@@ -155,6 +194,7 @@
         padding-top: 3rem;
     }
 }
+
 .details {
     padding: 4.2rem 2.8rem 5.4rem 3.2rem;
     background: #ffffff;
