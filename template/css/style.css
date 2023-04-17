@@ -2346,6 +2346,10 @@ iframe {
   padding: 1.2rem 0 1.1rem;
   margin-right: 2.4rem;
   border-bottom: 1px solid rgba(26, 26, 26, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+.footer-input:focus {
+  border-bottom: 1px solid #ff3c79;
 }
 @media screen and (max-width: 600px) {
   .footer-input {
@@ -2722,8 +2726,13 @@ iframe {
 }
 
 .select2-container {
-  height: 4.4rem;
+  height: 4.8rem;
   background-color: transparent;
+}
+@media screen and (max-width: 500px) {
+  .select2-container {
+    height: 3.6rem;
+  }
 }
 
 .select2.select2-container {
@@ -2739,7 +2748,7 @@ iframe {
 .select2-container--default .select2-selection--single {
   border: none;
   color: white;
-  height: 4.4rem;
+  height: 4.8rem;
   background: #F5F5F5;
   border: 1px solid #EFEFEF;
   border-radius: 12rem !important;
@@ -2748,6 +2757,11 @@ iframe {
   flex-direction: column;
   justify-content: center;
   width: 100%;
+}
+@media screen and (max-width: 500px) {
+  .select2-container--default .select2-selection--single {
+    height: 3.6rem;
+  }
 }
 
 .select2.select2-container .select2-selection--multiple {
@@ -3315,6 +3329,11 @@ body:has(.seclect2-seach-show) .select2-container .select2-dropdown .select2-res
 .form-control.full-w {
   width: 100%;
 }
+@media screen and (max-width: 800px) {
+  .form-control.d-3 {
+    width: 100%;
+  }
+}
 .form-control-file .name-file {
   padding: 1.2rem 1.6rem 0;
 }
@@ -3322,13 +3341,13 @@ body:has(.seclect2-seach-show) .select2-container .select2-dropdown .select2-res
   background: #FFFFFF;
   border: 0.05rem solid rgba(0, 0, 0, 0.15);
   border-radius: 50rem;
-  height: 4.2rem;
+  height: 4.8rem;
   transition: all 0.3s ease-in-out;
   padding: 0 2rem;
 }
 @media screen and (max-width: 500px) {
   .form-input {
-    height: 3.2rem;
+    height: 3.6rem;
   }
 }
 .form-input::placeholder {
@@ -15172,6 +15191,18 @@ table.table-cus td a {
 .cartsec {
   background: #F5F5F5;
   padding: 6.4rem 0;
+  overflow: hidden;
+}
+@media screen and (max-width: 800px) {
+  .cartsec-left {
+    width: 100%;
+    margin-bottom: 3.2rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  .cartsec-right {
+    width: 100%;
+  }
 }
 
 .carti {
@@ -15337,6 +15368,26 @@ table.table-cus td a {
   border: 0.1rem solid rgba(0, 0, 0, 0.15);
   border-radius: 1.6rem;
 }
+@media screen and (max-width: 1201px) {
+  .billdlvr {
+    padding: 4rem 5.6rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .billdlvr {
+    padding: 4rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .billdlvr {
+    padding: 2.4rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .billdlvr {
+    padding: 2.4rem 1.2rem;
+  }
+}
 .billdlvr-title {
   padding-bottom: 1.6rem;
   border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
@@ -15344,6 +15395,11 @@ table.table-cus td a {
 .billdlvr-list {
   padding-bottom: 3.2rem;
   border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
+}
+@media screen and (max-width: 800px) {
+  .billdlvr-list {
+    padding-bottom: 1.2rem;
+  }
 }
 .billdlvr-item:not(:last-child) {
   margin-bottom: var(--pdGen2);
@@ -15362,6 +15418,12 @@ table.table-cus td a {
   border-radius: 0.8rem;
   overflow: hidden;
 }
+@media screen and (max-width: 600px) {
+  .billdlvr-item-img {
+    width: 7rem;
+    height: 7rem;
+  }
+}
 .billdlvr-item-ct {
   padding-left: var(--pdGen2);
   flex: 1;
@@ -15369,6 +15431,10 @@ table.table-cus td a {
 .billdlvr-item-link {
   display: block;
   margin-bottom: 0.8rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 .billdlvr-bill {
   padding-bottom: 0.8rem;
@@ -15384,6 +15450,9 @@ table.table-cus td a {
   display: flex;
   justify-content: space-between;
 }
+.billdlvr-bill .info {
+  padding: 0;
+}
 
 .scsec {
   position: relative;
@@ -15394,6 +15463,7 @@ table.table-cus td a {
   width: 83.3333333333%;
   margin-left: auto;
   margin-right: auto;
+  filter: drop-shadow(0 0 0.1rem rgba(0, 0, 0, 0.2));
 }
 @media screen and (max-width: 1201px) {
   .scsec {
@@ -15776,6 +15846,21 @@ table.table-cus td a {
   margin-bottom: 0.8rem;
 }
 
+.check-style .recheck-item {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.check-style .recheck-item.active .checkbox {
+  border-color: #ff3c79;
+}
+.check-style .recheck-item.active .checkbox::before {
+  transform: none;
+}
 .check-style .checkbox {
   width: 1.4rem;
   height: 1.4rem;
@@ -15793,6 +15878,9 @@ table.table-cus td a {
   -webkit-align-items: center;
   justify-content: center;
   -webkit-justify-content: center;
+  overflow: hidden;
+  margin-right: 1.3rem;
+  transition: all 0.3s ease-in-out;
 }
 .check-style .checkbox::before {
   content: "";
@@ -15801,6 +15889,12 @@ table.table-cus td a {
   border-radius: 50%;
   background: #ff3c79;
   display: block;
+  transform: translateY(-2rem);
+  transition: all 0.3s ease-in-out;
+}
+
+.infodlvr-payment-item:not(:last-child) {
+  margin-bottom: 1.6rem;
 }
 
 :root {

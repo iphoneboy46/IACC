@@ -1,6 +1,20 @@
 .cartsec {
     background: #F5F5F5;
     padding: 6.4rem 0;
+    overflow: hidden;
+
+    &-left {
+        @include max(800px) {
+            width: 100%;
+            margin-bottom: 3.2rem;
+        }
+    }
+
+    &-right {
+        @include max(800px) {
+            width: 100%;
+        }
+    }
 }
 
 .carti {
@@ -169,13 +183,27 @@
 
 }
 
-
-
 .billdlvr {
     padding: 4rem 7.8rem;
     background: #FFFFFF;
     border: 0.1rem solid rgba(0, 0, 0, 0.15);
     border-radius: 1.6rem;
+
+    @include max(1201px) {
+        padding: 4rem 5.6rem;
+    }
+
+    @include max(1024px) {
+        padding: 4rem;
+    }
+
+    @include max(600px) {
+        padding: 2.4rem;
+    }
+
+    @include max(400px) {
+        padding: 2.4rem 1.2rem;
+    }
 
     &-title {
         padding-bottom: 1.6rem;
@@ -185,8 +213,11 @@
     &-list {
         padding-bottom: 3.2rem;
         border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
-    }
 
+        @include max(800px) {
+            padding-bottom: 1.2rem;
+        }
+    }
 
     &-item {
         &:not(:last-child) {
@@ -203,6 +234,11 @@
             height: 10.2rem;
             border-radius: 0.8rem;
             overflow: hidden;
+
+            @include max(600px) {
+                width: 7rem;
+                height: 7rem;
+            }
         }
 
         &-ct {
@@ -213,7 +249,9 @@
         &-link {
             display: block;
             margin-bottom: 0.8rem;
+            @include lc(2);
         }
+
     }
 
     &-bill {
@@ -225,6 +263,10 @@
             margin-bottom: var(--pdGen2);
             @include flex;
             justify-content: space-between;
+        }
+
+        .info {
+            padding: 0;
         }
     }
 }
@@ -238,6 +280,7 @@
     width: calc(100% * 10 / 12);
     margin-left: auto;
     margin-right: auto;
+    filter: drop-shadow(0 0 0.1rem rgba(0,0,0,0.2));
 
     @include max(1201px) {
         width: 100%;
@@ -654,6 +697,22 @@
 }
 
 .check-style {
+    .recheck-item {
+        @include flex;
+        align-items: center;
+        cursor: pointer;
+
+        &.active {
+            .checkbox {
+                border-color: $color-third;
+
+                &::before {
+                    transform: none;
+                }
+            }
+        }
+    }
+
     .checkbox {
         width: 1.4rem;
         height: 1.4rem;
@@ -662,6 +721,10 @@
         display: block;
         flex-shrink: 0;
         @include mid-flex;
+        overflow: hidden;
+        margin-right: 1.3rem;
+        transition: all 0.3s ease-in-out;
+
         &::before {
             content: "";
             width: 0.6rem;
@@ -669,6 +732,18 @@
             border-radius: 50%;
             background: $color-third;
             display: block;
+            transform: translateY(-2rem);
+            transition: all 0.3s ease-in-out;
+        }
+    }
+}
+
+.infodlvr {
+    &-payment {
+        &-item {
+            &:not(:last-child) {
+                margin-bottom: 1.6rem;
+            }
         }
     }
 }

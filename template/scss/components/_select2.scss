@@ -1,6 +1,10 @@
 .select2-container {
-    height: 4.4rem;
+    height: 4.8rem;
     background-color: transparent;
+
+    @include max(500px) {
+        height: 3.6rem;
+    }
 
 }
 
@@ -19,7 +23,7 @@
     border: none;
     // border-radius: 0 !important;
     color: white;
-    height: 4.4rem;
+    height: 4.8rem;
     background: #F5F5F5;
     border: 1px solid #EFEFEF;
     border-radius: 12rem !important;
@@ -28,6 +32,10 @@
     flex-direction: column;
     justify-content: center;
     width: 100%;
+
+    @include max(500px) {
+        height: 3.6rem;
+    }
 }
 
 .select2-container--default.select2-container--open.select2-container--below .select2-selection--single {
