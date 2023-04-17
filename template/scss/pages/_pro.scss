@@ -78,6 +78,8 @@
     }
 
     &-top {
+        justify-content: space-between;
+
         .d-item {
             @include max(1201px) {
                 margin-bottom: 0.8rem;
@@ -88,6 +90,12 @@
     .result {
         @include max(800px) {
             font-size: 1.4rem;
+        }
+    }
+
+    .filter {
+        @include min(1201px) {
+            display: none;
         }
     }
 }

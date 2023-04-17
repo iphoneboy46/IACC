@@ -5198,6 +5198,9 @@ body:has(.seclect2-seach-show) .select2-container .select2-dropdown .select2-res
     width: 100%;
   }
 }
+.bn-home .bn-right {
+  padding-left: 0;
+}
 @media screen and (max-width: 800px) {
   .bn-home .bn-right {
     width: 100%;
@@ -6130,11 +6133,6 @@ body:has(.seclect2-seach-show) .select2-container .select2-dropdown .select2-res
   justify-content: center;
   -webkit-justify-content: center;
 }
-@media screen and (min-width: 1201px) {
-  .proFilter-cate-open {
-    display: none;
-  }
-}
 @media screen and (max-width: 800px) {
   .proFilter-cate-open {
     height: 3.2rem;
@@ -6158,6 +6156,11 @@ body:has(.seclect2-seach-show) .select2-container .select2-dropdown .select2-res
     width: 1.8rem;
     margin-right: 0.8rem;
   }
+}
+
+.star-rate .cate-item.active .text {
+  color: #ff3c79;
+  transition: all 0.3s ease-in-out;
 }
 
 .swiper {
@@ -12032,7 +12035,7 @@ button[aria-label="Toggle autoplay"] {
   padding: 0.8rem;
   top: 0;
   left: 50%;
-  transform: translate(-40%, -50%);
+  transform: translate(-50%, -50%);
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   z-index: 10;
@@ -12327,6 +12330,12 @@ button[aria-label="Toggle autoplay"] {
 .ser.other::before, .ser.other::after {
   bottom: -3.2rem;
 }
+@media screen and (max-width: 1300px) {
+  .ser.other::before, .ser.other::after {
+    bottom: -7rem;
+    width: 16rem;
+  }
+}
 @media screen and (max-width: 600px) {
   .ser-list {
     justify-content: center;
@@ -12411,6 +12420,8 @@ button[aria-label="Toggle autoplay"] {
 .glr {
   padding-bottom: 0;
   margin-bottom: -17rem;
+  position: relative;
+  z-index: 11;
 }
 @media screen and (max-width: 1024px) {
   .glr {
@@ -12518,6 +12529,9 @@ button[aria-label="Toggle autoplay"] {
 .prolist .side-close .icon {
   font-weight: 500;
 }
+.prolist-top {
+  justify-content: space-between;
+}
 @media screen and (max-width: 1201px) {
   .prolist-top .d-item {
     margin-bottom: 0.8rem;
@@ -12526,6 +12540,11 @@ button[aria-label="Toggle autoplay"] {
 @media screen and (max-width: 800px) {
   .prolist .result {
     font-size: 1.4rem;
+  }
+}
+@media screen and (min-width: 1201px) {
+  .prolist .filter {
+    display: none;
   }
 }
 
@@ -12965,7 +12984,7 @@ button[aria-label="Toggle autoplay"] {
     text-align: center;
   }
 }
-.about-us-content-left .content .content-text {
+.about-us-content-left .content p {
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.5;

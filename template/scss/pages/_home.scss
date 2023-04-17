@@ -90,7 +90,7 @@
         padding: 0.8rem;
         top: 0;
         left: 50%;
-        transform: translate(-40%, -50%);
+        transform: translate(-50%, -50%);
         cursor: pointer;
         transition: all 0.3s ease-in-out;
         z-index: 10;
@@ -359,6 +359,11 @@
 
         &::before, &::after {
             bottom: -3.2rem;
+
+            @include max(1300px) {
+                bottom: -7rem;
+                width: 16rem;
+            }
         }
     }
 
@@ -435,6 +440,8 @@
 .glr {
     padding-bottom: 0;
     margin-bottom: -17rem;
+    position: relative;
+    z-index: 11;
 
     @include max(1024px) {
         margin-bottom: 0;
