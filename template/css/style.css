@@ -5375,7 +5375,7 @@ body:has(.seclect2-seach-show) .select2-container .select2-dropdown .select2-res
 .bn .breadcrumbs-list .breadcrumbs-item a {
   font-weight: 500;
   font-size: 1.8rem;
-  line-height: 13;
+  line-height: 1.3;
 }
 @media only screen and (max-width: 1200px) {
   .bn .breadcrumbs-list .breadcrumbs-item a {
@@ -14098,9 +14098,6 @@ button[aria-label="Toggle autoplay"] {
     margin-bottom: 0;
   }
 }
-.account-box {
-  width: 100%;
-}
 .account-box-left {
   width: 25%;
   min-width: 28rem;
@@ -15060,6 +15057,31 @@ table.table-cus td a {
 }
 .uinf-col:nth-child(2) {
   flex: 1;
+}
+
+.form-edit-control {
+  position: relative;
+}
+.form-edit-input {
+  border-bottom: 0.06rem solid transparent;
+  width: 100%;
+  padding-right: 2rem;
+}
+.form-edit-icon {
+  width: 1.8rem;
+  height: 1.8rem;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  cursor: pointer;
+  display: none;
+}
+.form-edit.active .form-edit-input {
+  border-bottom: 0.06rem solid rgba(135, 135, 135, 0.25);
+}
+.form-edit.active .form-edit-icon {
+  display: block;
 }
 
 .sign-up {

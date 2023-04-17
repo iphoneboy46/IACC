@@ -30,7 +30,7 @@
     }
 
     &-box {
-        width: 100%;
+        // width: 100%;
 
         &-left {
             width: calc(100% * 3 / 12);
@@ -1062,5 +1062,42 @@ table.table-cus {
         &:nth-child(2) {
             flex: 1;
         }
+    }
+}
+
+.form-edit {
+    &-control {
+        position: relative;
+    }
+
+    &-input {
+        border-bottom: 0.06rem solid transparent;
+        width: 100%;
+        padding-right: 2rem;
+    }
+
+    &-icon {
+        width: 1.8rem;
+        height: 1.8rem;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        cursor: pointer;
+        display: none;
+
+    }
+
+    &.active {
+        .form-edit {
+            &-input {
+                border-bottom: 0.06rem solid rgba($color: #878787, $alpha: 0.25);
+            }
+
+            &-icon {
+                display: block;
+            }
+        }
+
     }
 }
