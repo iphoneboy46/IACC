@@ -104,6 +104,10 @@
             line-height: 1.3;
             color: $color-pri;
         }
+
+        @media only screen and (max-width:800px){
+            padding-bottom: 2rem;
+        }
     }
 
     &-con {
@@ -120,6 +124,10 @@
                 width: 100%;
             }
         }
+    }
+
+    @media only screen and (max-width:800px){
+        padding: 2rem 0;
     }
 }
 
@@ -365,9 +373,17 @@
                     }
                 }
             }
+
+            .btn{
+                @media only screen and (max-width:800px){
+                   margin-top: 3rem;
+                }
+            }
         }
 
-       
+        @media only screen and (max-width:800px){
+            padding: 1.6rem 0;
+        }
     }
 
     &-left {

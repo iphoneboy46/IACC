@@ -12316,6 +12316,11 @@ button[aria-label="Toggle autoplay"] {
     font-size: 1.7rem;
   }
 }
+@media only screen and (max-width: 800px) {
+  .product-relate .title {
+    padding-bottom: 2rem;
+  }
+}
 @media only screen and (max-width: 700px) {
   .product-relate-con .swiper-slide {
     width: 40%;
@@ -12329,6 +12334,11 @@ button[aria-label="Toggle autoplay"] {
 @media only screen and (max-width: 400px) {
   .product-relate-con .swiper-slide {
     width: 100%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .product-relate {
+    padding: 2rem 0;
   }
 }
 
@@ -12535,6 +12545,16 @@ button[aria-label="Toggle autoplay"] {
 @media only screen and (max-width: 1024px) {
   .proInfo-ct .mona-content .content .proInfo-rv .proInfo-left {
     width: 100%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .proInfo-ct .mona-content .btn {
+    margin-top: 3rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .proInfo-ct {
+    padding: 1.6rem 0;
   }
 }
 .proInfo-left {
