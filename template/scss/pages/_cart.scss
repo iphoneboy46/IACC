@@ -95,6 +95,7 @@
         &:not(:last-child) {
             margin-bottom: var(--pdGen2);
         }
+
         &-wrap {
             @include flex;
             flex-wrap: wrap;
@@ -122,6 +123,7 @@
         padding-bottom: 0.8rem;
         border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
         margin-bottom: 3.2rem;
+
         &-item {
             margin-bottom: var(--pdGen2);
             @include flex;
@@ -135,6 +137,11 @@
     background: white;
     padding: 7.8rem 10rem 5.6rem;
     margin-top: 8.8rem;
+    border-radius: 1.6rem;
+    width: calc(100% * 10 / 12);
+    margin-left: auto;
+    margin-right: auto;
+
     &-icon {
         width: 15.4rem;
         height: 15.4rem;
@@ -150,6 +157,25 @@
             width: 8rem;
             height: 8rem;
             margin: auto;
+        }
+    }
+
+    .billdlvr-list {
+        border-style: dashed;
+    }
+}
+
+.billi {
+    padding-bottom: 0.8rem;
+    border-bottom: 0.1rem dashed rgba(0, 0, 0, 0.2);
+}
+
+.billt {
+    &-item {
+        width: 45%;
+
+        &:nth-child(2) {
+            flex: 1;
         }
     }
 }

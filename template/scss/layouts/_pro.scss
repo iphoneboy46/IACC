@@ -11,6 +11,10 @@
       padding-right: 0.3rem;
     }
 
+    @include max(340px) {
+      width: 100%;
+    }
+
     &-wrap {
       position: relative;
     }
