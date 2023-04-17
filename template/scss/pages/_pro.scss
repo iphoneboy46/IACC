@@ -41,7 +41,7 @@
             font-weight: 600;
             @include fz-24;
             line-height: 1.3;
-            color: #FFFFFF;
+            color: #ffffff;
             z-index: 10;
         }
     }
@@ -95,6 +95,28 @@
 .product-relate {
     padding-top: 5.6rem;
     padding-bottom: 8rem;
+
+    .title {
+        padding-bottom: 4.8rem;
+        &-text {
+            font-weight: 600;
+            @include fz-24;
+            line-height: 1.3;
+            color: $color-pri;
+        }
+    }
+
+    &-con{
+        .swiper-slide{
+            @media only screen and (max-width:800px){
+                width: 50%;
+            }
+
+            @media only screen and (max-width:600px){
+                width: 100%;
+            }
+        }
+    }
 }
 
 .prodt {
@@ -126,7 +148,7 @@
             border-radius: 1rem;
         }
 
-        >img {
+        > img {
             @include imgCover;
             transition: all 0.3s ease-in-out;
             border-radius: 1.6rem;
@@ -157,7 +179,6 @@
 
     &-thumbs {
         .prodt-img {
-
             &::before,
             &::after {
                 position: absolute;
@@ -178,7 +199,7 @@
                 z-index: -1;
                 width: 100%;
                 height: 100%;
-                background: linear-gradient(-90deg, #39b16c 2.67%, #38af6b 3.67%, #255361 71.67%, #1e2f5e 102.67%);
+                background:#6CBFC5;
             }
         }
 
@@ -191,7 +212,7 @@
                     opacity: 1;
                 }
 
-                >img {
+                > img {
                     transform: translate(-50%, -50%) scale(0.93);
                 }
 
@@ -202,7 +223,8 @@
         }
     }
 
-    &-share {}
+    &-share {
+    }
 
     &-rv {
         .star-rating-num {
@@ -214,7 +236,6 @@
                 border-right: 0.1rem solid #878787;
                 margin-right: 1.6rem;
                 padding-right: 1.6rem;
-
             }
         }
     }
@@ -283,7 +304,6 @@
             @include max(650px) {
                 font-size: 1.4rem;
             }
-
         }
 
         &-ct {
@@ -317,8 +337,15 @@
     }
 
     &-ct {
-        background: #F5F5F5;
+        background: #f5f5f5;
         padding: 5.6rem 0;
+
+        .img-list{
+            @media only screen and (max-width:1230px){
+                flex-wrap: wrap;
+
+            }
+        }
     }
 
     &-left {
@@ -372,7 +399,7 @@
         @include flex;
         align-items: center;
         padding: 0.6rem 1.6rem;
-        background: #FFFFFF;
+        background: #ffffff;
         border-radius: 50rem;
         cursor: pointer;
         line-height: 1;
