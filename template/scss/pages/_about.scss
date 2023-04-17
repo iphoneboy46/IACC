@@ -584,13 +584,22 @@
 }
 
 .about-service {
-    padding-top: 2.3rem;
+    padding-top: 2.4rem;
+    padding-bottom: 6.4rem;
+
+    @include max(1201px) {
+        padding:  2.4rem 0 4rem;
+    }
 
     &-con {
         align-items: center;
 
         &-left {
             width: calc(5 * 100% / 12);
+
+            @include max(600px) {
+                width: 90%;
+            }
 
             .img-item {
                 width: 100%;

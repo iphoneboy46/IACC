@@ -269,6 +269,7 @@
             min-width: auto;
         }
     }
+
     .btn-inner {
         @include max(600px) {
             padding: 0.8rem 1rem 0.75rem;
@@ -366,12 +367,23 @@
         padding-bottom: 16.4rem;
         margin-bottom: -10rem;
 
-        &::before, &::after {
+        @include max(800px) {
+            margin-bottom: 0;
+            padding: 4rem 0;
+        }
+
+        &::before,
+        &::after {
             bottom: -3.2rem;
 
             @include max(1300px) {
                 bottom: -7rem;
                 width: 16rem;
+            }
+
+            @include max(800px) {
+                bottom: -15rem;
+                width: 5rem;
             }
         }
     }
@@ -431,7 +443,7 @@
             margin-bottom: 0.8rem;
 
             @include max(600px) {
-               font-size: 1.5rem;
+                font-size: 1.5rem;
             }
         }
 
@@ -439,7 +451,7 @@
             font-weight: 500;
             color: #595959;
 
-            @include max(600px)  {
+            @include max(600px) {
                 font-size: 1.4rem;
             }
         }

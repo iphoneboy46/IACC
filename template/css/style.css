@@ -12376,6 +12376,12 @@ button[aria-label="Toggle autoplay"] {
   padding-bottom: 16.4rem;
   margin-bottom: -10rem;
 }
+@media screen and (max-width: 800px) {
+  .ser.other {
+    margin-bottom: 0;
+    padding: 4rem 0;
+  }
+}
 .ser.other::before, .ser.other::after {
   bottom: -3.2rem;
 }
@@ -12383,6 +12389,12 @@ button[aria-label="Toggle autoplay"] {
   .ser.other::before, .ser.other::after {
     bottom: -7rem;
     width: 16rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  .ser.other::before, .ser.other::after {
+    bottom: -15rem;
+    width: 5rem;
   }
 }
 @media screen and (max-width: 600px) {
@@ -13724,13 +13736,24 @@ button[aria-label="Toggle autoplay"] {
 }
 
 .about-service {
-  padding-top: 2.3rem;
+  padding-top: 2.4rem;
+  padding-bottom: 6.4rem;
+}
+@media screen and (max-width: 1201px) {
+  .about-service {
+    padding: 2.4rem 0 4rem;
+  }
 }
 .about-service-con {
   align-items: center;
 }
 .about-service-con-left {
   width: 41.6666666667%;
+}
+@media screen and (max-width: 600px) {
+  .about-service-con-left {
+    width: 90%;
+  }
 }
 .about-service-con-left .img-item {
   width: 100%;
@@ -14941,6 +14964,11 @@ table.table-cus td a {
   }
 }
 
+.uinf-wrap {
+  max-width: 73.6rem;
+  margin: 0 auto;
+  padding-top: 3.2rem;
+}
 .uinf-avt {
   width: 10.2rem;
   height: 10.2rem;

@@ -1010,6 +1010,12 @@ table.table-cus {
 }
 
 .uinf {
+    &-wrap {
+        max-width: 73.6rem;
+        margin: 0 auto;
+        padding-top: 3.2rem;
+    }
+
     &-avt {
         width: 10.2rem;
         height: 10.2rem;
