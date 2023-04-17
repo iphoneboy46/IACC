@@ -113,6 +113,74 @@ export default function SwiperModule() {
         }
       });
     }
+
+    const proDt = document.querySelector(".prodt-slide");
+
+    if (proDt) {
+      const thumvbs = proDt.querySelector(".prodt-thumbs");
+      const main = proDt.querySelector(".prodt-main");
+
+      var slthumbs = new Swiper(thumvbs.querySelector(".swiper"), {
+        slidesPerView: 4,
+        spaceBetween: 8,
+        lazy: !0,
+        pagination: {
+          el: thumvbs.querySelector(".swiper-pagination"),
+          clickable: !0,
+        },
+        navigation: {
+          nextEl: thumvbs.querySelector(".next"),
+          prevEl: thumvbs.querySelector(".prev"),
+        },
+        speed: 1000,
+        breakpoints: {
+          801:{
+            spaceBetween: 16,
+          }
+        }
+      });
+
+      var slmain = new Swiper(main.querySelector(".swiper"), {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        loopedSlides: 4,
+        lazy: !0,
+        watchSlidesVisibility: !0,
+        watchSlidesProgress: !0,
+        speed: 1000,
+        effect: "coverflow",
+        parallax: !0,
+        coverflowEffect: {
+          rotate: 0.05,
+          depth: 0,
+          stretch: 0,
+          modifier: 1,
+          slideShadows: !1,
+        },
+        on: {
+          init: function () {
+            let swiper = this;
+            for (let i = 0; i < swiper.slides.length; i++) {
+              const slide = swiper.slides[i];
+              const bannerMedia = slide.querySelector(".prodt-img");
+              if (bannerMedia) {
+                bannerMedia.setAttribute(
+                  "data-swiper-parallax",
+                  0.9 * swiper.width
+                );
+                bannerMedia.setAttribute("data-swiper-paralalx-opacity", 0.1);
+              }
+            }
+          },
+          resize: function () {
+            this.update();
+          },
+        },
+        thumbs: {
+          swiper: slthumbs,
+        },
+      });
+    }
   } catch (error) {
     console.log(error);
   }

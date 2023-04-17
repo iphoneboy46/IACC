@@ -127,6 +127,11 @@
 
 .qty {
     width: fit-content;
+    background: #F5F5F5;
+    border-radius: 10rem;
+    height: 4.8rem;
+    padding: 1.2rem;
+    align-items: center;
 
     .icon {
         width: 2.4rem;
@@ -150,7 +155,7 @@
 
     .amount {
         text-align: center;
-        width: 4rem;
+        width: 5.5rem;
         font-weight: 500;
         padding: 0 0.5rem;
 
