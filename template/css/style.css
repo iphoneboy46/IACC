@@ -2140,7 +2140,7 @@ iframe {
 }
 .footer-sign {
   padding-bottom: 3.2rem;
-  border-bottom: 0.1rem solid #E6E6E6;
+  border-bottom: 0.1rem solid #e6e6e6;
 }
 .footer-sign-wrap {
   margin-left: auto;
@@ -2165,6 +2165,20 @@ iframe {
   margin-bottom: 0;
   display: flex;
   align-items: center;
+  color: #f97b55;
+  font-weight: 600;
+  font-size: 2.4rem;
+  line-height: 1.3;
+}
+@media only screen and (max-width: 1200px) {
+  .footer-sign .footer-title {
+    font-size: 2rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .footer-sign .footer-title {
+    font-size: 1.7rem;
+  }
 }
 @media screen and (max-width: 800px) {
   .footer-sign .footer-title {
@@ -2259,13 +2273,23 @@ iframe {
   width: 100%;
 }
 .footer-box-item .menu-item a {
-  opacity: 0.7;
   font-size: 1.4rem;
   line-height: 1.4;
   font-weight: 400;
 }
 .footer-sc {
   padding-bottom: 1rem;
+}
+.footer-item a {
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.4;
+  color: #1a1a1a;
+}
+@media (min-width: 1201px) {
+  .footer-item a:hover {
+    color: #f97b55;
+  }
 }
 .footer-item:not(:last-child) {
   margin-bottom: var(--pdGen);
@@ -2289,13 +2313,15 @@ iframe {
   background: rgba(117, 69, 155, 0.15);
 }
 .footer-link .text {
-  opacity: 0.7;
   font-size: 1.4rem;
   line-height: 1.4;
 }
 .footer-title {
-  font-weight: 700;
   margin-bottom: var(--pdGen2);
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 1.4;
+  color: #f97b55;
 }
 .footer-bottom {
   border-top: 0.1rem solid rgba(118, 49, 120, 0.2);
@@ -2318,6 +2344,11 @@ iframe {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.3;
+  color: #1a1a1a;
+  text-transform: capitalize;
 }
 .footer-copyright .img {
   margin-left: 0.8rem;
@@ -2357,14 +2388,14 @@ iframe {
   }
 }
 .footer-input::placeholder {
-  font-weight: 500;
-  opacity: 0.5;
-  font-size: 1.4rem;
-  line-height: 1.2;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: #1a1a1a;
 }
 .footer-btn {
   border-radius: 50%;
-  background: linear-gradient(0deg, #0EB252 47.37%, #72C595 102.98%);
+  background: linear-gradient(0deg, #0eb252 47.37%, #72c595 102.98%);
   color: white;
 }
 .footer-btn .btn-inner {

@@ -4,7 +4,6 @@
     padding: 8rem 0;
     position: relative;
     background: white;
-
     @include max(1201px) {
       padding: 4rem 0;
     }
@@ -17,28 +16,12 @@
     &-wrap {
       margin-left: auto;
       width: calc(100% - 31.6rem);
-
-      @include max(1201px) {
-        margin-right: auto;
-      }
-
-      @include max(1024px) {
-        width: calc(100% - 16rem);
-      }
-
-      @include max(800px) {
-        width: 100%;
-      }
     }
 
     .footer-title {
       margin-bottom: 0;
       display: flex;
       align-items: center;
-
-      @include max(800px) {
-        width: 100%;
-      }
       color: $color-pri;
       font-weight: 600;
       @include fz-24;
@@ -102,10 +85,6 @@
   &-box {
     padding-top: 4.8rem;
 
-    @include max(800px) {
-      padding-top: 2rem;
-    }
-
     &-item {
       flex: 1;
 
@@ -128,7 +107,7 @@
         width: 100%;
 
         a {
-          
+          opacity: 0.7;
           font-size: 1.4rem;
           line-height: 1.4;
           font-weight: 400;
@@ -175,7 +154,7 @@
     }
 
     .text {
-     
+      opacity: 0.7;
       font-size: 1.4rem;
       line-height: 1.4;
     }
@@ -220,10 +199,6 @@
     flex: 1;
     margin-left: 4rem;
 
-    @include max(800px) {
-      margin-left: 0;
-    }
-
     &-wrap {
       @include flex;
       align-items: center;
@@ -233,18 +208,11 @@
   &-input {
     flex: 1;
     height: 4.4rem;
-    padding: 1.2rem 0 1.1rem;
+    // background: rgba($color: #363639, $alpha: 0.1);
+    padding: 1.2rem 1.6rem 1.1rem;
+    padding-right: 4rem;
     margin-right: 2.4rem;
     border-bottom: 1px solid rgba(26, 26, 26, 0.2);
-    transition: all 0.3s ease-in-out;
-
-    &:focus {
-      border-bottom: 1px solid $color-third;
-    }
-
-    @include max(600px) {
-      margin-right: 0;
-    }
 
     &::placeholder {
       font-weight: 400;
@@ -310,17 +278,8 @@
 
   &.bodder {
     background: $color-second;
-
     .footer-inner {
       border-radius: 12rem 12rem 0px 0px;
-
-      @include max(1024px) {
-        border-radius: 8rem 8rem 0px 0px;
-      }
-
-      @include max(800px) {
-        border-radius: 0;
-    }
     }
   }
 }
