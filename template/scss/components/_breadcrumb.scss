@@ -15,7 +15,7 @@
 
     &-item {
         position: relative;
-        // padding: 0 1.6rem;
+        padding: 0 1rem;
         height: 2.4rem;
         @include mid-flex;
 
@@ -26,16 +26,18 @@
             }
         }
 
+        &:last-child{
+            padding: 0 0.05rem;
+        }
+
         &:not(:last-child) {
             &::before {
                 position: absolute;
-                content: "";
-                background: url("../assets/images/arrow-breadcrumb.svg");
-                background-size: contain;
-                background-repeat: no-repeat;
+                content: "/";
+                color: white;
                 width: 1.6rem;
                 height: 1.6rem;
-                top: 50%;
+                top: 35%;
                 right: 0;
                 transform: translate(50%, -50%);
             }
