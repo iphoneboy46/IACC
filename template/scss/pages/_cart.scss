@@ -13,9 +13,6 @@
         padding: 3.6rem;
     }
 
-    @media only screen and (max-width: 1024px) {
-        padding: 3.6rem;
-    }
 
     &-top {
         border-bottom: 0.05rem solid rgba($color: #878787, $alpha: 0.25);
@@ -138,33 +135,41 @@
 
     }
 
-}
+    .carti-con {
+        max-width: 104.4rem;
+        overflow: auto;
 
-.carti-con {
-    max-width: 104.4rem;
-    overflow: auto;
+        &::-webkit-scrollbar {
+            height: 0.5rem;
 
-    &::-webkit-scrollbar {
-        height: 0.5rem;
+            @media only screen and (max-width: 1024px) {
+                overflow: auto;
+                max-width: 104.4rem;
 
-        @media only screen and (max-width: 1024px) {
-            overflow: auto;
-            max-width: 104.4rem;
+                &::-webkit-scrollbar {
+                    height: 0.5rem;
+                }
+            }
+        }
 
-            &::-webkit-scrollbar {
-                height: 0.5rem;
+        &-tb {
+            min-width: 104.4rem;
+
+            @media only screen and (max-width: 1024px) {
+                min-width: 104.4rem;
             }
         }
     }
 
     &-tb {
-        min-width: 104.4rem;
-
         @media only screen and (max-width: 1024px) {
-            min-width: 104.4rem;
+            min-width: 88rem;
         }
     }
+
 }
+
+
 
 .billdlvr {
     padding: 4rem 7.8rem;
@@ -234,6 +239,47 @@
     margin-left: auto;
     margin-right: auto;
 
+    @include max(1201px) {
+        width: 100%;
+    }
+
+    @include max(1024px) {
+        padding: 7.8rem 6.4rem 4rem;
+    }
+
+    @include max(800px) {
+        margin-top: 6.4rem;
+        padding: 4.8rem 2.4rem 3.2rem;
+    }
+
+    @include max(600px) {
+        margin-top: 6.4rem;
+        padding: 4.8rem 1.6rem 2.4rem;
+    }
+
+    &-desc {
+        max-width: 47.8rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &-top {
+        
+    }
+
+    &-left {
+        @include max(600px) {
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+    }
+
+    &-right {
+        @include max(600px) {
+            width: 100%;
+        }
+    }
+
     &-icon {
         width: 15.4rem;
         height: 15.4rem;
@@ -245,10 +291,39 @@
         transform: translate(-50%, - 8.8rem);
         background: white;
 
+        @include max(800px) {
+            width: 10rem;
+            height: 10rem;
+            padding-top: 1.2rem;
+            transform: translate(-50%, - 5.6rem);
+        }
+
         img {
             width: 8rem;
             height: 8rem;
             margin: auto;
+
+            @include max(800px) {
+                width: 6.4rem;
+                height: 6.4rem;
+            }
+        }
+    }
+
+    &-bottom {
+        .btn {
+            @include max(600px) {
+                margin-bottom: 0.8rem;
+            }
+
+            &:not(:last-child) {
+                margin-right: var(--pdGen2);
+            }
+        }
+
+        &-txt {
+            margin-top: 0.8rem;
+            margin-bottom: 0.8rem;
         }
     }
 
@@ -553,6 +628,10 @@
 
 .transf {
     padding-left: 8.3rem;
+
+    @include max(1024px) {
+        padding-left: 0;
+    }
 
     &-tit {
         margin-bottom: 1.4rem;
