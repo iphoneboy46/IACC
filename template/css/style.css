@@ -13416,6 +13416,11 @@ button[aria-label="Toggle autoplay"] {
     flex-direction: column-reverse;
   }
 }
+@media only screen and (max-width: 800px) {
+  .about-tiktok {
+    padding-top: 4rem;
+  }
+}
 
 .about-service {
   padding-top: 2.3rem;

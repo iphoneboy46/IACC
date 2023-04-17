@@ -546,6 +546,10 @@
             flex-direction: column-reverse;
         }
     }
+
+    @media only screen and (max-width:800px){
+        padding-top: 4rem;
+    }
 }
 
 .about-service {
