@@ -15208,10 +15208,22 @@ table.table-cus td a {
 .scsec .billdlvr-list {
   border-style: dashed;
 }
+.scsec .billdlvr-item-img {
+  width: 7.2rem;
+  height: 7.2rem;
+}
+.scsec .billdlvr-item-link {
+  font-size: 1.4rem;
+  margin-bottom: 0.4rem;
+  line-height: 1.4;
+}
 
 .billi {
   padding-bottom: 0.8rem;
   border-bottom: 0.1rem dashed rgba(0, 0, 0, 0.2);
+}
+.billi-item-tit {
+  margin-bottom: 0.4rem;
 }
 
 .billt-item {
@@ -15466,6 +15478,22 @@ table.table-cus td a {
   width: 100%;
   display: flex;
   justify-content: flex-end;
+}
+
+.transf {
+  padding-left: 8.3rem;
+}
+.transf-tit {
+  margin-bottom: 1.4rem;
+}
+.transf-box {
+  background: #F5F5F5;
+  border-radius: 1.6rem;
+  padding: 4.2rem 2.4rem;
+  margin-bottom: 1.6rem;
+}
+.transf-txt:not(:last-child) {
+  margin-bottom: 0.8rem;
 }
 
 :root {
