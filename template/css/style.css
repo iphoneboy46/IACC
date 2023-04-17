@@ -15033,6 +15033,11 @@ table.table-cus td a {
   border-radius: 1.6rem;
   padding: 3.6rem 7.8rem;
 }
+@media only screen and (max-width: 1024px) {
+  .carti {
+    padding: 3.6rem;
+  }
+}
 .carti-row {
   display: -webkit-flex;
   display: -moz-flex;
@@ -15090,8 +15095,34 @@ table.table-cus td a {
   justify-content: space-between;
   padding-top: 3.2rem;
 }
+@media only screen and (max-width: 500px) {
+  .carti-ft .carti-row {
+    flex-wrap: wrap;
+  }
+  .carti-ft .carti-row .text {
+    width: 50%;
+  }
+  .carti-ft .carti-row .carti-price {
+    width: 50%;
+    margin-right: 0;
+    text-align: end;
+  }
+  .carti-ft .carti-row .btn {
+    margin: 2rem auto 0;
+  }
+}
 .carti-price {
   margin-right: 6.8rem;
+}
+.carti .carti-con {
+  max-width: 104.4rem;
+  overflow: auto;
+}
+.carti .carti-con::-webkit-scrollbar {
+  height: 0.5rem;
+}
+.carti-tb {
+  min-width: 104.4rem;
 }
 
 .billdlvr {
