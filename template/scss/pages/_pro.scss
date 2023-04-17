@@ -113,7 +113,7 @@
             color: $color-pri;
         }
 
-        @media only screen and (max-width:800px){
+        @media only screen and (max-width: 800px) {
             padding-bottom: 2rem;
         }
     }
@@ -134,7 +134,7 @@
         }
     }
 
-    @media only screen and (max-width:800px){
+    @media only screen and (max-width: 800px) {
         padding: 2rem 0;
     }
 }
@@ -377,19 +377,18 @@
                         @media only screen and (max-width: 1024px) {
                             width: 100%;
                         }
-                       
                     }
                 }
             }
 
-            .btn{
-                @media only screen and (max-width:800px){
-                   margin-top: 3rem;
+            .btn {
+                @media only screen and (max-width: 800px) {
+                    margin-top: 3rem;
                 }
             }
         }
 
-        @media only screen and (max-width:800px){
+        @media only screen and (max-width: 800px) {
             padding: 1.6rem 0;
         }
     }
@@ -402,10 +401,9 @@
         flex: 1;
 
         .rvcheck-list {
-            @media only screen and (max-width:600px){
+            @media only screen and (max-width: 600px) {
                 justify-content: center;
             }
-           
         }
 
         .proInfo-form {
@@ -419,7 +417,11 @@
                     padding: 1.4rem 2rem;
                     width: 100%;
                     transition: all 0.3s linear;
-                    &:focus{
+                    font-weight: 400;
+                   @include fz-14;
+                    line-height: 1.4;
+                    color: #878787;
+                    &:focus {
                         border-color: $color-third;
                     }
                 }
@@ -432,7 +434,7 @@
                     padding: 1.4rem 2rem;
                     width: 100%;
                     transition: all 0.3s linear;
-                    &:focus{
+                    &:focus {
                         border-color: $color-third;
                     }
                 }
@@ -486,7 +488,7 @@
             margin: 0 !important;
         }
 
-        @media only screen and (max-width:600px){
+        @media only screen and (max-width: 600px) {
             width: 5rem;
             height: 5rem;
         }
@@ -507,14 +509,13 @@
         }
 
         @media only screen and (max-width: 600px) {
-           
             margin-bottom: 0rem;
-         }
+        }
     }
 
-    &-ct{
+    &-ct {
         @media only screen and (max-width: 600px) {
-           font-size: 1.2rem !important;
+            font-size: 1.2rem !important;
         }
     }
 }

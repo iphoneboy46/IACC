@@ -5309,17 +5309,27 @@ body:has(.seclect2-seach-show) .select2-container .select2-dropdown .select2-res
 }
 .bn-lg .bn-title {
   font-weight: 600;
-  font-size: 4rem;
-  line-height: 1.2;
+  font-size: 8rem;
+  line-height: 1.4;
+  color: white;
+  text-transform: none;
+  margin-bottom: 4rem;
 }
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1024px) {
   .bn-lg .bn-title {
-    font-size: 3.5rem;
+    margin-bottom: 2rem;
   }
 }
 @media only screen and (max-width: 800px) {
   .bn-lg .bn-title {
-    font-size: 2.7rem;
+    margin-bottom: 2rem;
+    font-size: 6rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .bn-lg .bn-title {
+    margin-bottom: 2rem;
+    font-size: 3rem;
   }
 }
 .bn-lg .bn-img {
@@ -5340,6 +5350,42 @@ body:has(.seclect2-seach-show) .select2-container .select2-dropdown .select2-res
 }
 .bn-lg .breadcrumbs-list {
   justify-content: center;
+}
+.bn-ct .bn-current {
+  font-weight: 600;
+  font-size: 4rem;
+  line-height: 1.2;
+  color: white;
+}
+@media only screen and (max-width: 1200px) {
+  .bn-ct .bn-current {
+    font-size: 3.5rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .bn-ct .bn-current {
+    font-size: 2.7rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .bn-ct .bn-current {
+    font-size: 2rem;
+  }
+}
+.bn .breadcrumbs-list .breadcrumbs-item a {
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 13;
+}
+@media only screen and (max-width: 1200px) {
+  .bn .breadcrumbs-list .breadcrumbs-item a {
+    font-size: 1.6rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .bn .breadcrumbs-list .breadcrumbs-item a {
+    font-size: 1.5rem;
+  }
 }
 .bn .breadcrumbs-list .breadcrumbs-item.current a {
   color: #f97b55 !important;
@@ -12895,6 +12941,10 @@ button[aria-label="Toggle autoplay"] {
   padding: 1.4rem 2rem;
   width: 100%;
   transition: all 0.3s linear;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.4;
+  color: #878787;
 }
 .proInfo-right .proInfo-form .proInfo-control .proInfo-input:focus {
   border-color: #ff3c79;
