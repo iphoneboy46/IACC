@@ -13253,6 +13253,12 @@ button[aria-label="Toggle autoplay"] {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.3s linear;
+}
+@media (min-width: 1201px) {
+  .about-tiktok-con-left .box-img .play:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
 }
 .about-tiktok-con-left .box-img .play img {
   width: 7.2rem;
