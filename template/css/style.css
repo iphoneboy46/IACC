@@ -15725,7 +15725,7 @@ table.table-cus td a {
 .cartsec table {
   display: block !important;
   padding-top: 2rem !important;
-  border-top: 0.1rem solid rgba(0, 0, 0, 0.2) !important;
+  border-top: 0.05rem solid rgba(0, 0, 0, 0.2) !important;
 }
 .cartsec table td {
   border-top: none !important;
