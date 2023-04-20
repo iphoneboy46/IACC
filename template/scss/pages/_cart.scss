@@ -1,5 +1,5 @@
 .cartsec {
-    background: #F5F5F5;
+    background: #f5f5f5;
     padding: 6.4rem 0;
     overflow: hidden;
 
@@ -27,8 +27,8 @@
     .woocommerce-billing-fields__field-wrapper {
         @include flex;
         flex-wrap: wrap;
-        margin-left: calc(var(--pdGen)*-1);
-        margin-right: calc(var(--pdGen)*-1);
+        margin-left: calc(var(--pdGen) * -1);
+        margin-right: calc(var(--pdGen) * -1);
     }
 
     .cartsec-wrap {
@@ -62,7 +62,7 @@
             }
 
             input {
-                background: #FFFFFF;
+                background: #ffffff;
                 border: 0.1rem solid rgba(0, 0, 0, 0.15);
                 border-radius: 50rem;
                 height: 4.8rem !important;
@@ -113,7 +113,7 @@
 
     .mona-cartsec-wrap {
         padding: 4rem 7.8rem;
-        background: #FFFFFF;
+        background: #ffffff;
         border: 0.1rem solid rgba(0, 0, 0, 0.15);
         border-radius: 1.6rem;
 
@@ -153,8 +153,6 @@
         td {
             border-top: none !important;
             padding: var(--pdGen) 0 !important;
-
-
         }
 
         tbody {
@@ -257,6 +255,21 @@
         padding: 0;
     }
 
+    form.checkout_coupon {
+        .form-row {
+            input.input-text {
+                width: 100%;
+               background-color: white;
+                @include fz-14;
+                border: solid 0.1rem #e1e1e1;
+                padding:  2rem;
+                border-radius:50rem;
+               line-height: 1.5;
+                outline: 0;
+                transition: all 0.3s ease-in-out;
+            }
+        }
+    }
 }
 
 .woocommerce {
@@ -289,12 +302,12 @@
 }
 
 .carti {
-    background: #FFFFFF;
+    background: #ffffff;
     border: 0.1rem solid rgba(0, 0, 0, 0.15);
     border-radius: 1.6rem;
     padding: 3.6rem 7.8rem;
 
-    @media only screen and (max-width:1024px) {
+    @media only screen and (max-width: 1024px) {
         padding: 3.6rem;
     }
 
@@ -305,7 +318,6 @@
     @include max(430px) {
         padding: 1.2rem;
     }
-
 
     &-top {
         // border-bottom: 0.05rem solid rgba($color: #878787, $alpha: 0.25);
@@ -352,9 +364,7 @@
                 width: 20%;
             }
 
-
             max-width: 28.2rem;
-
         }
 
         &:nth-child(3) {
@@ -439,8 +449,6 @@
 
     &-price {
         margin-right: 6.8rem;
-
-
     }
 
     .carti-con {
@@ -489,7 +497,7 @@
                 display: block;
 
                 @include max(768px) {
-                    display: none
+                    display: none;
                 }
 
                 tr {
@@ -499,8 +507,6 @@
                 th {
                     padding-bottom: 0.8rem !important;
                 }
-
-
             }
 
             tr {
@@ -529,11 +535,8 @@
                 @include max(600px) {
                     width: 100%;
 
-
                     &:not(:last-child) {
                         margin-bottom: 1rem;
-
-
                     }
                 }
 
@@ -580,7 +583,6 @@
                 padding-right: var(--pdGen2) !important;
                 display: table-cell;
 
-
                 @include max(1024px) {
                     padding: 2.4rem 0 !important;
                 }
@@ -600,7 +602,7 @@
                     text-align: start;
 
                     &::before {
-                        display: none
+                        display: none;
                     }
 
                     @include max(1024px) {
@@ -629,7 +631,6 @@
                             display: none;
                         }
                     }
-
                 }
 
                 &:nth-child(3) {
@@ -685,7 +686,7 @@
 
                 @include max(800px) {
                     font-size: 1.4rem;
-                    font-weight: 600
+                    font-weight: 600;
                 }
             }
 
@@ -735,7 +736,6 @@
                     background: transparent;
                 }
             }
-
         }
 
         .wc-proceed-to-checkout {
@@ -743,13 +743,13 @@
         }
     }
 
-    table.shop_table {}
-
+    table.shop_table {
+    }
 }
 
 .billdlvr {
     padding: 4rem 7.8rem;
-    background: #FFFFFF;
+    background: #ffffff;
     border: 0.1rem solid rgba(0, 0, 0, 0.15);
     border-radius: 1.6rem;
 
@@ -815,7 +815,6 @@
             margin-bottom: 0.8rem;
             @include lc(2);
         }
-
     }
 
     &-bill {
@@ -874,7 +873,8 @@
         margin-right: auto;
     }
 
-    &-top {}
+    &-top {
+    }
 
     &-left {
         @include max(600px) {
@@ -897,14 +897,14 @@
         border-radius: 50%;
         left: 50%;
         top: 0;
-        transform: translate(-50%, - 8.8rem);
+        transform: translate(-50%, -8.8rem);
         background: white;
 
         @include max(800px) {
             width: 10rem;
             height: 10rem;
             padding-top: 1.2rem;
-            transform: translate(-50%, - 5.6rem);
+            transform: translate(-50%, -5.6rem);
         }
 
         img {
@@ -1217,13 +1217,11 @@
 }
 
 .info-right {
-    background-color: $color-second;
-    border: 0.05rem solid rgba(0, 0, 0, 0.2);
-    border-radius: 1.6rem;
-
     &-con {
         padding: 4.7rem 7.8rem 3.9rem;
-
+        background-color: $color-second;
+        border: 0.05rem solid rgba(0, 0, 0, 0.2);
+        border-radius: 1.6rem;
         .item-con {
             display: flex;
             justify-content: space-between;
@@ -1278,7 +1276,7 @@
     }
 
     &-box {
-        background: #F5F5F5;
+        background: #f5f5f5;
         border-radius: 1.6rem;
         padding: 4.2rem 2.4rem;
         margin-bottom: 1.6rem;
