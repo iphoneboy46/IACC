@@ -187,18 +187,6 @@
     .breadcrumbs-list {
       justify-content: center;
     }
-
-    @media only screen and (max-width:1200px) {
-      padding: 16rem 0 16rem;
-    }
-
-    @media only screen and (max-width:1024px) {
-      padding: 10rem 0 10rem;
-    }
-
-    @media only screen and (max-width:600px) {
-      padding: 6rem 0 6rem;
-    }
   }
 
   &-ct {
