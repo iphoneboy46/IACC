@@ -113,10 +113,13 @@ export default function PopupModule() {
       item.addEventListener("click", (e) => {
         e.preventDefault();
         const idString = item.getAttribute("data-popup");
-        console.log(idString);
+
         if (popup) {
           popup.forEach((item) => {
             if (item.getAttribute("data-popup-id") == idString) {
+              popup.forEach((pu)=> {
+                pu.classList.remove("open")
+              })
               $("body").css("overflow", "hidden");
               item.classList.add("open");
             }

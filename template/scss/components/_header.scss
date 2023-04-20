@@ -191,6 +191,12 @@
 
       .menu-nav>.menu-list>.menu-item.dropdown>a>i {
         pointer-events: unset;
+
+        &.active {
+
+          transform: translate(10%, -50%) rotate(-180deg);
+
+        }
       }
     }
   }
@@ -209,9 +215,7 @@
     }
   }
 
-  .header-user {
-
-  }
+  .header-user {}
 
   &-manipulation {
     flex-wrap: nowrap;
@@ -479,7 +483,9 @@
   &-btn {
     @include flex;
     align-items: center;
-    border: 0.1rem solid $color-pri;
+    box-shadow: 0px 0px 0px 0.1rem $color-pri inset;
+    -webkit-box-shadow: 0px 0px 0px 0.1rem $color-pri inset;
+    -moz-box-shadow: 0px 0px 0px 0.1rem $color-pri inset;
     border-radius: 1.3rem;
     overflow: hidden;
     cursor: pointer;
@@ -497,6 +503,17 @@
         pointer-events: unset;
         opacity: 1;
         visibility: visible;
+      }
+    }
+
+    &.active {
+      @include max(1201px) {
+        .header-modal {
+          transform: translateY(0);
+          pointer-events: unset;
+          opacity: 1;
+          visibility: visible;
+        }
       }
     }
   }

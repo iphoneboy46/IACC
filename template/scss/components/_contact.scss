@@ -2,8 +2,9 @@
     background: $color-second;
     border-radius: 12rem 12rem 0px 0px;
     padding-top: 20.2rem;
-    padding-bottom: 4.6rem;
+    padding-bottom: 16.6rem;
     position: relative;
+    margin-bottom: -12rem;
     z-index: 10;
 
     @include max(1024px) {

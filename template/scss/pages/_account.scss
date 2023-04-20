@@ -52,9 +52,7 @@
             width: 100%;
 
             .account-main {
-                padding: 2.7rem 0 3.3rem;
-
-                padding-left: 1rem;
+                padding: 2.7rem 1rem 3.3rem;
 
                 &-title {
                     max-width: 73.6rem;
@@ -1057,10 +1055,24 @@ table.table-cus {
     &-col {
         &:nth-child(1) {
             width: calc(100% * 3 / 7);
+            color: #878787;
+
+            @include max(450px) {
+                width: 37%;
+                font-size: 1.4rem;
+            }
         }
 
         &:nth-child(2) {
             flex: 1;
+        }
+    }
+
+    &-edit {
+        .uinf-col {
+            @include flex;
+            align-items: center;
+            flex-wrap: wrap;
         }
     }
 }
@@ -1074,21 +1086,44 @@ table.table-cus {
         border-bottom: 0.06rem solid transparent;
         width: 100%;
         padding-right: 2rem;
+        font-size: 1.6rem;
     }
 
     &-icon {
         width: 1.8rem;
         height: 1.8rem;
         position: absolute;
-        top: 50%;
         right: 0;
-        transform: translateY(-50%);
+        bottom: 0.4rem;
         cursor: pointer;
+        @include mid-flex;
         display: none;
+
+        i {
+            color: #878787;
+        }
+
+        &.hide-pass, &.show-pass {
+            bottom: 0.7rem;
+        }
 
     }
 
+    .uinf-tb {
+        pointer-events: none;
+    }
+
+    .edit-show {
+        display: none;
+    }
+
     &.active {
+
+        .uinf-tb {
+            pointer-events: unset;
+        }
+
+
         .form-edit {
             &-input {
                 border-bottom: 0.06rem solid rgba($color: #878787, $alpha: 0.25);
@@ -1099,5 +1134,29 @@ table.table-cus {
             }
         }
 
+        .form-edit-btn {
+            display: none;
+        }
+
+        .edit-none {
+            display: none;
+        }
+
+        .edit-show {
+            display: flex;
+        }
+
+        .show-pass {
+            display: none;
+        }
+
+    }
+}
+
+.gender {
+    &-item {
+        &:not(:last-child) {
+            margin-right: var(--pdGen2);
+        }
     }
 }

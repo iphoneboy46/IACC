@@ -99,6 +99,30 @@
         left: 0;
       }
     }
+
+
+    @include hover {
+
+      a {
+        color: $color-third;
+
+      }
+
+      .icon {
+        color: $color-third;
+      }
+    }
+
+    &.show {
+      a {
+        color: $color-third;
+
+      }
+
+      .icon {
+        color: $color-third;
+      }
+    }
   }
 
   &-list {

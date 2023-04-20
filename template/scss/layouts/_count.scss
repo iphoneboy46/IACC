@@ -110,9 +110,13 @@
 .woocommerce .quantity input.qty {
   border: none;
   border-radius: unset;
-  width: 6.4rem;
+  width: 5.5rem;
   padding: 0 0.5rem;
   -moz-appearance: textfield;
+
+  @include max(800px) {
+    width: 4rem;
+  }
 
   &::-webkit-outer-spin-button,
   &::-webkit-inner-spin-button {

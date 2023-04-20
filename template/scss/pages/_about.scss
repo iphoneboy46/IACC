@@ -309,6 +309,7 @@
 .about-tiktok {
     padding-top: 8rem;
     background-color: #F5F5F5;
+
     &-con {
         &-left {
             padding-right: 6rem;
@@ -486,7 +487,7 @@
             }
 
             .content {
-                .content-text {
+                p {
                     font-weight: 400;
                     @include fz-16;
                     line-height: 1.5;
@@ -578,7 +579,7 @@
         }
     }
 
-    @media only screen and (max-width:800px){
+    @media only screen and (max-width:800px) {
         padding-top: 4rem;
     }
 }
@@ -588,7 +589,7 @@
     padding-bottom: 6.4rem;
 
     @include max(1201px) {
-        padding:  2.4rem 0 4rem;
+        padding: 2.4rem 0 4rem;
     }
 
     &-con {
@@ -656,7 +657,7 @@
             }
 
             .content {
-                .content-text {
+                p {
                     font-weight: 400;
                     @include fz-16;
                     line-height: 1.5;

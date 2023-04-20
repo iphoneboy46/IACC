@@ -111,7 +111,7 @@
         }
 
         @include hover {
-            transform: translate(-40%, -50%) scale(1.1);
+            transform: translate(-50%, -50%) scale(1.1);
         }
 
         &-inner {
@@ -296,6 +296,20 @@
 
     &-right {
         flex: 1;
+
+        >.btn {
+            @include min(1025px) {
+                display: none;
+            }
+        }
+    }
+
+    &-wrap {
+        >.btn {
+            @include max(1024px) {
+                display: none;
+            }
+        }
     }
 
     &-side {
@@ -364,8 +378,8 @@
     background: #F5F5F5;
 
     &.other {
-        padding-bottom: 16.4rem;
-        margin-bottom: -10rem;
+        padding-bottom: 18.4rem;
+        margin-bottom: -12rem;
 
         @include max(800px) {
             margin-bottom: 0;
@@ -471,5 +485,38 @@
     .swiper-pagination {
         position: absolute;
         bottom: 2rem;
+    }
+}
+
+.sign-form {
+    .popup-main {
+        width: calc(100% - 3rem);
+        max-width: 123rem;
+        overflow: hidden;
+    }
+
+    .popup-wrapper {
+        padding: 0;
+    }
+
+    .popup-over {
+        overflow: hidden;
+        border-radius: 1.6rem;
+    }
+
+    .sign-up-con .left-img img {
+        border-radius: 0;
+    }
+
+    .sign-up-con .left-img {
+        border-radius: 0;
+    }
+
+    .left {
+        height: auto !important;
+    }
+
+    .sign-up-con {
+        align-items: unset;
     }
 }

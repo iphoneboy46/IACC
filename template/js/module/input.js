@@ -1,26 +1,34 @@
+import CheckModule from "./CheckModule.js";
+
 export default function inputForm() {
   try {
-    const inputPass = document.querySelector(".pass");
-    const show = document.querySelector(".hide-pass");
-    const hidden = document.querySelector(".show-pass");
+    const hideShowPass = () => {
+      const inputPass = document.querySelectorAll(".pass");
+      const show = document.querySelectorAll(".hide-pass");
+      const hidden = document.querySelectorAll(".show-pass");
 
-    if (show) {
-      show.addEventListener("click", () => {
-        console.log("asdas");
-        inputPass.type = "text";
-        hidden.style.display = "block";
-        show.style.display = "none";
-      });
-    }
+      if (inputPass) {
+        inputPass.forEach((ele, i) => {
+          if (show[i]) {
+            $(show[i]).click(() => {
+              ele.type = "text";
+              hidden[i].style.display = "block";
+              show[i].style.display = "none";
+            });
+          }
 
-    if (hidden) {
-      hidden.addEventListener("click", () => {
-        console.log("asdas");
-        inputPass.type = "password";
-        show.style.display = "block";
-        hidden.style.display = "none";
-      });
-    }
+          if (hidden[i]) {
+            $(hidden[i]).click(() => {
+              ele.type = "password";
+              show[i].style.display = "block";
+              hidden[i].style.display = "none";
+            });
+          }
+        });
+      }
+    };
+
+    hideShowPass()
 
     const showRe = document.querySelector(".re-hide-pass");
     const hiddenRe = document.querySelector(".re-show-pass");
@@ -52,29 +60,45 @@ export default function inputForm() {
     if (form) {
       form.forEach((ele, i) => {
         const btn = ele.querySelector(".form-edit-btn");
-        const inputList = ele.querySelectorAll("input");
-        const recheck = ele.querySelectorAll(".recheck-item")
+        const formct = ele.querySelectorAll(".form-edit-control");
+        const layoutBtn = ele.querySelector(".btn-list");
+        let btnhidden = ele.querySelector(".form-edit-btn-hidden");
+        const getBtnsm = btnhidden.cloneNode(true);
 
-        recheck.forEach((item) => {
-          item.preventDefault();
-        })
+        const removeBtn = () => {
+          let btnhiddeni = ele.querySelector(".form-edit-btn-hidden");
+          if (btnhiddeni) {
+            btnhiddeni.remove();
+          }
+        };
 
-        inputList.forEach((input, i) => {
-          input.disabled = true;
-        })
+        removeBtn();
 
-        btn.addEventListener("click", () => {
+        btn.addEventListener("click", (e) => {
+          e.preventDefault();
           ele.classList.add("active");
+
           if (ele.classList.contains("active")) {
             const control = ele.querySelectorAll(".form-edit-control");
+
+            layoutBtn.appendChild(getBtnsm);
+
+            getBtnsm.addEventListener("click", () => {
+              getBtnsm.submit();
+              ele.classList.remove("active");
+              removeBtn();
+            });
 
             control.forEach((ctEl, j) => {
               const edit = ctEl.querySelector(".form-edit-icon");
               const input = ctEl.querySelector(".form-edit-input");
-              input.removeAttribute("disabled");
-              edit.addEventListener("click", () => {
-                input.focus();
-              });
+
+              if (edit) {
+                input.removeAttribute("disabled");
+                edit.addEventListener("click", () => {
+                  input.focus();
+                });
+              }
             });
           }
         });
