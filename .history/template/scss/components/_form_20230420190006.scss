@@ -175,21 +175,17 @@
         }
 
 
-        // @include max(450px) {
-        //     right: 0;
-        //     transform: translateX(5rem);
-        //     top: calc(100% + 2rem);
-        // }
+        @include max(450px) {
+            right: 0;
+            transform: translateX(5rem);
+            top: calc(100% + 2rem);
+        }
 
         &.active {
             max-width: 32rem;
 
             @include max(450px) {
                 max-width: 26rem;
-            }
-
-            @include max(280px) {
-                max-width: 20rem !important;
             }
         }
 

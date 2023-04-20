@@ -187,10 +187,6 @@
             @include max(450px) {
                 max-width: 26rem;
             }
-
-            @include max(280px) {
-                max-width: 20rem !important;
-            }
         }
 
         .form {

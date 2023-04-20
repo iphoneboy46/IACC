@@ -3506,11 +3506,10 @@ body:has(.seclect2-seach-show) .select2-container .select2-dropdown .select2-res
   overflow: hidden;
   transition: all 0.5s;
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 800px) {
   .form-search {
-    right: 0;
-    transform: translateX(5rem);
-    top: calc(100% + 2rem);
+    top: 170%;
+    left: -150%;
   }
 }
 .form-search.active {
@@ -3519,6 +3518,11 @@ body:has(.seclect2-seach-show) .select2-container .select2-dropdown .select2-res
 @media screen and (max-width: 450px) {
   .form-search.active {
     max-width: 26rem;
+  }
+}
+@media screen and (max-width: 280px) {
+  .form-search.active {
+    max-width: 20rem !important;
   }
 }
 .form-search .form-wrap {
