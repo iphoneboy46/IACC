@@ -133,6 +133,10 @@
     padding: 1.2rem;
     align-items: center;
 
+    @include max(800px) {
+        height: 3.8rem;
+    }
+
     .icon {
         width: 2.4rem;
         height: 2.4rem;
@@ -158,6 +162,7 @@
         width: 5.5rem;
         font-weight: 500;
         padding: 0 0.5rem;
+        pointer-events: none;
 
     }
 }

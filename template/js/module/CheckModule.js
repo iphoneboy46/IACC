@@ -26,7 +26,14 @@ export default function CheckModule() {
 
       if (reCheckItem) {
         const input = reCheckItem.querySelector(".recheck-input");
+
         if (input.type == "radio") {
+          if (input.checked == true) {
+            input.checked = false;
+            reCheckItem.classList.remove("active");
+            return;
+          }
+
           reCheckItems.forEach((item) => {
             item.classList.remove("active");
           });
@@ -37,7 +44,6 @@ export default function CheckModule() {
           if (input.checked == true) {
             reCheckItem.classList.add("active");
           }
-          input.dispatchEvent(event);
         }
         if (input.type == "checkbox") {
           if (input.checked == true) {

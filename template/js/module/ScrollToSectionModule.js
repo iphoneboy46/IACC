@@ -31,4 +31,17 @@ export default function ScrollToSectionModule() {
       scrollToID(".des-scroll", 0);
     });
   }
+
+  const scroll = document.querySelector(".scrolld-btn");
+
+  if (scroll) {
+    const parent = scroll.parentElement
+
+    scroll.addEventListener("click", () => {
+      var topPos = $(parent).offset().top;
+    
+      // Scroll đến vị trí của phần tử parent
+      $('html, body').animate({scrollTop: topPos}, 500);
+    })
+  }
 }

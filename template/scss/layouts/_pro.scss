@@ -11,8 +11,15 @@
       padding-right: 0.3rem;
     }
 
+    @include max(340px) {
+      width: 100%;
+    }
+
     &-wrap {
       position: relative;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
     }
 
     &-img {
@@ -20,7 +27,6 @@
       overflow: hidden;
       background: linear-gradient(180deg, #EADEEC 0%, #ADC4ED 100%);
       border-radius: 0.8rem;
-      padding: 0.8rem 0 0;
 
       .img-inner {
         @include imgPd(1, 1);
@@ -49,6 +55,7 @@
       line-height: 1.3;
       text-align: center;
       color: $color-third;
+      margin-top: auto;
     }
 
     &-content {
@@ -58,10 +65,13 @@
       @include fz-18;
       line-height: 1.3;
       text-align: center;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
     }
 
     &-add {
-      position: absolute;
+      position: absolute !important;
       bottom: 0;
       right: 0;
       left: 0;
@@ -73,11 +83,25 @@
       transform: translateY(100%);
       transition: all 1s, color 0.3s 0.3s, transform 0.3s;
 
-      &:hover {
+      @include max(1201px) {
+        // position: static;
+        transform: none;
+      }
+
+      @include max(400px) {
+        height: 3.2rem;
+      }
+
+      @include hover {
         color: white;
         // box-shadow: 0 8rem 0 0 $color-second inset, 0 -8rem 0 0 $color-second  inset;
         box-shadow: 300px 0 0 0 $color-second inset, -300px 0 0 0 $color-second inset;
+      }
 
+      &.loading {
+        @include min(1202px) {
+          transform: none;
+        }
       }
     }
 
@@ -138,4 +162,3 @@
   }
 
 }
-

@@ -99,6 +99,30 @@
         left: 0;
       }
     }
+
+
+    @include hover {
+
+      a {
+        color: $color-third;
+
+      }
+
+      .icon {
+        color: $color-third;
+      }
+    }
+
+    &.show {
+      a {
+        color: $color-third;
+
+      }
+
+      .icon {
+        color: $color-third;
+      }
+    }
   }
 
   &-list {
@@ -293,14 +317,9 @@
   padding: 0 1.8rem 0 1.2rem;
   @include mid-flex;
 
-
-  @include min(1201px) {
-    display: none;
-  }
-
   @include max(800px) {
     height: 3.2rem;
-  } 
+  }
 
   .text {
     color: white;
@@ -318,6 +337,16 @@
     @include max(800px) {
       width: 1.8rem;
       margin-right: 0.8rem;
+    }
+  }
+}
+
+.star-rate {
+  .cate-item.active {
+
+    .text {
+      color: $color-third;
+      transition: all 0.3s ease-in-out;
     }
   }
 }

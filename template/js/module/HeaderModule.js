@@ -2,6 +2,7 @@ export default function HeaderModule() {
   const lang = document.querySelectorAll(".lang");
   const toggleHd = document.querySelector(".header-btn");
   const headerCT = document.querySelector(".header-ct");
+  const hduser = document.querySelector(".header-user");
   const bg = document.querySelector(".bg-fade");
   if (lang.length > 0) {
     lang.forEach((ele, i) => {
@@ -20,24 +21,22 @@ export default function HeaderModule() {
       toggleHd.querySelector(".toggle-header").classList.toggle("active");
       document.body.classList.toggle("overflow-hidden");
     });
+  }
 
-    // headerCT.querySelector(".header-close").addEventListener("click", () => {
-    //   headerCT.classList.remove("show");
-    //   bg.classList.remove("show");
-    //   toggleHd.classList.remove("active");
-    //   document.body.classList.remove("overflow-hidden");
-    // });
+  if (hduser) {
+    hduser.addEventListener("click", () => {
+      hduser.classList.toggle("active")
+    })
   }
 
   document.addEventListener("click", (e) => {
     const isClickInsideElement = toggleHd.contains(e.target);
-    // const isClickInsideElement2 =
     if (e.target.matches(".header-ct, .header-ct *") || isClickInsideElement) {
       return;
     }
     headerCT.classList.remove("show");
     bg.classList.remove("show");
-    toggleHd.classList.remove("active");
+    toggleHd.querySelector(".toggle-header").classList.remove("active");
     document.body.classList.remove("overflow-hidden");
   });
 
