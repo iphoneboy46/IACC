@@ -1,0 +1,14 @@
+.khuyenmai {
+    padding-top: 6rem;
+    padding-bottom: 9.6rem;
+}
+
+.title {
+    &-text {
+        font-weight: 600;
+        @include fz-32;
+        line-height: 1.5;
+        letter-spacing: 0.04em;
+        color: #2e3237;
+    }
+}
