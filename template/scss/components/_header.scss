@@ -353,6 +353,7 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    height: 100%;
 
     @media (max-width: 1201px) {
       height: 100%;
@@ -371,10 +372,8 @@
 
     a {
       display: block;
+      height: 100%;
 
-      @include max(1201px) {
-        height: 100%;
-      }
     }
 
     img {

@@ -1917,6 +1917,7 @@ iframe {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  height: 100%;
 }
 @media (max-width: 1201px) {
   .header-logo {
@@ -1937,11 +1938,7 @@ iframe {
 }
 .header-logo a {
   display: block;
-}
-@media screen and (max-width: 1201px) {
-  .header-logo a {
-    height: 100%;
-  }
+  height: 100%;
 }
 .header-logo img {
   width: 100%;
@@ -3505,6 +3502,8 @@ body:has(.seclect2-seach-show) .select2-container .select2-dropdown .select2-res
   transform: translateY(-50%);
   overflow: hidden;
   transition: all 0.5s;
+  border-radius: 12rem;
+  border: 0.1rem solid #f97b55;
 }
 @media screen and (max-width: 800px) {
   .form-search {
@@ -3534,6 +3533,7 @@ body:has(.seclect2-seach-show) .select2-container .select2-dropdown .select2-res
   height: 100%;
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
+  border-radius: 12rem;
 }
 .form-search .input {
   width: 100%;
@@ -12160,9 +12160,6 @@ input[type=number] {
 .join-left {
   width: 33.3333333333%;
 }
-.join-left .t-title {
-  max-width: 28rem;
-}
 @media screen and (max-width: 1024px) {
   .join-left {
     width: 100%;
@@ -12544,12 +12541,9 @@ input[type=number] {
   margin-left: auto;
   margin-right: auto;
 }
-@media screen and (max-width: 1024px) {
-  .proh-side .btn {
-    margin-bottom: 2.4rem;
-  }
+.proh-side .btn {
+  margin-bottom: 13rem;
 }
-
 .ser {
   padding: 6.4rem 0;
   background: #F5F5F5;

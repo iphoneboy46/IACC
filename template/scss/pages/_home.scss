@@ -17,7 +17,7 @@
         width: calc(100% * 4 / 12);
 
         .t-title {
-            max-width: 28rem;
+            // max-width: 28rem;
         }
 
         @include max(1024px) {
@@ -365,8 +365,10 @@
         }
 
         .btn {
+            margin-bottom: 13rem;
+
             @include max(1024px) {
-                margin-bottom: 2.4rem;
+                // margin-bottom: 2.4rem;
             }
         }
 
