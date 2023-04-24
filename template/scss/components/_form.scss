@@ -164,6 +164,8 @@
         transform: translateY(-50%);
         overflow: hidden;
         transition: all 0.5s;
+        border-radius: 12rem;
+        border: 0.1rem solid $color-pri;
 
         @include max(800px) {
             top: 170%;
@@ -198,6 +200,7 @@
                 height: 100%;
                 border-top-left-radius: 1rem;
                 border-bottom-left-radius: 1rem;
+                border-radius: 12rem;
             }
         }
 
@@ -215,6 +218,7 @@
             flex-shrink: 0;
             cursor: pointer;
             background-size: 2rem;
+            // filter: brightness(0) invert(1);
         }
     }
 
