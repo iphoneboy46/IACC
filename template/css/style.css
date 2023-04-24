@@ -3392,7 +3392,7 @@ body:has(.seclect2-seach-show) .select2-container .select2-dropdown .select2-res
   padding: 1.2rem 1.6rem 0;
 }
 .form-input {
-  background: #FFFFFF;
+  background: #ffffff;
   border: 0.05rem solid rgba(0, 0, 0, 0.15);
   border-radius: 50rem;
   height: 4.8rem;
@@ -3412,7 +3412,7 @@ body:has(.seclect2-seach-show) .select2-container .select2-dropdown .select2-res
   border: 0.1rem solid #6cbfc5;
 }
 .form-text {
-  background: #FFFFFF;
+  background: #ffffff;
   border: 0.05rem solid rgba(0, 0, 0, 0.15);
   border-radius: 1.6rem;
   padding: 2rem;
@@ -3509,7 +3509,7 @@ body:has(.seclect2-seach-show) .select2-container .select2-dropdown .select2-res
 @media screen and (max-width: 800px) {
   .form-search {
     top: 170%;
-    left: -150%;
+    left: -130%;
   }
 }
 .form-search.active {
@@ -3532,6 +3532,8 @@ body:has(.seclect2-seach-show) .select2-container .select2-dropdown .select2-res
   margin: 0;
   background: white;
   height: 100%;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
 }
 .form-search .input {
   width: 100%;
@@ -3558,7 +3560,7 @@ body:has(.seclect2-seach-show) .select2-container .select2-dropdown .select2-res
   }
 }
 .form-label {
-  border: 0.1rem dashed #004B41;
+  border: 0.1rem dashed #004b41;
   border-radius: 0.8rem;
   padding: 3.2rem 0;
   cursor: pointer;
