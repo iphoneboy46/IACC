@@ -84,7 +84,7 @@ export default function inputForm() {
             layoutBtn.appendChild(getBtnsm);
 
             getBtnsm.addEventListener("click", () => {
-              getBtnsm.submit();
+              ele.submit();
               ele.classList.remove("active");
               removeBtn();
             });

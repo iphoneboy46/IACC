@@ -1,8 +1,12 @@
 export default function LoadModule() {
-    const load = document.querySelector('.load')
+  try {
+    const load = document.querySelector(".load");
     if (load) {
-        setTimeout(() => {
-            $(load).fadeOut();
-        }, 1200)
+      setTimeout(() => {
+        $(load).fadeOut();
+      }, 1200);
     }
+  } catch (error) {
+    console.log(error);
+  }
 }
