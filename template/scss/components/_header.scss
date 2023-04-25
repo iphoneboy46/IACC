@@ -1,6 +1,6 @@
 :root {
-  --headerHeight: 8.4rem;
-  --headerHeight2: 11.2rem;
+  --headerHeight: 8rem;
+  --headerHeight2: 4rem;
 }
 
 @media (max-width: 1201px) {
@@ -20,8 +20,8 @@
   // box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.06);
 
   &-wrap {
-    background: white;
-    height: var(--headerHeight);
+    
+    height: var(--headerHeight2);
     position: relative;
     width: 100%;
     left: 0;
@@ -29,14 +29,37 @@
     top: 0;
     bottom: 0;
 
-    @include max(1201px) {
-      // padding: 0 1rem;
+    .header-logo {
+      @include min(1202px) {
+        display: none;
+      }
+    }
+
+    .header-search {
+      @include min(1202px) {
+        display: none;
+      }
     }
   }
 
+  &-top {
+    height: var(--headerHeight);
+    background: white;
+  }
+
+  &-bottom {
+    background: $color-pri;
+  }
+
   &-menu {
-    margin-right: auto;
-    margin-left: 2.4rem;
+    flex: 1;
+
+    .menu-item {
+      @include min(1202px) {
+        flex: 1;
+        @include mid-flex;
+      }
+    }
 
     @media (max-width: 1201px) {
       position: fixed;
@@ -151,7 +174,7 @@
       background: #FFFFFF;
       z-index: 9999;
       position: fixed;
-      top: var(--headerHeight);
+      top: calc(var(--headerHeight) + var(--headerHeight2));
       padding: 2.9rem 4rem 1.6rem;
       border-radius: 0px 0px 0.8rem 0.8rem;
       left: calc((100vw - 120rem)/2);
@@ -207,16 +230,6 @@
     }
   }
 
-  .header-lang {
-    margin-left: auto;
-
-    @include max(800px) {
-      display: none;
-    }
-  }
-
-  .header-user {}
-
   &-manipulation {
     flex-wrap: nowrap;
 
@@ -228,8 +241,6 @@
   &-search {
     position: relative;
     margin-left: auto;
-    width: 3.2rem;
-    height: 3.2rem;
     padding: 0.6rem;
     margin-left: var(--pdGen2);
     border-radius: 50%;
@@ -237,14 +248,9 @@
     user-select: none;
     z-index: 1000;
 
-    @include max(1201px) {
-      width: 4rem;
-      height: 4rem;
-      padding: 0.3rem;
-    }
-
-    @include max(800px) {
-      margin-right: auto;
+    @include min(1201px) {
+      flex: 1;
+      max-width: 48.6rem;
     }
 
 
@@ -255,13 +261,7 @@
       cursor: pointer;
       transition: 0.3s;
       width: 100%;
-      height: 100%;
 
-      @media (max-width: 1024px) {
-        width: 3.2rem;
-        height: 3.2rem;
-        font-size: 1.6rem;
-      }
 
       i {
         font-weight: 900;
@@ -289,12 +289,23 @@
       visibility: hidden;
       height: 100%;
 
+      @include min(1202px) {
+        position: static;
+        width: 100%;
+        max-width: none;
+        visibility: visible;
+        opacity: 1;
+        transform: none;
+        height: 4.8rem;
+
+      }
+
       @include max(1201px) {
         width: 28rem;
         height: 4rem;
       }
 
-      form{
+      form {
         height: 100%;
       }
 
@@ -307,53 +318,92 @@
     }
   }
 
-  &-user {
-    margin-left: var(--pdGen2);
-
-    @include max(800px) {
-      margin-left: 0;
-    }
+  &-addr {
+    @include flex;
+    align-items: center;
 
     .icon {
-      width: 3.2rem;
-      height: 3.2rem;
-      padding: 0.6rem;
-      @include mid-flex;
+      width: 2.4rem;
+      height: 2.4rem;
+      margin-right: 0.8rem;
+    }
+
+    &-ct {
+      max-width: 16.7rem;
+
+      .tit {
+        font-size: 1.4rem;
+        line-height: 1.5;
+        margin-bottom: 0.4rem;
+        @include mid-flex;
+        align-items: center;
+      }
+
+      .icon {
+        width: 1rem;
+        height: 1rem;
+        margin-left: 0.8rem;
+        @include mid-flex;
+      }
+
+      .addr {
+        @include lc(1);
+        font-weight: 600;
+        font-size: 1.4rem;
+        line-height: 1.5;
+      }
     }
   }
 
   &-cart {
     margin-left: var(--pdGen2);
+    @include flex;
+    flex-direction: column;
+    align-items: center;
 
-    .btn {
-      &-inner {
-        @include max(800px) {
-          padding: 1rem;
-        }
+    .icon {
+      width: 2.4rem;
+      height: 2.4rem;
+      @include mid-flex;
+      margin-bottom: 0.2rem;
+      position: relative;
+    }
 
-        .text {
-          @include max(800px) {
-            display: none;
-          }
-        }
+    .num {
+      position: absolute;
+      right: 0;
+      top: 0;
+      transform: translate(43%, -10%);
+      background: url("../assets/images/heart-icon.svg");
+      min-width: 1.8rem;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      width: fit-content;
+      color: white;
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-align: center;
+      padding: 0.1rem;
+      @include mid-flex;
+    }
 
-        .icon {
-          @include max(800px) {
-            margin-left: 0 !important;
-          }
-        }
-      }
+    .text {
+      font-weight: 600;
+      font-size: 1.4rem;
+      line-height: 1.5;
     }
   }
 
   &-logo {
-    width: 8.4rem;
+
     @include mid-flex;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    height: 100%;
+    max-height: 100%;
+
+    @include min(1202px) {
+      margin-left: -1.6rem;
+    }
+
 
     @media (max-width: 1201px) {
       height: 100%;
@@ -373,6 +423,7 @@
     a {
       display: block;
       height: 100%;
+      width: 8rem;
 
     }
 
@@ -382,6 +433,13 @@
       display: block;
       height: 100%;
     }
+  }
+
+  &-slogan {
+    font-weight: 600;
+    font-size: 1.4rem;
+
+
   }
 
   .social {
@@ -496,31 +554,6 @@
     cursor: pointer;
     user-select: none;
 
-  }
-
-  &-user {
-    position: relative;
-    cursor: pointer;
-
-    @include hover {
-      .header-modal {
-        transform: translateY(0);
-        pointer-events: unset;
-        opacity: 1;
-        visibility: visible;
-      }
-    }
-
-    &.active {
-      @include max(1201px) {
-        .header-modal {
-          transform: translateY(0);
-          pointer-events: unset;
-          opacity: 1;
-          visibility: visible;
-        }
-      }
-    }
   }
 
   &-modal {

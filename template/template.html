@@ -14,147 +14,133 @@
 
 <body>
     <header class="header">
-        <div class="container large">
-            <div class="header-wrap flex flex-ai-center flex-jc-between">
-                <div class="header-btn">
-                    <div class="toggle toggle-header">
-                        <div class="toggle-inner">
-                            <span class="toggle-item">
-                                <img src="./assets/images/menu-hd.svg" alt="">
-                            </span>
-                            <span class="toggle-item">
-                                <img src="./assets/images/close-hd.svg" alt="">
-                            </span>
+        <div class="header-top">
+            <div class="container">
+                <div class="menu-top">
+                    <div class="header-logo">
+                        <a href="home.html">
+                            <img src="./assets/images/logo.svg" alt="">
+                        </a>
+                        <div class="header-slogan">
+                            <p>
+                                In ảnh Cho con
+                                <br>
+                                Lưu khoảnh khắc - Giữ yêu thương
+                            </p>
                         </div>
                     </div>
-                    <span class="toggle-text">Danh mục</span>
-                </div>
-                <div class="header-menu">
-                    <div class="menu-nav">
-                        <ul class="menu-list">
-                            <li class="menu-item">
-                                <a href="home.html"> Trang chủ </a>
-                            </li>
-                            <li class="menu-item">
-                                <a href="">Giới thiệu</a>
-                            </li>
-                            <li class="menu-item dropdown current-menu-item">
-                                <a href="">Sản phẩm</a>
-
-                                <ul class="menu-list">
-                                    <li class="menu-item">
-                                        <a href="">
-                                            Submenu 1
-                                            <i class="fas fa-angle-down"></i></a>
-                                    </li>
-                                    <li class="menu-item dropdown">
-                                        <a href="">
-                                            Submenu 2
-                                            <i class="fas fa-angle-down"></i></a>
-                                        <ul class="menu-list">
-                                            <li class="menu-item">
-                                                <a href="">
-                                                    Submenu 2 1
-                                                </a>
-                                            </li>
-                                            <li class="menu-item">
-                                                <a href="">
-                                                    Submenu 2 2
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="header-logo">
-                    <a href="home.html">
-                        <img src="./assets/images/logo.svg" alt="">
-                    </a>
-                </div>
-                <div class="header-lang">
-                    <div class="lang pos-relative">
-                        <div class="lang-selected flex flex-ai-center">
-                            <img src="./assets/images/vn-icon.svg" alt="">
-                            <span class="text">VIE</span>
-                            <span class="icon">
-                                <i class="fas fa-chevron-down"></i>
-                            </span>
-                        </div>
-                        <ul class="lang-lst pos-abs">
-                            <li class="lang-item">
-                                <img src="./assets/images/vn-icon.svg" alt="">
-                                <span class="text">VIE</span>
-                            </li>
-                            <li class="lang-item">
-                                <img src="./assets/images/vn-icon.svg" alt="">
-                                <span class="text">VIE</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="header-search">
-                    <span class="icon">
-                        <img src="./assets/images/search.svg" alt="">
-                        <img src="./assets/images/close-icon.svg" alt="">
-                    </span>
-                    <div class="form-search">
-                        <form method="get" id="searchform" action="http://chaangchiia.monamedia.net/">
-                            <div class="form-wrap flex">
-                                <input type="search" name="s" value="" class="input" placeholder="Tìm kiếm">
-                                <input class="btn-search" type="submit" value="">
-                            </div>
-                        </form>
-                    </div>
-                </div>
-
-
-
-            </div>
-            <div class="header-user">
-                <div class="icon">
-                    <img src="./assets/images/user-icon.svg" alt="">
-                </div>
-
-                <div class="header-modal">
-                    <div class="header-modal-wrap">
-                        <div class="header-modal-box">
-                            <span class="avt">
-                                <img src="./assets/images/avt.png" alt="">
-                            </span>
-                            <span class="name">Trần Đạt</span>
-                        </div>
-
-                        <ul class="header-modal-list">
-                            <li class="header-modal-item">
-                                <a href="" class="header-modal-link">Thông tin tài khoản</a>
-                            </li>
-                            <li class="header-modal-item">
-                                <a href="" class="header-modal-link">Đơn hàng của tôi</a>
-                            </li>
-                        </ul>
-
-                        <div class="header-modal-bottom">
-                            <a href="" class="header-modal-link">Đăng xuất</a>
+                    <div class="header-search">
+                        <div class="form-search">
+                            <form action="#">
+                                <div class="form-wrap flex">
+                                    <input type="text" class="input" placeholder="Tìm kiếm sản phẩm...">
+                                    <input class="btn-search" type="submit" value="">
+                                </div>
+                            </form>
                         </div>
                     </div>
-                </div>
-
-            </div>
-            <div class="header-cart">
-                <a href="" class="btn icon-right">
-                    <span class="btn-inner">
-                        <span class="text">Giỏ hàng</span>
-
-                        <span class="icon">
+                    <div class="header-addr">
+                        <div class="icon">
+                            <img src="./assets/images/marker-pin.svg" alt="">
+                        </div>
+                        <div class="header-addr-ct">
+                            <p class="tit">Giao hoặc đến lấy tại <span class="icon"><img src="./assets/images/arr-down.svg"
+                                        alt=""></span></p>
+                            <p class="addr">Tòa nhà HH1C Linh Đàm, Phường Hoàng Liệt, Quận Hoàng Mai</p>
+                        </div>
+                    </div>
+                    <div class="header-cart">
+                        <div class="icon">
+                            <span class="num">3</span>
                             <img src="./assets/images/cart-icon.svg" alt="">
-                        </span>
-                    </span>
-                </a>
+                        </div>
+                        <span class="text">Yêu thích</span>
+                    </div>
+                </div>
             </div>
         </div>
+        <div class="header-bottom">
+            <div class="container">
+                <div class="header-wrap flex flex-ai-center flex-jc-between">
+                    <div class="header-btn">
+                        <div class="toggle toggle-header">
+                            <div class="toggle-inner">
+                                <span class="toggle-item">
+                                    <img src="./assets/images/menu-hd.svg" alt="">
+                                </span>
+                                <span class="toggle-item">
+                                    <img src="./assets/images/close-hd.svg" alt="">
+                                </span>
+                            </div>
+                        </div>
+                        <span class="toggle-text">Danh mục sản phẩm <span class="icon"><i
+                                    class="fas fa-chevron-down"></i></span></span>
+                    </div>
+                    <div class="header-menu">
+                        <div class="menu-nav">
+                            <ul class="menu-list">
+                                <li class="menu-item">
+                                    <a href="home.html">Cách thức gửi ảnh</a>
+                                </li>
+        
+                                <li class="menu-item dropdown current-menu-item">
+                                    <a href="">Tin tức</a>
+        
+                                    <ul class="menu-list">
+                                        <li class="menu-item">
+                                            <a href="">
+                                                Submenu 1
+                                                <i class="fas fa-angle-down"></i></a>
+                                        </li>
+                                        <li class="menu-item dropdown">
+                                            <a href="">
+                                                Submenu 2
+                                                <i class="fas fa-angle-down"></i></a>
+                                            <ul class="menu-list">
+                                                <li class="menu-item">
+                                                    <a href="">
+                                                        Submenu 2 1
+                                                    </a>
+                                                </li>
+                                                <li class="menu-item">
+                                                    <a href="">
+                                                        Submenu 2 2
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="">Chính sách bảo mật</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="">Liên hệ</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="header-logo">
+                        <a href="home.html">
+                            <img src="./assets/images/logo.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="header-search">
+                        <span class="icon">
+                            <img src="./assets/images/search.svg" alt="">
+                        </span>
+        
+                        <div class="form-search">
+                            <form action="#">
+                                <div class="form-wrap flex">
+                                    <input class="btn-search" type="submit" value="">
+                                    <input type="text" class="input" placeholder="Bạn đang tìm gì?">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -392,20 +378,6 @@
 
     <div class="bg-fade hd-bg"></div>
 
-    <div class="breadcrumbs other">
-        <div class="container">
-            <ul class="breadcrumbs-list">
-                <li class="breadcrumbs-item">
-                    <a href="#">Trang chủ</a>
-                </li>
-
-                <li class="breadcrumbs-item current">
-                    <a href="#">Thông tin tài khoản</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-
     <main class="main">
 
         <div class="conactsec">
@@ -596,7 +568,7 @@
                     </div>
 
                     <div class="footer-sc">
-                       <p class="text"> @2023</p>
+                        <p class="text"> @2023</p>
                     </div>
 
                 </div>

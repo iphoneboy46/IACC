@@ -10,7 +10,7 @@
 
         >.menu-list {
             height: 100%;
-            margin: 0 -1.6rem;
+            // margin: 0 -1.6rem;
 
             @media (max-width: 1300px) {
                 margin: 0 -1rem;
@@ -47,7 +47,7 @@
 
                     &.dropdown {
                         >a {
-                            color: $color-pri;
+                            color: $color-second;
                             >i {
                                 @include min(1202px) {
                                     // transform: translate(0%, -50%);
