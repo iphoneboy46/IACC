@@ -93,7 +93,7 @@
   @media (min-width: 1200px) {
     &:hover {
       color: white;
-      box-shadow: 16rem 0 0 0 $color-pri inset, -16rem 0 0 0 $color-pri inset;
+      box-shadow: 16rem 0 0 0 $color-pro inset, -16rem 0 0 0 $color-second inset;
       // box-shadow: 0 8rem 0 0 $color-second inset, 0 -8rem 0 0 $color-second  inset;
     }
   }

@@ -323,11 +323,6 @@
             }
         }
     }
-
-    @media screen and (max-width:800px){
-        padding-top: 4rem;
-        padding-bottom: 2rem;
-    }
 }
 
 .km-right {
@@ -364,12 +359,6 @@
 
             i {
                 color: $color-text;
-            }
-
-            @include hover {
-                i{
-                    color: $color-second;
-                }
             }
         }
 

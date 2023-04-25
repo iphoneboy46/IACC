@@ -2,13 +2,13 @@
   position: relative;
   width: fit-content;
   height: fit-content;
-  background: $color-second;
+  background: $color-third;
   cursor: pointer;
   overflow: hidden;
   transition: all 0.8s, color 0.3s 0.3s, transform 0.3s;
   display: block;
   user-select: none;
-  border-radius: 0.8rem;
+  border-radius: 12rem;
   color: white;
   flex-shrink: 0;
   -webkit-mask-image: -webkit-radial-gradient(white, black);
@@ -21,7 +21,7 @@
     border-radius: 50%;
     font-size: 1.2rem;
     transition: all 0.3s 0.2s ease-in-out;
-    color: white;
+  
     @include max(600px) {
       width: 2rem;
       height: 2rem;
@@ -65,7 +65,7 @@
     position: relative;
     z-index: 4;
     text-align: center;
-    padding: 1rem 1.6rem 0.95rem;
+    padding: 1.0rem 1.6rem 0.95rem;
     border-radius: 12rem;
     @include fz-16;
     line-height: 1.5;
@@ -74,14 +74,6 @@
     letter-spacing: 0.02em;
     white-space: nowrap;
     -webkit-mask-image: -webkit-radial-gradient(white, black);
-
-    .text {
-      color: white !important;
-      font-weight: 600;
-      @include fz-16;
-      line-height: 1.5;
-      /* identical to box height, or 150% */
-    }
 
     @include max(400px) {
       padding: 1rem 1.6rem 0.9rem;
@@ -92,8 +84,9 @@
 
   @media (min-width: 1200px) {
     &:hover {
+
       color: white;
-      box-shadow: 16rem 0 0 0 $color-pri inset, -16rem 0 0 0 $color-pri inset;
+      box-shadow: 16rem 0 0 0 $color-second inset, -16rem 0 0 0 $color-second inset;
       // box-shadow: 0 8rem 0 0 $color-second inset, 0 -8rem 0 0 $color-second  inset;
     }
   }
@@ -124,7 +117,7 @@
       height: 102%;
       top: 0;
       left: -13%;
-      background: #72c3d5;
+      background: #72C3D5;
       transition: transform 0.6s;
       z-index: -1;
       transform: skew(30deg) scaleX(0);
@@ -178,8 +171,8 @@
     }
   }
 
-  &.t-black {
-  }
+  &.t-black {}
+
 
   &.t-black {
     .btn-inner {
@@ -227,7 +220,7 @@
 
   &.bd-third {
     .btn-inner {
-      border: 0.1rem solid #e51515;
+      border: 0.1rem solid #E51515;
     }
   }
 
@@ -262,6 +255,7 @@
 
     @media (min-width: 1200px) {
       &:hover {
+
         // color: white;
         &::before {
           transform: skew(30deg) scaleX(1);
@@ -316,6 +310,7 @@
   &-second {
     background: $color-second;
 
+
     &::before {
       background: $color-pri;
     }
@@ -348,11 +343,11 @@
   }
 
   &-sixth {
-    background: #e8e8e8;
+    background: #E8E8E8;
   }
 
   &-seventh {
-    background: #e6e6e6;
+    background: #E6E6E6;
   }
 
   // &-2 {
