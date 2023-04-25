@@ -1,0 +1,34 @@
+.contact {
+    padding-top: 6rem;
+    padding-bottom: 9.6rem;
+}
+
+.contact-title {
+    margin-bottom: 0.2rem;
+    .text {
+        font-weight: 600;
+        @include fz-32;
+        line-height: 1.5;
+        letter-spacing: 0.04em;
+        color: $color-text;
+    }
+}
+
+.content {
+    &-left {
+        width: calc(100% * 5 / 12);
+
+        .title {
+            &-text {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                /* identical to box height, or 150% */
+
+                /* đen */
+
+                color: #2e3237;
+            }
+        }
+    }
+}

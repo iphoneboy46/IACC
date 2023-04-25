@@ -36,11 +36,6 @@
             .item {
                 display: flex;
                 align-items: center;
-                margin-bottom: 6.2rem;
-
-                &:last-child{
-                    margin-bottom: 0;
-                }
                 .img-item {
                     width: 8rem;
                     height: 8rem;
@@ -50,7 +45,6 @@
                     justify-content: center;
                     align-items: center;
                     flex-shrink: 0;
-                    margin-right: 3rem;
                     img {
                         width: 2.4rem;
                         height: 2.4rem;
@@ -69,9 +63,9 @@
                     .text {
                         font-style: normal;
                         font-weight: 400;
-                        @include fz-16;
+                        font-size: 16px;
                         line-height:1.5;
-                        color: $color-text;
+                        color: #2e3237;
                     }
                 }
             }
