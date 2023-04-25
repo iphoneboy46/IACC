@@ -1326,6 +1326,11 @@ iframe {
     display: block;
   }
 }
+@media screen and (max-width: 1201px) {
+  .menu-nav > .menu-list > .menu-item > .menu-list {
+    margin-top: -1rem;
+  }
+}
 .menu-list {
   display: -webkit-flex;
   display: -moz-flex;
@@ -1588,7 +1593,7 @@ iframe {
 
 @media (max-width: 1201px) {
   :root {
-    --headerHeight2: 5.6rem;
+    --headerHeight2: 4.8rem;
   }
 }
 .header {
