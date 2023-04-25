@@ -14219,6 +14219,95 @@ input[type=number] {
   }
 }
 
+.contact {
+  padding-top: 6rem;
+  padding-bottom: 9.6rem;
+}
+
+.contact-title {
+  margin-bottom: 0.2rem;
+}
+.contact-title .text {
+  font-weight: 600;
+  font-size: 3.2rem;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2E3237;
+}
+@media only screen and (max-width: 1200px) {
+  .contact-title .text {
+    font-size: 2.7rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .contact-title .text {
+    font-size: 2.2rem;
+  }
+}
+
+.content .contact-left {
+  width: 41.6666666667%;
+}
+.content .contact-left .title {
+  margin-bottom: 5.3rem;
+}
+.content .contact-left .title-text {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: #2E3237;
+}
+.content .contact-left .title-text strong {
+  color: #E40000;
+}
+.content .contact-left .list .item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6.2rem;
+}
+.content .contact-left .list .item:last-child {
+  margin-bottom: 0;
+}
+.content .contact-left .list .item .img-item {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  background-color: #fef8ea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  margin-right: 3rem;
+}
+.content .contact-left .list .item .img-item img {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.content .contact-left .list .item .content-item .title {
+  margin-bottom: 1rem;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 1.5;
+  color: #2E3237;
+}
+@media only screen and (max-width: 1200px) {
+  .content .contact-left .list .item .content-item .title {
+    font-size: 1.8rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .content .contact-left .list .item .content-item .title {
+    font-size: 1.6rem;
+  }
+}
+.content .contact-left .list .item .content-item .text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: #2E3237;
+}
+
 :root {
   --pdGen: 1.2rem;
   --pdGen2: 2.4rem;

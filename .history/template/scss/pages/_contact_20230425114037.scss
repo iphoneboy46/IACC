@@ -1,0 +1,35 @@
+.contact {
+    padding-top: 6rem;
+    padding-bottom: 9.6rem;
+}
+
+.contact-title {
+    margin-bottom: 0.2rem;
+    .text {
+        font-weight: 600;
+        @include fz-32;
+        line-height: 1.5;
+        letter-spacing: 0.04em;
+        color: $color-text;
+    }
+}
+
+.content {
+    .contact-left {
+        width: calc(100% * 5 / 12);
+
+        .title {
+            margin-bottom: 5.3rem;
+            &-text {
+                font-weight: 400;
+                @include fz-16;
+                line-height: 1.5;
+                color: $color-text;
+
+                strong{
+                    color: $color-second;
+                }
+            }
+        }
+    }
+}
