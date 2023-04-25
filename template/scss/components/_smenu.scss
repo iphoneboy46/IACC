@@ -148,6 +148,10 @@
                     @include min(1202px) {
                         display: block;
                     }
+
+                    @include  max(1201px) {
+                        margin-top: -1rem;
+                    }
                 }
             }
         }
