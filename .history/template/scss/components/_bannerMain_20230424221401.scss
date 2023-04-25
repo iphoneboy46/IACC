@@ -1,0 +1,166 @@
+.banner-main {
+    position: relative;
+    padding: 2rem 0;
+    width: 100%;
+    height: 100%;
+
+    @media screen and (max-width:1400px) {
+       padding: 5rem 0;
+    }
+    
+   
+        .bg-main{
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            width: 100%;
+           height: 100%;
+    
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        
+    }
+
+    
+
+    &-con {
+        .item-left {
+            &-top {
+                display: flex;
+                justify-content: center;
+                align-items: end;
+                margin-bottom: 1.6rem;
+                .img-item-top {
+                    &:first-child {
+                        width: 16rem;
+                        height: 16rem;
+                        margin-right: 1.6rem;
+                        img {
+                            border-radius: 0.8rem;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+
+                    &:last-child {
+                        width: 16rem;
+                        height: 24rem;
+                        img {
+                            border-radius: 0.8rem;
+
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                }
+            }
+
+            &-bottom {
+                display: flex;
+                justify-content: center;
+                align-items: start;
+                .img-item-bottom {
+                    &:first-child {
+                        min-width: 19.2rem;
+                        height: 12.8rem;
+                        margin-right: 1.6rem;
+                        img {
+                            border-radius: 0.8rem;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        width: 16rem;
+                        height: 24rem;
+                        margin-right: 1.6rem;
+                        img {
+                            border-radius: 0.8rem;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+
+                    &:last-child {
+                        width: 19.2rem;
+                        height: 12.8rem;
+                        margin-right: 1.6rem;
+                        img {
+                            border-radius: 0.8rem;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                }
+            }
+        }
+
+        .item-right {
+            padding-left: 8rem;
+            max-width: 52rem;
+            .title {
+                margin-bottom: 4rem;
+                &-text {
+                    font-weight: 600;
+                    @include fz-32;
+                    line-height: 1.5;
+                    letter-spacing: 0.04em;
+                    color: $color-text;
+                }
+            }
+
+            .content {
+                margin-bottom: 2rem;
+                &-text {
+                    font-weight: 400;
+                    @include fz-16;
+                    line-height: 1.5;
+                    color: $color-text;
+                }
+            }
+
+            .note {
+                &-list {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 2.2rem;
+
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                    .icon-tik {
+                        width: 2.8rem;
+                        height: 2rem;
+                        i {
+                            font-size: 2rem;
+                            color: $color-second;
+                        }
+                    }
+
+                    .content-text {
+                        .text {
+                            font-weight: 400;
+                            @include fz-16;
+                            line-height: 1.5;
+                            color: $color-text;
+                        }
+                    }
+                }
+            }
+
+            @media screen and (max-width:1200px) {
+                padding-left: 0rem;
+            }
+        }
+    }
+}

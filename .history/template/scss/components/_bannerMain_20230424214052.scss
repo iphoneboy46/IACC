@@ -1,0 +1,39 @@
+.banner-main{
+    position: relative;
+    padding: 1rem 0;
+
+    &-con{
+        .item-left{
+            &-top{
+                display: flex;
+                justify-content: center;
+                align-items: end;
+                .img-item-top{
+                    &:first-child{
+                        width: 16rem;
+                        height: 16rem;
+                        margin-right: 1.6rem;
+                        img{
+                            border-radius:0.8rem
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+
+                    &:last-child{
+                        width: 16rem;
+                        height: 24rem;
+                        img{
+                            border-radius:0.8rem
+
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                }
+            }
+        }
+    }
+} 
