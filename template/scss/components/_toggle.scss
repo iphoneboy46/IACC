@@ -1,7 +1,7 @@
 .toggle {
     &-header {
-        width: 4rem;
-        height: 4rem;
+        width: 2.4rem;
+        height: 2.4rem;
         transition: all 0.3s ease-in-out;
 
         .toggle-inner {
@@ -49,8 +49,8 @@
         @include mid-flex;
 
         img {
-            width: 2rem;
-            height: 2rem;
+            width: 2.4rem;
+            height: 2.4rem;
             --rotate: 0deg;
             backface-visibility: hidden;
             position: absolute;
@@ -60,7 +60,7 @@
         }
 
         &:first-child {
-            background: $color-pri;
+            background: $color-second;
         }
 
         &:last-child {
@@ -70,7 +70,24 @@
     }
 
     &-text {
-        padding: 0.8rem;
+        font-weight: 600;
+        color: white;                                           
+        @include flex;
+        align-items: center;
+        margin-left: 0.8rem;
+
+        .icon {
+            margin-left: 0.3rem;
+            width: 2rem;
+            height: 2rem;
+            @include mid-flex;
+            font-size: 1.4rem;
+
+            i {
+                font-weight: 400;
+            }
+        }
+
 
         @include max(800px) {
             display: none;

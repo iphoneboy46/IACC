@@ -5,7 +5,7 @@ export default function MenuModule() {
     listDr.forEach((ele, i) => {
       const icon = document.createElement("i");
       // <i class="fas fa-angle-down"></i>
-      icon.className = "fas fa-angle-down";
+      icon.className = "fas fa-chevron-down";
       ele.querySelectorAll("a")[0].appendChild(icon);
       icon.addEventListener("click", (e) => {
         e.preventDefault();

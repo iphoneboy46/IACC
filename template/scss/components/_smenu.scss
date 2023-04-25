@@ -10,7 +10,6 @@
 
         >.menu-list {
             height: 100%;
-            margin: 0 -1.6rem;
 
             @media (max-width: 1300px) {
                 margin: 0 -1rem;
@@ -19,7 +18,6 @@
             @media (max-width: 1201px) {
                 height: auto;
                 margin: 0;
-                // padding: 2rem 0;
                 position: relative;
             }
 
@@ -27,15 +25,13 @@
                 height: 100%;
                 @include flex;
                 align-items: center;
+                
 
-                //   padding: 0 3.2rem;
-                // position: relative;
                 @media (max-width: 1201px) {
                     width: 100%;
                     color: $color-text;
                     white-space: inherit;
                 }
-
 
                 &.current-menu-item,
                 &.current_page_item,
@@ -47,7 +43,7 @@
 
                     &.dropdown {
                         >a {
-                            color: $color-pri;
+                            color: $color-second;
                             >i {
                                 @include min(1202px) {
                                     // transform: translate(0%, -50%);
@@ -70,7 +66,7 @@
 
                 &.dropdown {
                     >a {
-                        padding-right: 2.4rem;
+                        padding-right: 6rem;
 
                         >i {
                             position: absolute;
@@ -126,7 +122,7 @@
                     height: 100%;
                     @include flex;
                     align-items: center;
-                    padding: 0.8rem 1.6rem 0.7rem;
+                    padding: 1.2rem 1.6rem 1.1rem;
                     white-space: nowrap;
                     transition: all 0.3s;
                     position: relative;
@@ -142,21 +138,6 @@
                             &::before {
                                 width: 100%;
                             }
-                        }
-                    }
-                }
-
-                &.current-menu-item,
-                &.current_page_item,
-                &.current_page_ancestor {
-
-                }
-
-                &.current-menu-item {
-                    >a {
-                        @media (min-width: 1200px) {
-                            // background: $color-pri;
-                            //   color: $color-pri;
                         }
                     }
                 }
@@ -243,6 +224,7 @@
         }
 
         >a {
+            font-weight: 600;
             >i {
                 display: none;
 
@@ -274,7 +256,7 @@
                     position: absolute;
                     right: -1rem;
                     // top: 1.8rem;
-                    font-size: 1.2rem;
+                    font-size: 1.4rem;
                     width: 3.5rem;
                     height: 3.5rem;
                     @include mid-flex;
@@ -391,6 +373,13 @@
             >a {
                 color: $color-pri
             }
+        }
+
+        &-icon {
+            width: 1.6rem;
+            display: block;
+            margin-right: 0.8rem;
+            flex-shrink: 0;
         }
     }
 
