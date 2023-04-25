@@ -1626,6 +1626,11 @@ iframe {
 .header-bottom {
   background: #FCD02F;
 }
+@media screen and (max-width: 1200px) {
+  .header-bottom {
+    margin-top: 2rem;
+  }
+}
 .header-menu {
   flex: 1;
 }
@@ -2245,11 +2250,6 @@ iframe {
   position: relative;
   background: white;
   z-index: 12;
-}
-@media screen and (max-width: 1201px) {
-  .footer {
-    padding: 4rem 0;
-  }
 }
 @media screen and (max-width: 1024px) {
   .footer {
