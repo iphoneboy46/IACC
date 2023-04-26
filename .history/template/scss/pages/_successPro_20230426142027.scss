@@ -1,0 +1,21 @@
+.success-product{
+    position: relative;
+    padding-top: 6rem;
+    padding-bottom: 9.6rem;
+    .bg-success{
+        position: absolute;
+        inset: 0;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.success-product-content{
+    
+}
+
+.box-alert-product{
+    max-width: 39rem;
+}
