@@ -1,0 +1,22 @@
+.product-chi-tiet {
+    padding-top: 4rem;
+    padding-bottom: 9.6rem;
+
+    border-bottom: 0.1rem solid rgba(46, 50, 55, 0.2);
+
+    &-top {
+        border-bottom: 0.1rem solid rgba(46, 50, 55, 0.2);
+
+        .product-ct-box {
+            display: flex;
+        }
+
+        .product-tabs {
+            font-weight: 600;
+            @include fz-20;
+            line-height: 1.5;
+        
+            color: $color-text;
+        }
+    }
+}

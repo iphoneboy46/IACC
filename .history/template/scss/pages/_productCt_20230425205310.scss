@@ -1,0 +1,55 @@
+.product-chi-tiet {
+    padding-top: 4rem;
+    padding-bottom: 9.6rem;
+
+    border-bottom: 0.1rem solid rgba(46, 50, 55, 0.2);
+
+    &-top {
+        border-bottom: 0.1rem solid rgba(46, 50, 55, 0.2);
+
+        .product-ct-box {
+            display: flex;
+            cursor: pointer;
+        }
+
+        .product-tabs {
+            font-weight: 600;
+            @include fz-20;
+            line-height: 1.5;
+            padding-bottom: 1.4rem;
+            color: $color-text;
+            max-width: 19.2rem;
+            position: relative;
+            &:first-child {
+                margin-right: 9rem;
+            }
+
+            &::before {
+                content: " ";
+                position: absolute;
+                width: 0%;
+                height: 100%;
+                bottom: 0;
+                border-bottom: 0.2rem solid $color-pri;
+                transition: all 0.5s linear;
+            }
+
+            &:hover {
+                &::before {
+                    width: 80%;
+                }
+            }
+
+            &.active {
+                &::before {
+                    content: " ";
+                    position: absolute;
+                    width: 80%;
+                    height: 100%;
+                    bottom: 0;
+                    border-bottom: 0.2rem solid $color-pri;
+                }
+            }
+        }
+    }
+}

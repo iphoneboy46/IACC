@@ -1,0 +1,21 @@
+.none-cart {
+    padding-top: 5rem;
+    padding-bottom: 9.6rem;
+}
+
+.content-none {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    .title {
+        &-text {
+            font-weight: 600;
+            @include fz-32;
+            line-height: 1.5;
+            text-align: center;
+            letter-spacing: 0.04em;
+            color: $color-text;
+        }
+    }
+}
