@@ -75,4 +75,38 @@ export default function CheckModule() {
       }
     }
   });
+
+  const whist = document.querySelector(".whist");
+
+  if (whist) {
+    const btn = whist.querySelector(".whist-btn");
+    const num = btn.querySelector(".num");
+    const checkbox = whist.querySelectorAll(".recheck-input");
+    const setNum = () => {
+      num.innerHTML = whist.querySelectorAll(".recheck-item.active").length;
+
+      if (whist.querySelectorAll(".recheck-item.active").length > 0) {
+        btn.classList.add("active");
+      } else {
+        btn.classList.remove("active");
+      }
+    };
+
+    setNum();
+    checkbox.forEach((ele, i) => {
+      ele.addEventListener("change", () => {
+        setNum();
+      });
+    });
+
+    btn.addEventListener("click", () => {
+      const active = whist.querySelectorAll(".recheck-item.active");
+      active.forEach((ele, i) => {
+        ele.closest(".pro-item").remove();
+        btn.classList.remove("active");
+        num.innerHTML = 0;
+        // console.log(ele.closest('.pro-item'))
+      });
+    });
+  }
 }
