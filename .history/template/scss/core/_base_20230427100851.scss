@@ -107,10 +107,8 @@ input:-webkit-autofill:active,
 input:-webkit-autofill:focus {
   background-color: #fef8ea !important;
   color: $color-text !important;
-  font-weight: 400 !important;
   -webkit-box-shadow: 0 0 0 1000px #fef8ea inset !important;
   -webkit-text-fill-color: $color-text !important;
-  
 }
 
 input[type="search"]::-webkit-search-decoration,

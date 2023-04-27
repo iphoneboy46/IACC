@@ -106,20 +106,27 @@ input:-webkit-autofill:hover,
 input:-webkit-autofill:active,
 input:-webkit-autofill:focus {
   background-color: #fef8ea !important;
-  color: $color-text !important;
-  font-weight: 400 !important;
+  color: black !important;
   -webkit-box-shadow: 0 0 0 1000px #fef8ea inset !important;
-  -webkit-text-fill-color: $color-text !important;
-  
+  -webkit-text-fill-color: black !important;
 }
 
-input[type="search"]::-webkit-search-decoration,
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-results-button,
-input[type="search"]::-webkit-search-results-decoration {
-  display: none;
+.clearable{
+  background: #fff
+  url(data:image/gif;base64,R0lGODlhBwAHAIAAAP///5KSkiH5BAAAAAAALAAAAAAHAAcAAAIMTICmsGrIXnLxuDMLADs=) no-repeat right -10px center;
+  border: 1px solid #999;
+  padding: 3px 18px 3px 4px; /* Use the same right padding (18) in jQ! */
+  border-radius: 3px;
+  transition: background 0.4s;
+ }
+ .clearable.x  { background-position: right 5px center; }
+ .clearable.onX{ cursor: pointer; }
+
+ input[type="search" i] {
+  appearance: none;
+  box-sizing: border-box;
+  padding: 1px 2px;
 }
- 
 
 .container {
   width: 100%;

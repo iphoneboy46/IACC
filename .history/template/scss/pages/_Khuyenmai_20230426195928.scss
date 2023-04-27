@@ -217,8 +217,6 @@
                 display: flex;
                 align-items: center;
                 padding-bottom: 1.2rem;
-                margin-left: 0;
-                margin-right: 0;
                 &-img {
                     width: 1.8rem;
                     height: 1.8rem;
@@ -327,7 +325,7 @@
         margin-bottom: 3rem;
         .input-search {
             width: 100%;
-            padding: 1.2rem 5.5rem 1.2rem 2.5rem;
+            padding: 1.2rem 2.5rem;
             background: #fef8ea;
             border: 1px solid rgba(46, 50, 55, 0.2);
             border-radius: 10rem;

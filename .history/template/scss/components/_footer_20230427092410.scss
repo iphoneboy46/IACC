@@ -229,35 +229,15 @@
       &.ft-icon{
         &::before{
           content: "";
-          z-index: -1;
-          width: 0rem;
-          height: 5rem;
+          z-index: 2;
+          width: 4.4rem;
+          height: 4.4rem;
           position: absolute;
           top: 50%;
           left: 50%;
           transform: translate(-50%,-50%);
           background-color: $color-pri;
           border-radius: 50%;
-          transition: all 0.3s linear;
-        }
-
-        &::after{
-          content: "";
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%,-50%);
-          z-index: -1;
-          background-color: white;
-          width: 4rem;
-          height: 4rem;
-          border-radius: 50%;
-        }
-
-        @include hover{
-          &::before{
-          width: 5rem;
-          }
         }
       }
 
@@ -265,8 +245,12 @@
       img {
         width: 2.4rem;
         height: 2.4rem;
-     
-       
+        
+        
+
+        &:hover{
+
+        }
       }
     }
 

@@ -101,16 +101,19 @@ button {
   }
 }
 
+// new custom
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:active,
 input:-webkit-autofill:focus {
   background-color: #fef8ea !important;
-  color: $color-text !important;
-  font-weight: 400 !important;
-  -webkit-box-shadow: 0 0 0 1000px #fef8ea inset !important;
-  -webkit-text-fill-color: $color-text !important;
   
+  -webkit-box-shadow: 0 0 0 1000px #fef8ea inset !important;
+  font-weight: 400 !important;
+  font-size: 1.6rem !important;
+  line-height: 1.5;
+  color: $color-text !important;
 }
 
 input[type="search"]::-webkit-search-decoration,
@@ -119,7 +122,7 @@ input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration {
   display: none;
 }
- 
+
 
 .container {
   width: 100%;

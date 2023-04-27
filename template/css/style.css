@@ -234,10 +234,18 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:active,
 input:-webkit-autofill:focus {
-  background-color: white !important;
-  color: black !important;
-  -webkit-box-shadow: 0 0 0 1000px white inset !important;
-  -webkit-text-fill-color: black !important;
+  background-color: #fef8ea !important;
+  color: #2E3237 !important;
+  font-weight: 400 !important;
+  -webkit-box-shadow: 0 0 0 1000px #fef8ea inset !important;
+  -webkit-text-fill-color: #2E3237 !important;
+}
+
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+  display: none;
 }
 
 .container {
@@ -2549,6 +2557,37 @@ iframe {
   display: -o-flex;
   display: flex;
   align-items: center;
+  position: relative;
+}
+.footer-link-wrap.ft-icon::before {
+  content: "";
+  z-index: -1;
+  width: 0rem;
+  height: 5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #FCD02F;
+  border-radius: 50%;
+  transition: all 0.3s linear;
+}
+.footer-link-wrap.ft-icon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  background-color: white;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+@media (min-width: 1201px) {
+  .footer-link-wrap.ft-icon:hover::before {
+    width: 5rem;
+  }
 }
 .footer-link-wrap img {
   width: 2.4rem;
@@ -14122,6 +14161,7 @@ input[type=number] {
   position: relative;
   display: block;
   overflow: hidden;
+  border-radius: 0.8rem;
 }
 @media (min-width: 1201px) {
   .khuyenmai .km-left .content .item-content .item-img:hover::before {
@@ -14139,6 +14179,7 @@ input[type=number] {
   z-index: 2;
   opacity: 0;
   transition: all 0.3s linear;
+  border-radius: 0.8rem;
 }
 .khuyenmai .km-left .content .item-content .item-img img {
   width: 100%;
@@ -14159,6 +14200,8 @@ input[type=number] {
   display: flex;
   align-items: center;
   padding-bottom: 1.2rem;
+  margin-left: 0;
+  margin-right: 0;
 }
 .khuyenmai .km-left .content .author-img {
   width: 1.8rem;
@@ -14268,7 +14311,7 @@ input[type=number] {
 }
 .km-right .km-right-search .input-search {
   width: 100%;
-  padding: 1.2rem 2.5rem;
+  padding: 1.2rem 5.5rem 1.2rem 2.5rem;
   background: #fef8ea;
   border: 1px solid rgba(46, 50, 55, 0.2);
   border-radius: 10rem;
@@ -15842,6 +15885,7 @@ input[type=number] {
   border-radius: 0.8rem;
   background: #ffffff;
   border: 0.01rem solid rgba(46, 50, 55, 0.2);
+  user-select: none;
 }
 @media screen and (max-width: 1024px) {
   .con-right {
