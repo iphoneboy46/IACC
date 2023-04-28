@@ -191,10 +191,10 @@ export default function SwiperModule() {
           el: thumvbs.querySelector(".swiper-pagination"),
           clickable: !0,
         },
-        navigation: {
-          nextEl: thumvbs.querySelector(".next"),
-          prevEl: thumvbs.querySelector(".prev"),
-        },
+        // navigation: {
+        //   nextEl: thumvbs.querySelector(".next"),
+        //   prevEl: thumvbs.querySelector(".prev"),
+        // },
         speed: 1000,
         breakpoints: {
           801: {
@@ -213,6 +213,10 @@ export default function SwiperModule() {
         speed: 1000,
         effect: "coverflow",
         parallax: !0,
+        navigation: {
+          nextEl: main.parentElement.querySelector(".next"),
+          prevEl: main.parentElement.querySelector(".prev"),
+        },
         coverflowEffect: {
           rotate: 0.05,
           depth: 0,

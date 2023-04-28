@@ -15339,6 +15339,14 @@ input[type=number] {
 .prodt-thumbs .swiper-slide-thumb-active .prodt-img {
   opacity: 1;
 }
+.prodt-thumbs .swiper-navigation.pri.prev, .prodt-thumbs .swiper-navigation.pri.next {
+  top: 50%;
+  width: 2rem;
+  height: 2rem;
+}
+.prodt-thumbs .swiper-navigation.pri.prev i, .prodt-thumbs .swiper-navigation.pri.next i {
+  font-size: 0.8rem;
+}
 .prodt-share {
   display: -webkit-flex;
   display: -moz-flex;

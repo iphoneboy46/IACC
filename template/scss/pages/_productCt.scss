@@ -369,6 +369,16 @@
                 opacity: 1;
             }
         }
+
+        .swiper-navigation.pri.prev, .swiper-navigation.pri.next {
+            top: 50%;
+            width: 2rem;
+            height: 2rem;
+
+            i {
+                font-size: 0.8rem;
+            }
+        }
     }
 
     &-share {
