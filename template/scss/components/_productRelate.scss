@@ -1,5 +1,14 @@
 .product-relate {
     margin-top: 2.4rem;
+
+    &.other {
+        padding-bottom: 9.6rem;
+
+        @include max(1201px) {
+            padding-bottom: 4rem;
+        }
+    }
+
 }
 
 .product-relate-con {

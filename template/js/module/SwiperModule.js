@@ -79,6 +79,18 @@ export default function SwiperModule() {
               }
             }
           },
+          slideChange: function () {
+            var activeIndex = this.activeIndex;
+            var realIndex = this.slides
+              .eq(activeIndex)
+              .attr("data-swiper-slide-index");
+            $(".banner-home .swiper-slide").removeClass("my-active");
+            $(
+              '.banner-home .swiper-slide[data-swiper-slide-index="' +
+                realIndex +
+                '"]'
+            ).addClass("my-active");
+          },
           resize: function () {
             this.update();
           },
@@ -90,11 +102,20 @@ export default function SwiperModule() {
 
     if (eleFree) {
       eleFree.forEach((ele, i) => {
+        const numSl = ele.querySelectorAll(".swiper-slide");
+        let wEle = ele.offsetWidth;
+        let wSL = numSl[0].offsetWidth;
+        
         var swiper2 = new Swiper(ele.querySelector(".swiper"), {
           slidesPerView: "auto",
           lazy: !0,
           pagination: {
             el: ele.querySelector(".swiper-pagination"),
+            type: ele
+              .querySelector(".swiper")
+              .classList.contains("--progressbar")
+              ? "progressbar"
+              : "dot",
             clickable: !0,
           },
           loop: ele.querySelector(".swiper").classList.contains("--loop"),
@@ -106,6 +127,48 @@ export default function SwiperModule() {
           autoplay: {
             delay: 5000,
             disableOnInteraction: false,
+          },
+          on: {
+            // init: function () {
+            //   if (
+            //     ele.querySelector(".swiper").classList.contains("--progressbar")
+            //   ) {
+            //     console.log(wEle / wSL);
+            //   }
+            //   var progressbarFill = ele.querySelector(
+            //     ".swiper-pagination-progressbar-fill"
+            //   );
+            //   $(progressbarFill).css(
+            //     "transform",
+            //     `translate3d(0px, 0px, 0px) scaleX(${
+            //       1 / (numSl.length / (wEle / wSL))
+            //     }) scaleY(1)`
+            //   );
+            // },
+            // slideChange: function (e) {
+            //   // wEle = ele.offsetWidth;
+            //   // wSL = numSl[0].offsetWidth;
+
+            //   if (ele
+            //     .querySelector(".swiper")
+            //     .classList.contains("--progressbar")) {
+                  
+            //     }
+            //     var progressbarFill = ele.querySelector(
+            //       ".swiper-pagination-progressbar-fill"
+            //     );
+            //     $(progressbarFill).css(
+            //       "transform",
+            //       `translate3d(${
+            //         (e.realIndex / numSl.length) * 100
+            //       }%, 0px, 0px) scaleX(${
+            //         1 / (numSl.length / (wEle / wSL))
+            //       }) scaleY(1)`
+            //     );
+            // },
+            resize: function () {
+              this.update();
+            },
           },
         });
         if (!ele.querySelector(".swiper").classList.contains("--auto")) {
@@ -128,16 +191,16 @@ export default function SwiperModule() {
           el: thumvbs.querySelector(".swiper-pagination"),
           clickable: !0,
         },
-        navigation: {
-          nextEl: thumvbs.querySelector(".next"),
-          prevEl: thumvbs.querySelector(".prev"),
-        },
+        // navigation: {
+        //   nextEl: thumvbs.querySelector(".next"),
+        //   prevEl: thumvbs.querySelector(".prev"),
+        // },
         speed: 1000,
         breakpoints: {
-          801:{
+          801: {
             spaceBetween: 16,
-          }
-        }
+          },
+        },
       });
 
       var slmain = new Swiper(main.querySelector(".swiper"), {
@@ -150,6 +213,10 @@ export default function SwiperModule() {
         speed: 1000,
         effect: "coverflow",
         parallax: !0,
+        navigation: {
+          nextEl: main.parentElement.querySelector(".next"),
+          prevEl: main.parentElement.querySelector(".prev"),
+        },
         coverflowEffect: {
           rotate: 0.05,
           depth: 0,
