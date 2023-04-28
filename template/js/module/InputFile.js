@@ -85,30 +85,18 @@ export default function InputFile() {
     }
 
     /////////////////////////////////////////////////////////////////
-    const inputUpload = document.querySelector("#upload-file");
-    if (inputUpload) {
-      $(".re-form-image").fadeOut();
-      const btnUpload = inputUpload.parentElement.querySelector(".upload-btn");
+    const Upload = document.querySelector(".uploadimg");
+    if (Upload) {
+      const wrap = Upload.querySelector(".uploadimg-wrap");
+      const btnUpload = Upload.querySelector(".uploadimg-add");
+      const input = Upload.querySelector("input");
 
       btnUpload.addEventListener("click", () => {
-        inputUpload.click();
+        input.click();
       });
       var filesChangeable = [];
-      inputUpload.addEventListener("change", (e) => {
-        const dataTransfer = new DataTransfer();
-
-        if (inputUpload.files.length == 0) {
-          $(".reviews-upload-image").html(``);
-          // return;
-        } else {
-          $(".reviews-upload-image").html(` <div class="list-chooesed">
-        <div class="list-chooesed-wrap">
-                <div class="list-chooesed-content d-wrap"></div>
-            </div>
-        </div>
-        <input type="file" class="input-upload upload-btn" id="addMore-input"
-        name="upload_files[]" multiple="" hidden>`);
-        }
+      const dataTransfer = new DataTransfer();
+      input.addEventListener("change", (e) => {
 
         var files = e.target.files,
           file;
@@ -117,32 +105,22 @@ export default function InputFile() {
           dataTransfer.items.add(file);
           filesChangeable.push(file);
 
-          if (file.type.toString().includes("video")) {
-            $(".reviews-upload-image .list-chooesed .list-chooesed-content")
-              .append(`<div class="upload-result-img d-item d-5"> <div class="upload-result-img-inner">
-                  <div class="upload-close"><i class="fas fa-times"></i></div>
-                  <div class="media video-flie">
-                   <video width="120" height="120">
-                  <source src="${URL.createObjectURL(file)}" type="video/mp4">
-                  </video> </div> </div></div>`);
-          } else {
-            $(
-              ".reviews-upload-image .list-chooesed .list-chooesed-content"
-            ).append(
-              '<div class="upload-result-img d-item d-5"> <div class="upload-result-img-inner"> <div class="upload-close"> <i class="fas fa-times"> </i>  </div> <div class="media img-file gItem" data-src=' +
-                URL.createObjectURL(file) +
-                '"> <img src="' +
-                URL.createObjectURL(file) +
-                '" alt="" width=120 height=120></div></div> </div>'
-            );
-          }
+          $(wrap).append(`<div class="uploadimg-item">
+            <div class="uploadimg-item-inner">
+              <span class="close"><i class="fas fa-times"></i></span>
+              <img src="${URL.createObjectURL(file)}" alt="">
+            </div>
+          </div>`);
         }
+        input.files = dataTransfer.files;
+
+        console.log(input.files)
 
         var removeItem = function (fileEle) {
-          const listClose = document.querySelectorAll(".upload-close");
+          const listClose = Upload.querySelectorAll(".close");
           listClose.forEach((ele, i) => {
             ele.addEventListener("click", (e) => {
-              $(ele).parent().closest(".upload-result-img").remove();
+              $(ele).parent().closest(".uploadimg-item").remove();
               filesChangeable.splice(filesChangeable.indexOf(fileEle), 1);
               const dataList = dataTransfer.items;
               for (let j = dataList.length - 1; j >= 0; j--) {
@@ -152,13 +130,9 @@ export default function InputFile() {
                   }
                 }
               }
-              inputUpload.files = dataTransfer.files;
+              input.files = dataTransfer.files;
 
-              // console.log(inputUpload.files);
-
-              if (filesChangeable.length == 0) {
-                $(".reviews-upload-image").html(``);
-              }
+              console.log(input.files);
             });
           });
         };

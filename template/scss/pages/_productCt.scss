@@ -1,5 +1,5 @@
 .product-chi-tiet {
-    padding-top: 4rem;
+    padding-top: 2rem;
     padding-bottom: 9.6rem;
 
     border-bottom: 0.1rem solid rgba(46, 50, 55, 0.2);
@@ -24,12 +24,13 @@
             color: $color-text;
             max-width: 19.2rem;
             position: relative;
+
             &:first-child {
                 margin-right: 9rem;
 
                 @media screen and (max-width:500px) {
-                   margin-right: 3rem;
-                   
+                    margin-right: 3rem;
+
                 }
             }
 
@@ -64,6 +65,7 @@
 
     .detail-product {
         padding-top: 2rem;
+
         &-con {
             padding: 2.7rem 3.3rem 7.8rem;
             background: #fef8ea;
@@ -74,6 +76,7 @@
 
             .title {
                 margin-bottom: 2rem;
+
                 &-text {
                     font-weight: 700;
                     @include fz-20;
@@ -111,6 +114,7 @@
                 color: $color-text;
                 margin-bottom: 2.6rem;
             }
+
             .list-img {
                 padding-top: 1.6rem;
                 padding-left: 3.7rem;
@@ -164,6 +168,7 @@
 
     .instruct-image {
         padding-top: 2rem;
+
         &-con {
             padding: 2.7rem 3.3rem 7.8rem;
             background: #fef8ea;
@@ -174,6 +179,7 @@
 
             .title {
                 margin-bottom: 3rem;
+
                 &-text {
                     font-weight: 700;
                     @include fz-20;
@@ -183,7 +189,7 @@
 
                 @media screen and (max-width:600px) {
                     margin-bottom: 2rem;
-                   
+
                 }
             }
 
@@ -199,25 +205,29 @@
                     margin-bottom: 2rem;
                     flex-wrap: wrap;
                 }
-                &-item{
+
+                &-item {
                     max-width: 16.4rem;
+
                     .title-con {
                         font-weight: 600;
                         @include fz-16;
                         line-height: 1.5;
                         color: $color-text;
                         margin-bottom: 1rem;
+
                         @media screen and (max-width:1024px) {
                             width: 50%;
-                           
+
                         }
 
                         @media screen and (max-width:660px) {
                             width: 100%;
-                           margin-bottom: 0;
+                            margin-bottom: 0;
                         }
                     }
-                    .text-con{
+
+                    .text-con {
                         font-weight: 400;
                         @include fz-16;
                         line-height: 1.5;
@@ -225,16 +235,16 @@
                     }
 
                     @media screen and (max-width:1024px) {
-                       max-width: none;
-                       margin-bottom: 1rem;
+                        max-width: none;
+                        margin-bottom: 1rem;
                     }
                 }
 
-                .icon-arr{
+                .icon-arr {
                     width: 1.9rem;
                     height: 1.9rem;
 
-                    img{
+                    img {
                         width: 100%;
                         height: 100%;
                     }
@@ -243,40 +253,48 @@
                         display: none;
                     }
                 }
-                
+
             }
 
-            .text-node{
+            .text-node {
                 font-weight: 600;
                 @include fz-16;
                 line-height: 1.5;
                 color: $color-text;
             }
 
-            .video{
+            .video {
                 max-width: 92.1rem;
                 width: 100%;
                 margin: 0 auto;
 
-
-                &-con{
+                &-con {
                     padding-top: calc(100% * 691 / 921);
                     width: 100%;
                     position: relative;
                     overflow: hidden;
                     margin-top: 3rem;
-                    video{
+
+                    video {
                         width: 100%;
                         height: 100%;
                         position: absolute;
-                        transform: translate(-50%,-50%);
+                        transform: translate(-50%, -50%);
                         left: 50%;
                         top: 50%;
                         object-fit: cover;
                     }
+
+                    .plyr {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                    }
                 }
 
-                .text-video{
+                .text-video {
                     margin-top: 1.4rem;
                     font-weight: 400;
                     @include fz-16;
@@ -286,5 +304,303 @@
                 }
             }
         }
+    }
+}
+
+.prodt {
+    user-select: none;
+    padding-bottom: 2rem;
+
+    &-left {
+        width: 52.4rem;
+
+        @include max(1024px) {
+            min-width: 32rem;
+        }
+
+        @include max(600px) {
+            width: 100%;
+            margin-bottom: 2rem;
+            min-width: unset;
+        }
+    }
+
+    &-right {
+        width: calc(100% - 52.4rem);
+    }
+
+    &-img {
+        @include imgPd(1, 1);
+
+
+        >img {
+            @include imgCover;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .icon {
+            display: block;
+            width: 2.4rem;
+            height: 2.4rem;
+            position: absolute;
+            z-index: 5;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+
+    &-main {
+        border-radius: 0.8rem;
+        overflow: hidden;
+    }
+
+    &-thumbs {
+        .prodt-img {
+            border-radius: 0.4rem;
+            opacity: 0.55;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .swiper-slide-thumb-active {
+            .prodt-img {
+                opacity: 1;
+            }
+        }
+    }
+
+    &-share {
+        @include flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .text {
+            margin-right: 0.5rem;
+        }
+    }
+
+    &-numOf {}
+
+    &-btn-list {
+        .btn {
+            &:not(:last-child) {
+                margin-right: 2rem;
+            }
+        }
+    }
+
+    &-info {
+        &-item {
+            @include flex;
+            align-items: center;
+
+            &:not(:last-child) {
+                margin-bottom: 2rem;
+            }
+        }
+
+        &-tit {
+            width: 16.5rem;
+            font-weight: 600;
+            padding-right: 3rem;
+            flex-shrink: 0;
+
+            @include max(650px) {
+                font-size: 1.4rem;
+            }
+        }
+
+
+        &-ct {
+            flex: 1;
+        }
+    }
+
+    &-select {
+        width: 100%;
+        max-width: 16.3rem;
+
+        .select2-container {
+            height: 4rem;
+        }
+
+        .select2-container--default .select2-selection--single {
+            background: #FEF8EA;
+            border-radius: 10rem;
+            border: none;
+            height: 4rem;
+        }
+
+        .select2-container .select2-selection--single .select2-selection__rendered {
+            opacity: 1;
+            color: $color-text;
+        }
+
+        .select2-container--default .select2-selection--single .select2-selection__arrow b {
+            transform: scale(1.5);
+        }
+    }
+
+    &-textarea {
+        width: 100%;
+        background: #F5F5F5;
+        border-radius: 0.8rem;
+        resize: none;
+    }
+
+    .swiper {
+        &-slide {
+            overflow: hidden;
+        }
+    }
+
+    .note {
+        .strong {
+            font-style: italic;
+            font-weight: 700;
+        }
+    }
+
+    .sc-item {
+        &:not(:last-child) {
+            margin-right: var(--pdGen2);
+        }
+    }
+
+    .sc-list {
+        position: relative;
+        background: white;
+        padding-left: 1.6rem;
+    }
+
+    .sc-link {
+        width: 2.4rem;
+        height: 2.4rem;
+        padding: 0;
+        border-radius: 0;
+        background: transparent;
+        filter: grayscale(1);
+        -webkit-filter: grayscale(1);
+        opacity: 0.55;
+
+        img {
+            transform: none;
+        }
+
+        @include hover {
+            filter: grayscale(0);
+            -webkit-filter: grayscale(0);
+            opacity: 1;
+        }
+    }
+
+    .pro-item-cur {
+        @include fz-24;
+        font-weight: 600;
+    }
+}
+
+.color {
+    &-list {
+        margin: -0.7rem;
+    }
+
+    &-item {
+        padding: 0.7rem;
+        cursor: pointer;
+
+        &-check {
+            width: 2.6rem;
+            height: 2.6rem;
+            @include mid-flex;
+            border-radius: 50%;
+
+            i {
+                font-size: 1rem;
+                opacity: 0;
+                transition: all 0.3s ease-in-out;
+            }
+        }
+
+        &.active {
+            i {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.uploadimg {
+
+    &-wrap {
+        margin: 0 -1.9rem;
+        @include flex;
+    }
+
+    &-box {
+        overflow: auto;
+        padding-bottom: 1.2rem;
+
+        &::-webkit-scrollbar {
+            height: 0.3rem;
+        }
+    }
+
+    &-item {
+        padding: 0 1.9rem;
+
+        &-inner {
+            border-radius: 0.4rem;
+            overflow: hidden;
+            width: 6.4rem;
+            height: 6.4rem;
+            position: relative;
+
+            img {
+                object-fit: cover;
+            }
+        }
+
+        .close {
+            @include mid-flex;
+            width: 1.2rem;
+            height: 1.2rem;
+            border-radius: 50%;
+            background: $color-second;
+            font-size: 0.7rem;
+            position: absolute;
+            color: white;
+            right: 0.1rem;
+            top: 0.1rem;
+            cursor: pointer;
+
+            i {
+                font-weight: 400;
+            }
+        }
+    }
+
+    &-add {
+        cursor: pointer;
+
+        .uploadimg-item-inner {
+            border: 0.1rem dashed #2E3237;
+            @include mid-flex;
+            font-weight: 600;
+        }
+    }
+
+    &-num0f {
+        padding: 1rem 1rem 0.9rem;
+        color: $color-second;
+        flex-shrink: 0;
+        border: 0.1rem solid rgba(46, 50, 55, 0.1);
+        border-radius: 0.4rem;
+        height: fit-content;
+        font-weight: 600;
+        font-size: 1.4rem;
+        margin-left: auto;
     }
 }

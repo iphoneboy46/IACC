@@ -11,12 +11,7 @@ export default function Select2Module() {
       $(".select-year").select2({});
 
       $(".select2choose").each(function (i, v) {
-        var placeholder = $(this).attr("data-placeholder");
-        $(this).select2({
-          width: "100%",
-          placeholder: placeholder,
-          dropdownCssClass: "no-search",
-        });
+        $(this).select2({});
       });
 
       $(".recruit-search-select").each(function (i, v) {
