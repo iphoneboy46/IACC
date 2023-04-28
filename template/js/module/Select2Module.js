@@ -23,6 +23,11 @@ export default function Select2Module() {
         });
       });
     });
+
+    $(document).ready(function() {
+      $('.option-filter').select2();
+  });
+    
   } catch (error) {
     console.log(error);
   }
