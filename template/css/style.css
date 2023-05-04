@@ -5671,6 +5671,11 @@ body:has(.seclect2-seach-show) .select2-container .select2-dropdown .select2-res
   height: 100%;
   object-fit: cover;
 }
+@media screen and (max-width: 460px) {
+  .banner-main-con .item-left-top .img-item-top:first-child {
+    max-width: 12rem;
+  }
+}
 .banner-main-con .item-left-top .img-item-top:last-child {
   max-width: 16rem;
   width: 100%;
@@ -5691,6 +5696,11 @@ body:has(.seclect2-seach-show) .select2-container .select2-dropdown .select2-res
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+@media screen and (max-width: 460px) {
+  .banner-main-con .item-left-top .img-item-top:last-child {
+    max-width: 12rem;
+  }
 }
 .banner-main-con .item-left-bottom {
   display: flex;
@@ -5846,6 +5856,7 @@ body:has(.seclect2-seach-show) .select2-container .select2-dropdown .select2-res
 .banner-description {
   margin-top: 6rem;
   margin-bottom: 6rem;
+  overflow: hidden;
 }
 @media screen and (max-width: 1200px) {
   .banner-description {
@@ -15788,9 +15799,20 @@ input[type=number] {
   background-color: #fef8ea;
   margin: 9.6rem 0;
 }
+@media screen and (max-width: 1024px) {
+  .product-home-eight {
+    margin: 4rem 0;
+  }
+}
 .product-home-eight-con {
   padding-top: 9.6rem;
   padding-bottom: 9.6rem;
+}
+@media screen and (max-width: 1024px) {
+  .product-home-eight-con {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
 }
 .product-home-eight-con .product-top-relate {
   margin-bottom: 3.2rem;
@@ -15835,6 +15857,11 @@ input[type=number] {
   margin-top: 9.6rem;
   margin-bottom: 9.6rem;
 }
+@media screen and (max-width: 1024px) {
+  .home-slide-image {
+    margin: 4rem 0;
+  }
+}
 
 .protab {
   position: relative;
@@ -15848,6 +15875,11 @@ input[type=number] {
   background: #FEF8EA;
   left: 0;
   bottom: -6rem;
+}
+@media screen and (max-width: 1024px) {
+  .protab::before {
+    bottom: 0;
+  }
 }
 .protab-tab {
   background: #FEF8EA;
@@ -15864,6 +15896,12 @@ input[type=number] {
 .protab-item.active {
   color: white;
   background: #E40000;
+}
+@media (min-width: 1201px) {
+  .protab-item:hover {
+    background-color: #E40000;
+    color: white;
+  }
 }
 .protab-ct .swiper-pagination {
   margin-top: 5rem;

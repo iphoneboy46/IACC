@@ -63,10 +63,6 @@
 .home-slide-image{
     margin-top: 9.6rem;
     margin-bottom: 9.6rem;
-    @media screen and (max-width:1024px) {
-       margin: 4rem 0;
-    }
-
    
 }
 
@@ -82,10 +78,6 @@
         background: #FEF8EA;
         left: 0;
         bottom: -6rem;
-
-        @media screen and (max-width:1024px) {
-            bottom: 0;
-        }
     }
 
     &-tab {
