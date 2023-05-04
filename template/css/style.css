@@ -3128,7 +3128,7 @@ iframe {
 .select2-container--default .select2-selection--single .select2-selection__arrow {
   height: 100%;
   border-color: #000 transparent transparent transparent;
-  content: url(../../assets/images/arrfil.svg);
+  content: url(../assets/images/arrfil.svg);
   right: 2.2rem;
   top: 0.5rem;
   width: 1.2rem;
@@ -3179,6 +3179,10 @@ body:has(.seclect2-seach-show) .select2-container .select2-dropdown .select2-res
   font-size: 1.2rem;
   line-height: 1.7;
   color: white;
+}
+
+.filter-dropdown-menu .select2-results__options .select2-results__option:first-child {
+  display: block;
 }
 
 .mirror {
