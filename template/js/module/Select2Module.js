@@ -24,16 +24,14 @@ export default function Select2Module() {
       });
     });
 
-    $(document).ready(function() {
-      $('.option-filter').select2({
-        // dropdownCssClass: "filter-dropdown-menu"
-      }).data('select2').$dropdown.addClass('filter-dropdown-menu');
+    const filterPr = document.querySelector(".option-filter");
 
-    //   $('.option-filter').on('select2:open', function (e) {
-    //     // select2 is opened, handle event
-    // });
-  });
-    
+    if (filterPr) {
+      $(".option-filter")
+        .select2({})
+        .data("select2")
+        .$dropdown.addClass("filter-dropdown-menu");
+    }
   } catch (error) {
     console.log(error);
   }
