@@ -5,7 +5,7 @@
 
 @media (max-width: 1201px) {
   :root {
-    --headerHeight2: 4.8rem;
+    --headerHeight2: 5.6rem;
   }
 }
 
@@ -17,7 +17,6 @@
   top: 0;
   background: white;
   cursor: pointer;
-  // box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.06);
 
   .header-addr-ct {
     @include hover {
@@ -74,7 +73,11 @@
     display: flex;
     align-items: center;
 
-
+    @include max(1201px) {
+      order: 2;
+      margin-left: auto;
+      margin-right: 1.2rem;
+    }
   }
 
   &-top {
@@ -647,6 +650,9 @@
 
     @include max(1201px) {
       order: 3;
+      width: 3.6rem;
+      height: 3.6rem;
+      border-radius: 0.6rem;
     }
 
   }

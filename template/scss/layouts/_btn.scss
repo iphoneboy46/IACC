@@ -296,6 +296,10 @@
     }
   }
 
+  &-remove {
+    background: rgba(46, 50, 55, 0.22);
+  }
+
   &.other-hv {
     @media (min-width: 1201px) {
       &:hover {

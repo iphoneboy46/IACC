@@ -1,8 +1,9 @@
 .sidebar {
   &-top {
     background: $color-second;
-    padding: 2.7rem 4rem 2.6rem;
-    border-radius: 1.2rem 1.2rem 0px 0px;
+    padding: 1.5rem 4rem 1.4rem;
+    border-radius: 0.8rem 0.8rem 0px 0px;
+    text-align: center;
 
     @include max(1201px) {
       padding: 2.4rem;
@@ -15,8 +16,7 @@
   }
 
   &-content {
-    padding: 2rem 4rem 3.2rem;
-    // display: none;
+    padding: 2rem;
 
     @include max(1201px) {
       padding: 2.4rem;
@@ -42,13 +42,14 @@
   }
 
   &-type {
-    padding: 1.6rem 4.4rem 1.5rem;
+    padding: 1.4rem 2rem 1.3rem;
     background: #FEF8EA;
     font-weight: 600;
     @include flex;
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
+    user-select: none;
 
     .icon {
       width: 1.6rem;
@@ -64,7 +65,7 @@
         width: 100%;
         height: 0.1rem;
         border-radius: 1rem;
-        background: $color-pri;
+        background: #2E3237;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -127,13 +128,6 @@
         display: none;
       }
     }
-
-    // &:has(.sidebar-type.show) {
-    //   .sidebar-content {
-    //     display: block;
-    //   }
-
-    // }
   }
 }
 
@@ -145,8 +139,7 @@
 
 .cate {
   &-list {
-    padding-bottom: 2.4rem;
-    border-bottom: 0.1rem dashed rgba(234, 222, 236, 1);
+
 
     a {
       &:has(.cate-item) {
@@ -163,6 +156,7 @@
     @include flex;
     align-items: center;
     cursor: pointer;
+    user-select: none;
 
     &:not(:last-child) {
       margin-bottom: 1.6rem;
@@ -172,10 +166,11 @@
       @include mid-flex;
       width: 1.8rem;
       height: 1.8rem;
-      border: 0.2rem solid $color-third;
+      border: 0.2rem solid #2E3237;
       border-radius: 0.2rem;
       margin-right: 0.8rem;
       transition: all 0.3s ease-in-out;
+      
 
       i {
         font-size: 1rem;
@@ -184,10 +179,20 @@
       }
     }
 
+    .text {
+      transition: all 0.3s ease-in-out;
+    }
+
     &.active {
 
       .box {
-        background: $color-third;
+        background: $color-second;
+        border: 0.2rem solid $color-second;
+
+      }
+
+      .text {
+        color: $color-second;
       }
     }
   }
