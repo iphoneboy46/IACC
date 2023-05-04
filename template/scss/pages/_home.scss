@@ -58,6 +58,19 @@
 }
 
 .protab {
+    position: relative;
+    overflow: visible;
+
+    &::before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 28rem;
+        background: #FEF8EA;
+        left: 0;
+        bottom: -6rem;
+    }
+
     &-tab {
         background: #FEF8EA;
 
