@@ -115,7 +115,7 @@ export default function SwiperModule() {
               .querySelector(".swiper")
               .classList.contains("--progressbar")
               ? "progressbar"
-              : "dot",
+              : "bullets",
             clickable: !0,
           },
           loop: ele.querySelector(".swiper").classList.contains("--loop"),

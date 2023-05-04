@@ -73,6 +73,8 @@
   .header-box {
     display: flex;
     align-items: center;
+
+
   }
 
   &-top {
@@ -86,6 +88,10 @@
 
   &-bottom {
     background: $color-pri;
+
+    @include max(1201px) {
+      background: white;
+    }
 
   }
 
@@ -281,9 +287,13 @@
     user-select: none;
     z-index: 1000;
 
-    @include min(1201px) {
+    @include min(1202px) {
       flex: 1;
       max-width: 48.6rem;
+    }
+
+    @include max(1201px) {
+      order: 2;
     }
 
     .icon {
@@ -395,15 +405,15 @@
         font-weight: 600;
         font-size: 1.4rem;
         line-height: 1.5;
-       
 
-        @media screen and (max-width:1200px){
+
+        @media screen and (max-width:1200px) {
           overflow: auto;
           padding-left: 0;
           display: block;
           font-weight: 400;
-        font-size: 1.4rem;
-        line-height: 1.5;
+          font-size: 1.4rem;
+          line-height: 1.5;
         }
       }
     }
@@ -412,6 +422,7 @@
       background: white;
       padding-left: 1.5rem;
       padding-top: 1.2rem;
+
       .header-addr-ct {
         max-width: none;
 
@@ -423,13 +434,13 @@
         padding-bottom: 0.5rem;
       }
 
-      .icon{
-          width: 1.5rem;
-          margin-left: 0;
-          margin-right: 0.5rem;
+      .icon {
+        width: 1.5rem;
+        margin-left: 0;
+        margin-right: 0.5rem;
       }
 
-      .tit-text{
+      .tit-text {
         font-weight: 600;
         font-size: 1.6rem;
       }
@@ -449,8 +460,8 @@
     cursor: pointer;
     display: none;
 
-    @media screen and (max-width:1200px) {
-      display: block;
+    @include max(1201px) {
+      display: none;
     }
 
     .icon {
@@ -504,10 +515,7 @@
     }
 
     @media (max-width: 1201px) {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      height: 100%;
+      order: 1;
     }
 
     @media (max-width: 600px) {
@@ -638,12 +646,8 @@
     height: 100%;
 
     @include max(1201px) {
-      margin-left: -1.5rem;
+      order: 3;
     }
 
-    @media screen and (max-width:800px){
-      margin-left: -0.8rem;
-
-    }
   }
 }
