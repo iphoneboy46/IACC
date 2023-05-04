@@ -1687,6 +1687,11 @@ iframe {
 .header-bottom {
   background: #FCD02F;
 }
+@media screen and (max-width: 1201px) {
+  .header-bottom {
+    background: white;
+  }
+}
 .header-menu {
   flex: 1;
 }
@@ -1873,10 +1878,15 @@ iframe {
   user-select: none;
   z-index: 1000;
 }
-@media screen and (min-width: 1201px) {
+@media screen and (min-width: 1202px) {
   .header-search {
     flex: 1;
     max-width: 48.6rem;
+  }
+}
+@media screen and (max-width: 1201px) {
+  .header-search {
+    order: 2;
   }
 }
 .header-search .icon {
@@ -2062,9 +2072,9 @@ iframe {
   cursor: pointer;
   display: none;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1201px) {
   .header-cart {
-    display: block;
+    display: none;
   }
 }
 .header-cart .icon {
@@ -2142,10 +2152,7 @@ iframe {
 }
 @media (max-width: 1201px) {
   .header-logo {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 100%;
+    order: 1;
   }
 }
 @media (max-width: 600px) {
@@ -2280,12 +2287,7 @@ iframe {
 }
 @media screen and (max-width: 1201px) {
   .header-btn {
-    margin-left: -1.5rem;
-  }
-}
-@media screen and (max-width: 800px) {
-  .header-btn {
-    margin-left: -0.8rem;
+    order: 3;
   }
 }
 
@@ -3064,7 +3066,7 @@ iframe {
   -webkit-box-orient: vertical;
   overflow: hidden;
   width: 100%;
-  padding: 0.9rem 2rem;
+  padding: 0.9rem 2.5rem;
 }
 
 .select2.select2-container .select2-selection--multiple .select2-selection__rendered {
@@ -16549,6 +16551,25 @@ input[type=number] {
     width: 50%;
   }
 }
+.product-box-list.custom-bullet .swiper-pagination {
+  margin: 1.2rem 0;
+}
+.product-box-list.custom-bullet .swiper-pagination-bullet {
+  width: 1.6rem;
+  height: 1.6rem;
+  border-color: rgba(228, 0, 0, 0.2);
+}
+.product-box-list.custom-bullet .swiper-pagination-bullet::before {
+  width: 0.8rem;
+  height: 0.8rem;
+  background-color: rgba(228, 0, 0, 0.2);
+}
+.product-box-list.custom-bullet .swiper-pagination-bullet-active {
+  border-color: #e40000;
+}
+.product-box-list.custom-bullet .swiper-pagination-bullet-active::before {
+  background-color: #e40000;
+}
 
 @media screen and (max-width: 800px) {
   .product-content-con {
@@ -16562,6 +16583,17 @@ input[type=number] {
   .product-content-con .con-left {
     width: 100%;
     margin-bottom: 2rem;
+  }
+}
+.product-content-con .con-left .poster {
+  overflow: hidden;
+  position: relative;
+}
+@media screen and (max-width: 800px) {
+  .product-content-con .con-left .poster {
+    position: relative;
+    top: 0;
+    bottom: 0;
   }
 }
 .product-content-con .con-right {
