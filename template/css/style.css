@@ -7238,7 +7238,7 @@ body:has(.seclect2-seach-show) .select2-container .select2-dropdown .select2-res
 }
 
 .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
-  background: #E40000;
+  background: #FCD02F;
 }
 
 .swiper-grid-column > .swiper-wrapper {
@@ -15419,6 +15419,7 @@ input[type=number] {
   user-select: none;
   padding-bottom: 2rem;
   --widthsl: 52.4rem;
+  padding-top: 0;
 }
 @media screen and (max-width: 1024px) {
   .prodt {
@@ -15479,6 +15480,25 @@ input[type=number] {
 .prodt-main {
   border-radius: 0.8rem;
   overflow: hidden;
+  position: relative;
+}
+.prodt-main .box-sale {
+  width: 10rem;
+  height: 10rem;
+}
+.prodt-main .box-sale .num-sale, .prodt-main .box-sale .text-sale {
+  font-weight: 700;
+  font-size: 2rem;
+}
+@media only screen and (max-width: 1200px) {
+  .prodt-main .box-sale .num-sale, .prodt-main .box-sale .text-sale {
+    font-size: 1.8rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .prodt-main .box-sale .num-sale, .prodt-main .box-sale .text-sale {
+    font-size: 1.6rem;
+  }
 }
 .prodt-thumbs .prodt-img {
   border-radius: 0.4rem;
@@ -15816,6 +15836,19 @@ input[type=number] {
   margin-bottom: 9.6rem;
 }
 
+.protab {
+  position: relative;
+  overflow: visible;
+}
+.protab::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 28rem;
+  background: #FEF8EA;
+  left: 0;
+  bottom: -6rem;
+}
 .protab-tab {
   background: #FEF8EA;
 }
@@ -16819,7 +16852,7 @@ input[type=number] {
   z-index: 10;
   border-top-right-radius: 0.8rem;
 }
-.box-sale .num-sale p {
+.box-sale .num-sale {
   font-weight: 600;
   font-size: 1.4rem;
   line-height: 1.5;

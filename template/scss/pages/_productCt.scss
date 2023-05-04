@@ -311,6 +311,7 @@
     user-select: none;
     padding-bottom: 2rem;
     --widthsl: 52.4rem;
+    padding-top: 0;
 
     @include max(1024px) {
         --widthsl: 40rem;
@@ -365,6 +366,17 @@
     &-main {
         border-radius: 0.8rem;
         overflow: hidden;
+        position: relative;
+
+        .box-sale {
+            width: 10rem;
+            height: 10rem;
+
+            .num-sale,  .text-sale{
+                font-weight: 700;
+                @include fz-20;
+            }
+        }
     }
 
     &-thumbs {
@@ -578,7 +590,7 @@
         margin: 0 -1.9rem;
         @include flex;
 
-        @include max(800px)  {
+        @include max(800px) {
             margin: 0 -0.6rem;
         }
     }
@@ -596,7 +608,7 @@
         padding: 0 1.9rem;
 
         @include max(800px) {
-            padding: 0 0.6rem;  
+            padding: 0 0.6rem;
         }
 
         &-inner {

@@ -348,13 +348,11 @@
     border-top-right-radius: 0.8rem;
 
     .num-sale {
-        p {
-            font-weight: 600;
-            @include fz-14;
-            line-height: 1.5;
-            text-align: center;
-            color: #fcd02f;
-        }
+        font-weight: 600;
+        @include fz-14;
+        line-height: 1.5;
+        text-align: center;
+        color: #fcd02f;
     }
 
     .text-sale {
