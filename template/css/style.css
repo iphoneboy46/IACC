@@ -5997,13 +5997,13 @@ body:has(.seclect2-seach-show) .select2-container .select2-dropdown .select2-res
   display: block;
 }
 @media (min-width: 1201px) {
-  .product-content:hover > .pro-img::before {
+  .product-content:hover .pro-img::before {
     opacity: 1;
   }
-  .product-content:hover > .pro-img .pro-img-con {
+  .product-content:hover .pro-img .pro-img-con {
     transform: translate(-50%, -50%) scale(1);
   }
-  .product-content:hover > .pro-title {
+  .product-content:hover .pro-title {
     color: #E40000;
   }
 }
@@ -16502,6 +16502,9 @@ input[type=number] {
 .product-content-con .con-right .product-content.hot {
   grid-column: auto/span 2;
   grid-row: auto/span 2;
+}
+.product-content-con .con-right .product-content.hot .product-content-wrap {
+  position: relative;
   border: 0.01rem solid rgba(85, 82, 82, 0.2);
   border-radius: 0.8rem;
 }
@@ -16560,7 +16563,8 @@ input[type=number] {
 }
 @media (min-width: 1201px) {
   .product-content-con .con-right .product-content.hot .btn-hot-product .btn:hover {
-    box-shadow: #E40000 16rem 0px 0px 0px inset, #E40000 -16rem 0px 0px 0px inset;
+    color: white;
+    box-shadow: #e40000 16rem 0px 0px 0px inset, #e40000 -16rem 0px 0px 0px inset;
   }
 }
 .product-content-con .con-right .product-content.hot .btn-hot-product .btn-inner {
@@ -16576,6 +16580,37 @@ input[type=number] {
 }
 .product-content-con .con-right .prolist-bott {
   margin-bottom: 4.6rem;
+}
+
+.box-sale {
+  padding-top: 0.4rem;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 75%, 0 100%);
+  background-color: #0050b3;
+  width: 6.4rem;
+  height: 6.4rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  border-top-right-radius: 0.8rem;
+}
+.box-sale .num-sale p {
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  text-align: center;
+  color: #fcd02f;
+}
+.box-sale .text-sale {
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  text-align: center;
+  color: #ffffff;
 }
 
 :root {

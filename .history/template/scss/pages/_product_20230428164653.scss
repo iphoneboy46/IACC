@@ -230,8 +230,35 @@
 
                         border: 0.01rem solid rgba(85, 82, 82, 0.2);
                         border-radius: 0.8rem;
+                    }
 
+                    .box-sale {
+                        clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 75%, 0 100%);
+                        background-color: #0050b3;
+                        width: 6.4rem;
+                        height: 6.4rem;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        z-index: 2;
+                        border-top-right-radius: 0.8rem;
 
+                        .num-sale {
+                            p {
+                                font-weight: 600;
+                                @include fz-14;
+                                line-height: 1.5;
+                                text-align: center;
+
+                                /* #FCD02F */
+
+                                color: #fcd02f;
+                            }
+                        }
                     }
 
                     .pro-title {
@@ -272,7 +299,6 @@
                             background-color: $color-pri;
 
                             @include hover {
-                                color: white;
                                 box-shadow: #e40000 16rem 0px 0px 0px inset, #e40000 -16rem 0px 0px 0px inset;
                             }
                         }
@@ -295,40 +321,5 @@
                 margin-bottom: 4.6rem;
             }
         }
-    }
-}
-
-.box-sale {
-    padding-top: 0.4rem;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 75%, 0 100%);
-    background-color: #0050b3;
-    width: 6.4rem;
-    height: 6.4rem;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    flex-direction: column;
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 10;
-    border-top-right-radius: 0.8rem;
-
-    .num-sale {
-        p {
-            font-weight: 600;
-            @include fz-14;
-            line-height: 1.5;
-            text-align: center;
-            color: #fcd02f;
-        }
-    }
-
-    .text-sale {
-        font-weight: 600;
-        @include fz-14;
-        line-height: 1.6;
-        text-align: center;
-        color: #ffffff;
     }
 }
