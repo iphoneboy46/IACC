@@ -109,7 +109,7 @@
     height: 100%;
     border-color: #000 transparent transparent transparent;
     // top: 1.7rem !important;
-    content: url(../../assets/images/arrfil.svg);
+    content: url(../assets/images/arrfil.svg);
     right: 2.2rem;
     top: 0.5rem;
     width: 1.2rem;
@@ -170,5 +170,11 @@ body:has(.seclect2-seach-show) {
         font-size: 1.2rem;
         line-height: 1.7;
         color: white;
+    }
+}
+
+.filter-dropdown-menu {
+    .select2-results__options .select2-results__option:first-child {
+        display: block;
     }
 }

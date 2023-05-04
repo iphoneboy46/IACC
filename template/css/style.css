@@ -1614,7 +1614,7 @@ iframe {
 
 @media (max-width: 1201px) {
   :root {
-    --headerHeight2: 4.8rem;
+    --headerHeight2: 5.6rem;
   }
 }
 .header {
@@ -1674,6 +1674,13 @@ iframe {
 .header .header-box {
   display: flex;
   align-items: center;
+}
+@media screen and (max-width: 1201px) {
+  .header .header-box {
+    order: 2;
+    margin-left: auto;
+    margin-right: 1.2rem;
+  }
 }
 .header-top {
   height: var(--headerHeight);
@@ -2288,6 +2295,9 @@ iframe {
 @media screen and (max-width: 1201px) {
   .header-btn {
     order: 3;
+    width: 3.6rem;
+    height: 3.6rem;
+    border-radius: 0.6rem;
   }
 }
 
@@ -3118,7 +3128,7 @@ iframe {
 .select2-container--default .select2-selection--single .select2-selection__arrow {
   height: 100%;
   border-color: #000 transparent transparent transparent;
-  content: url(../../assets/images/arrfil.svg);
+  content: url(../assets/images/arrfil.svg);
   right: 2.2rem;
   top: 0.5rem;
   width: 1.2rem;
@@ -3169,6 +3179,10 @@ body:has(.seclect2-seach-show) .select2-container .select2-dropdown .select2-res
   font-size: 1.2rem;
   line-height: 1.7;
   color: white;
+}
+
+.filter-dropdown-menu .select2-results__options .select2-results__option:first-child {
+  display: block;
 }
 
 .mirror {
@@ -6558,6 +6572,9 @@ body:has(.seclect2-seach-show) .select2-container .select2-dropdown .select2-res
 .btn-fourth::before {
   background: #ff3c79;
 }
+.btn-remove {
+  background: rgba(46, 50, 55, 0.22);
+}
 @media (min-width: 1201px) {
   .btn.other-hv:hover {
     color: white;
@@ -6666,8 +6683,9 @@ body:has(.seclect2-seach-show) .select2-container .select2-dropdown .select2-res
 
 .sidebar-top {
   background: #E40000;
-  padding: 2.7rem 4rem 2.6rem;
-  border-radius: 1.2rem 1.2rem 0px 0px;
+  padding: 1.5rem 4rem 1.4rem;
+  border-radius: 0.8rem 0.8rem 0px 0px;
+  text-align: center;
 }
 @media screen and (max-width: 1201px) {
   .sidebar-top {
@@ -6679,7 +6697,7 @@ body:has(.seclect2-seach-show) .select2-container .select2-dropdown .select2-res
   background: #E40000;
 }
 .sidebar-content {
-  padding: 2rem 4rem 3.2rem;
+  padding: 2rem;
 }
 @media screen and (max-width: 1201px) {
   .sidebar-content {
@@ -6702,7 +6720,7 @@ body:has(.seclect2-seach-show) .select2-container .select2-dropdown .select2-res
   }
 }
 .sidebar-type {
-  padding: 1.6rem 4.4rem 1.5rem;
+  padding: 1.4rem 2rem 1.3rem;
   background: #FEF8EA;
   font-weight: 600;
   display: -webkit-flex;
@@ -6713,6 +6731,7 @@ body:has(.seclect2-seach-show) .select2-container .select2-dropdown .select2-res
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
+  user-select: none;
 }
 .sidebar-type .icon {
   width: 1.6rem;
@@ -6727,7 +6746,7 @@ body:has(.seclect2-seach-show) .select2-container .select2-dropdown .select2-res
   width: 100%;
   height: 0.1rem;
   border-radius: 1rem;
-  background: #FCD02F;
+  background: #2E3237;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -6778,10 +6797,6 @@ body:has(.seclect2-seach-show) .select2-container .select2-dropdown .select2-res
   justify-content: space-between;
 }
 
-.cate-list {
-  padding-bottom: 2.4rem;
-  border-bottom: 0.1rem dashed rgb(234, 222, 236);
-}
 .cate-list a:has(.cate-item) {
   display: block;
 }
@@ -6796,6 +6811,7 @@ body:has(.seclect2-seach-show) .select2-container .select2-dropdown .select2-res
   display: flex;
   align-items: center;
   cursor: pointer;
+  user-select: none;
 }
 .cate-item:not(:last-child) {
   margin-bottom: 1.6rem;
@@ -6813,7 +6829,7 @@ body:has(.seclect2-seach-show) .select2-container .select2-dropdown .select2-res
   -webkit-justify-content: center;
   width: 1.8rem;
   height: 1.8rem;
-  border: 0.2rem solid #ff3c79;
+  border: 0.2rem solid #2E3237;
   border-radius: 0.2rem;
   margin-right: 0.8rem;
   transition: all 0.3s ease-in-out;
@@ -6823,8 +6839,15 @@ body:has(.seclect2-seach-show) .select2-container .select2-dropdown .select2-res
   font-weight: 900;
   color: white;
 }
+.cate-item .text {
+  transition: all 0.3s ease-in-out;
+}
 .cate-item.active .box {
-  background: #ff3c79;
+  background: #E40000;
+  border: 0.2rem solid #E40000;
+}
+.cate-item.active .text {
+  color: #E40000;
 }
 .cate-link {
   display: -webkit-flex;
@@ -16507,6 +16530,7 @@ input[type=number] {
   font-size: 1.6rem;
   line-height: 1.5;
   transition: all 0.3s linear;
+  font-family: "Roboto";
   text-align: center;
   color: #2E3237;
 }
@@ -16552,7 +16576,7 @@ input[type=number] {
   }
 }
 .product-box-list.custom-bullet .swiper-pagination {
-  margin: 1.2rem 0;
+  margin: 1.5rem 0;
 }
 .product-box-list.custom-bullet .swiper-pagination-bullet {
   width: 1.6rem;

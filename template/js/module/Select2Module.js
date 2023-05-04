@@ -25,7 +25,13 @@ export default function Select2Module() {
     });
 
     $(document).ready(function() {
-      $('.option-filter').select2();
+      $('.option-filter').select2({
+        // dropdownCssClass: "filter-dropdown-menu"
+      }).data('select2').$dropdown.addClass('filter-dropdown-menu');
+
+    //   $('.option-filter').on('select2:open', function (e) {
+    //     // select2 is opened, handle event
+    // });
   });
     
   } catch (error) {
