@@ -591,22 +591,119 @@
                         </div>
                         <div class="swiper-pagination"></div>
                     </div>
-                    <div class="pagination-con swiper-navi">
-                        <div class="swiper-navigation circle pri prev swiper-abs ">
-                            <i class="fas fa-chevron-left"></i>
-                        </div>
-                        <div class="swiper-navigation circle pri next swiper-abs ">
-                            <i class="fas fa-chevron-right"></i>
-                        </div>
-                    </div>
+                   
                 </div>
             </div>
         </div>
 
-        <div class="product-content">
+        <div class="product-content-pro">
             <div class="container">
                 <div class="product-content-con d-wrap">
                     <div class="con-left d-item">
+                        <div class="sidebar mb-24">
+                            <div class="side-fixed">
+                                <div class="side-fixed-wrap filterJs">
+                                    <div class="sidebar-wrap">
+                                        <div class="sidebar-top">
+                                            <h2 class="t-white f-20 l-24">Bộ lọc sản phẩm</h2>
+                                        </div>
+                                        <div class="sidebar-box filterBoxJS">
+                                            <div class="sidebar-type filterTypeJS">
+                                                Danh mục sản phẩm
+
+                                                <span class="icon"></span>
+                                            </div>
+                                            <div class="sidebar-content filter-sub">
+                                                <ul class="cate-list recheck-block">
+                                                    <li class="cate-item recheck-item active">
+                                                        <input type="checkbox" hidden class="recheck-input" checked>
+                                                        <span class="box">
+                                                            <i class="ti-check"></i>
+                                                        </span>
+                                                        <span class="text">Combo in ảnh và album</span>
+                                                    </li>
+                                                    <li class="cate-item recheck-item">
+                                                        <input type="checkbox" hidden class="recheck-input">
+                                                        <span class="box">
+                                                            <i class="ti-check"></i>
+                                                        </span>
+                                                        <span class="text">Khung ảnh 12 tháng</span>
+                                                    </li>
+                                                    <li class="cate-item recheck-item active">
+                                                        <input type="checkbox" hidden class="recheck-input" checked>
+                                                        <span class="box">
+                                                            <i class="ti-check"></i>
+                                                        </span>
+                                                        <span class="text">Album nhật ký cho bé</span>
+                                                    </li>
+                                                    <li class="cate-item recheck-item">
+                                                        <input type="checkbox" hidden class="recheck-input">
+                                                        <span class="box">
+                                                            <i class="ti-check"></i>
+                                                        </span>
+                                                        <span class="text">Khung ảnh thiết kế theo số</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="sidebar-box filterBoxJS">
+                                            <div class="sidebar-type filterTypeJS">
+                                                Giá
+
+                                                <span class="icon"></span>
+                                            </div>
+                                            <div class="sidebar-content filter-sub">
+                                                <ul class="cate-list recheck-block mb-24">
+                                                    <li class="cate-item recheck-item active">
+                                                        <input type="checkbox" hidden class="recheck-input" checked>
+                                                        <span class="box">
+                                                            <i class="ti-check"></i>
+                                                        </span>
+                                                        <span class="text">0 - 50.000 đ</span>
+                                                    </li>
+                                                    <li class="cate-item recheck-item">
+                                                        <input type="checkbox" hidden class="recheck-input">
+                                                        <span class="box">
+                                                            <i class="ti-check"></i>
+                                                        </span>
+                                                        <span class="text">50.000 - 150.000 đ</span>
+                                                    </li>
+                                                    <li class="cate-item recheck-item">
+                                                        <input type="checkbox" hidden class="recheck-input">
+                                                        <span class="box">
+                                                            <i class="ti-check"></i>
+                                                        </span>
+                                                        <span class="text">150.000 - 250.000 đ</span>
+                                                    </li>
+                                                    <li class="cate-item recheck-item">
+                                                        <input type="checkbox" hidden class="recheck-input">
+                                                        <span class="box">
+                                                            <i class="ti-check"></i>
+                                                        </span>
+                                                        <span class="text">Trên 250.000 đ</span>
+                                                    </li>
+                                                </ul>
+
+                                                <button class="btn btn-second fw mb-10">
+                                                    <span class="btn-inner">
+                                                        Lọc sản phẩm ( <span class="num">3</span> )
+                                                    </span>
+                                                </button>
+                                                <button class="btn btn-remove fw btn-fifth t-white">
+                                                    <span class="btn-inner">
+                                                        Bỏ chọn tất cả
+                                                    </span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="side-close">
+                                    <i class="fas fa-times close icon"></i>
+                                </div>
+                            </div>
+                            <div class="side-overlay"></div>
+                        </div>
                         <div class="poster">
                             <div class="img-poster">
                                 <img src="./assets/images/Image.png" alt="">
@@ -644,11 +741,18 @@
                                         <option value="WY">Wyoming</option>
                                     </select>
                                 </div>
+
+                                <div class="proFilter-cate-open">
+                                    <div class="icon">
+                                        <img src="http://schainoffical.monamedia.net/template/assets/images/filter-icon.svg" alt="">
+                                    </div>
+                                    <span class="text">Phân loại</span>
+                                </div>
                             </div>
                         </div>
                         <div class="con-right-bottom">
                             <div class="box-bottom d-wrap">
-                                  <div href="" class="product-content d-item">
+                                <div href="" class="product-content d-item">
                                     <div class="product-content-wrap">
                                         <a href="" class="pro-img">
                                             <img src="./assets/images/vSlide.png" alt="">
@@ -878,162 +982,217 @@
                                         </span>
                                     </div>
                                 </div>
-                                <div href="" class="product-content hot">
-                                    <a href="" class="pro-img">
-                                        <img src="./assets/images/vSlide.png" alt="">
-
-                                        <span class="pro-img-con">
-                                            <img src="./assets/images/eye.svg" alt="">
-                                        </span>
-                                    </a>
-                                    <a href="" class="pro-title">
-                                        Gói in ảnh S1 - Gói 64 ảnh 6.9 và album
-                                    </a>
-                                    <span class="price">
-                                        <p class="price-text">
-                                            159,000đ
-                                        </p>
-
-                                        <p class="price-line">
-                                            (200,000đ)
-                                        </p>
-                                    </span>
-                                    <div class="btn-hot-product">
-                                        <a href="" class="btn">
-                                            <span class="btn-inner">
-                                                <span class="text">Xem chi tiết</span>
+                                <div href="" class="product-content d-item hot">
+                                    <div class="product-content-wrap">
+                                        <div class="box-sale">
+                                            <div class="num-sale">
+                                                <p>
+                                                    33%
+                                                </p>
+                                            </div>
+                                            <div class="text-sale">
+                                                <p>
+                                                    OFF
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <a href="" class="pro-img">
+                                            <img src="./assets/images/vSlide.png" alt="">
+    
+                                            <span class="pro-img-con">
+                                                <img src="./assets/images/eye.svg" alt="">
                                             </span>
                                         </a>
+                                        <a href="" class="pro-title">
+                                            Gói in ảnh S1 - Gói 64 ảnh 6.9 và album
+                                        </a>
+                                        <span class="price">
+                                            <p class="price-text">
+                                                159,000đ
+                                            </p>
+    
+                                            <p class="price-line">
+                                                (200,000đ)
+                                            </p>
+                                        </span>
+                                        <div class="btn-hot-product">
+                                            <a href="" class="btn">
+                                                <span class="btn-inner">
+                                                    <span class="text">Xem chi tiết</span>
+                                                </span>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-                                <div href="" class="product-content ">
-                                    <a href="" class="pro-img">
-                                        <img src="./assets/images/vSlide.png" alt="">
-
-                                        <span class="pro-img-con">
-                                            <img src="./assets/images/eye.svg" alt="">
+                                  <div href="" class="product-content d-item">
+                                    <div class="product-content-wrap">
+                                        <a href="" class="pro-img">
+                                            <img src="./assets/images/vSlide.png" alt="">
+    
+                                            <span class="pro-img-con">
+                                                <img src="./assets/images/eye.svg" alt="">
+                                            </span>
+                                        </a>
+                                        <a href="" class="pro-title">
+                                            Gói in ảnh S1 - Gói 64 ảnh 6.9 và album
+                                        </a>
+                                        <span class="price">
+                                            <p class="price-text">
+                                                159,000đ
+                                            </p>
+    
+                                            <p class="price-line">
+                                                (200,000đ)
+                                            </p>
                                         </span>
-                                    </a>
-                                    <a href="" class="pro-title">
-                                        Gói in ảnh S1 - Gói 64 ảnh 6.9 và album
-                                    </a>
-                                    <span class="price">
-                                        <p class="price-text">
-                                            159,000đ
-                                        </p>
-
-                                        <p class="price-line">
-                                            (200,000đ)
-                                        </p>
-                                    </span>
+                                    </div>
                                 </div>
-                                <div href="" class="product-content ">
-                                    <a href="" class="pro-img">
-                                        <img src="./assets/images/vSlide.png" alt="">
-
-                                        <span class="pro-img-con">
-                                            <img src="./assets/images/eye.svg" alt="">
+                                  <div href="" class="product-content d-item">
+                                    <div class="product-content-wrap">
+                                        <a href="" class="pro-img">
+                                            <img src="./assets/images/vSlide.png" alt="">
+    
+                                            <span class="pro-img-con">
+                                                <img src="./assets/images/eye.svg" alt="">
+                                            </span>
+                                        </a>
+                                        <a href="" class="pro-title">
+                                            Gói in ảnh S1 - Gói 64 ảnh 6.9 và album
+                                        </a>
+                                        <span class="price">
+                                            <p class="price-text">
+                                                159,000đ
+                                            </p>
+    
+                                            <p class="price-line">
+                                                (200,000đ)
+                                            </p>
                                         </span>
-                                    </a>
-                                    <a href="" class="pro-title">
-                                        Gói in ảnh S1 - Gói 64 ảnh 6.9 và album
-                                    </a>
-                                    <span class="price">
-                                        <p class="price-text">
-                                            159,000đ
-                                        </p>
-
-                                        <p class="price-line">
-                                            (200,000đ)
-                                        </p>
-                                    </span>
+                                    </div>
                                 </div>
-                                <div href="" class="product-content ">
-                                    <a href="" class="pro-img">
-                                        <img src="./assets/images/vSlide.png" alt="">
-
-                                        <span class="pro-img-con">
-                                            <img src="./assets/images/eye.svg" alt="">
+                                  <div href="" class="product-content d-item">
+                                    <div class="product-content-wrap">
+                                        <a href="" class="pro-img">
+                                            <img src="./assets/images/vSlide.png" alt="">
+    
+                                            <span class="pro-img-con">
+                                                <img src="./assets/images/eye.svg" alt="">
+                                            </span>
+                                        </a>
+                                        <a href="" class="pro-title">
+                                            Gói in ảnh S1 - Gói 64 ảnh 6.9 và album
+                                        </a>
+                                        <span class="price">
+                                            <p class="price-text">
+                                                159,000đ
+                                            </p>
+    
+                                            <p class="price-line">
+                                                (200,000đ)
+                                            </p>
                                         </span>
-                                    </a>
-                                    <a href="" class="pro-title">
-                                        Gói in ảnh S1 - Gói 64 ảnh 6.9 và album
-                                    </a>
-                                    <span class="price">
-                                        <p class="price-text">
-                                            159,000đ
-                                        </p>
-
-                                        <p class="price-line">
-                                            (200,000đ)
-                                        </p>
-                                    </span>
+                                    </div>
                                 </div>
-                                <div href="" class="product-content ">
-                                    <a href="" class="pro-img">
-                                        <img src="./assets/images/vSlide.png" alt="">
-
-                                        <span class="pro-img-con">
-                                            <img src="./assets/images/eye.svg" alt="">
+                                  <div href="" class="product-content d-item">
+                                    <div class="product-content-wrap">
+                                        <a href="" class="pro-img">
+                                            <img src="./assets/images/vSlide.png" alt="">
+    
+                                            <span class="pro-img-con">
+                                                <img src="./assets/images/eye.svg" alt="">
+                                            </span>
+                                        </a>
+                                        <a href="" class="pro-title">
+                                            Gói in ảnh S1 - Gói 64 ảnh 6.9 và album
+                                        </a>
+                                        <span class="price">
+                                            <p class="price-text">
+                                                159,000đ
+                                            </p>
+    
+                                            <p class="price-line">
+                                                (200,000đ)
+                                            </p>
                                         </span>
-                                    </a>
-                                    <a href="" class="pro-title">
-                                        Gói in ảnh S1 - Gói 64 ảnh 6.9 và album
-                                    </a>
-                                    <span class="price">
-                                        <p class="price-text">
-                                            159,000đ
-                                        </p>
-
-                                        <p class="price-line">
-                                            (200,000đ)
-                                        </p>
-                                    </span>
+                                    </div>
                                 </div>
-                                <div href="" class="product-content ">
-                                    <a href="" class="pro-img">
-                                        <img src="./assets/images/vSlide.png" alt="">
-
-                                        <span class="pro-img-con">
-                                            <img src="./assets/images/eye.svg" alt="">
+                                  <div href="" class="product-content d-item">
+                                    <div class="product-content-wrap">
+                                        <a href="" class="pro-img">
+                                            <img src="./assets/images/vSlide.png" alt="">
+    
+                                            <span class="pro-img-con">
+                                                <img src="./assets/images/eye.svg" alt="">
+                                            </span>
+                                        </a>
+                                        <a href="" class="pro-title">
+                                            Gói in ảnh S1 - Gói 64 ảnh 6.9 và album
+                                        </a>
+                                        <span class="price">
+                                            <p class="price-text">
+                                                159,000đ
+                                            </p>
+    
+                                            <p class="price-line">
+                                                (200,000đ)
+                                            </p>
                                         </span>
-                                    </a>
-                                    <a href="" class="pro-title">
-                                        Gói in ảnh S1 - Gói 64 ảnh 6.9 và album
-                                    </a>
-                                    <span class="price">
-                                        <p class="price-text">
-                                            159,000đ
-                                        </p>
-
-                                        <p class="price-line">
-                                            (200,000đ)
-                                        </p>
-                                    </span>
+                                    </div>
                                 </div>
-                                <div href="" class="product-content ">
-                                    <a href="" class="pro-img">
-                                        <img src="./assets/images/vSlide.png" alt="">
-
-                                        <span class="pro-img-con">
-                                            <img src="./assets/images/eye.svg" alt="">
+                                  <div href="" class="product-content d-item">
+                                    <div class="product-content-wrap">
+                                        <a href="" class="pro-img">
+                                            <img src="./assets/images/vSlide.png" alt="">
+    
+                                            <span class="pro-img-con">
+                                                <img src="./assets/images/eye.svg" alt="">
+                                            </span>
+                                        </a>
+                                        <a href="" class="pro-title">
+                                            Gói in ảnh S1 - Gói 64 ảnh 6.9 và album
+                                        </a>
+                                        <span class="price">
+                                            <p class="price-text">
+                                                159,000đ
+                                            </p>
+    
+                                            <p class="price-line">
+                                                (200,000đ)
+                                            </p>
                                         </span>
-                                    </a>
-                                    <a href="" class="pro-title">
-                                        Gói in ảnh S1 - Gói 64 ảnh 6.9 và album
-                                    </a>
-                                    <span class="price">
-                                        <p class="price-text">
-                                            159,000đ
-                                        </p>
-
-                                        <p class="price-line">
-                                            (200,000đ)
-                                        </p>
-                                    </span>
+                                    </div>
                                 </div>
 
 
+                            </div>
+
+                            <div class="prolist-bott flex flex-wrap flex-ai-center flex-jc-center">
+                                <ul class="page-numbers">
+    
+                                    <li>
+                                        <span class="page-numbers current">1</span>
+                                    </li>
+                                    <li>
+                                        <a href="" class="page-numbers">2</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="page-numbers">3</a>
+                                    </li>
+                                    <li>
+                                        <span class="page-numbers">...</span>
+                                    </li>
+                                    <li>
+                                        <a href="" class="page-numbers">10</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="page-numbers">11</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="page-numbers">12</a>
+                                    </li>
+                                </ul>
+    
+    
                             </div>
                         </div>
                     </div>

@@ -25,7 +25,6 @@
         width: 100%;
         justify-content: space-between;
         position: relative;
-        flex-direction: column;
         &-item {
             display: flex;
             flex-direction: column;
@@ -75,7 +74,7 @@
                 @include fz-16;
                 line-height: 1.5;
                 transition: all 0.3s linear;
-                font-family:"Roboto";
+
                 text-align: center;
 
                 color: $color-text;
@@ -127,31 +126,6 @@
             width: 50%;
         }
     }
-
-    &.custom-bullet{
-        .swiper-pagination{
-            margin: 1.5rem 0;
-        }
-
-        .swiper-pagination-bullet{
-           width: 1.6rem;
-           height: 1.6rem;
-            border-color: rgba($color: $color-second, $alpha: 0.2);
-
-            &::before{
-                width: 0.8rem;
-                height: 0.8rem;
-                background-color: rgba($color: $color-second, $alpha: 0.2);
-            }
-        }
-
-        .swiper-pagination-bullet-active{
-            border-color: rgba($color: $color-second, $alpha: 1);
-            &::before{
-                background-color: rgba($color: $color-second, $alpha: 1);
-            }
-        }
-    }
 }
 
 .product-content {
@@ -169,8 +143,9 @@
 
             .poster {
                 overflow: hidden;
-                position: relative;
-               
+                position: sticky;
+                top: 15rem;
+                bottom: 0rem;
                 @media screen and (max-width: 800px) {
                     position: relative;
                     top: 0;
@@ -255,8 +230,6 @@
 
                         border: 0.01rem solid rgba(85, 82, 82, 0.2);
                         border-radius: 0.8rem;
-
-
                     }
 
                     .pro-title {
@@ -297,7 +270,6 @@
                             background-color: $color-pri;
 
                             @include hover {
-                                color: white;
                                 box-shadow: #e40000 16rem 0px 0px 0px inset, #e40000 -16rem 0px 0px 0px inset;
                             }
                         }
@@ -319,32 +291,23 @@
             .prolist-bott {
                 margin-bottom: 4.6rem;
             }
-
-          
-        }
-    }
-
-    .side-fixed-wrap {
-        @include max(1201px) {
-            padding: 0;
         }
     }
 }
 
 .box-sale {
-    padding-top: 0.4rem;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 75%, 0 100%);
     background-color: #0050b3;
     width: 6.4rem;
-    height: 6.4rem;
+    height: 8.4rem;
     display: flex;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     position: absolute;
     top: 0;
     right: 0;
-    z-index: 10;
+    z-index: 2;
     border-top-right-radius: 0.8rem;
 
     .num-sale {
@@ -358,7 +321,7 @@
     }
 
     .text-sale {
-        font-weight: 600;
+        font-weight: 400;
         @include fz-14;
         line-height: 1.6;
         text-align: center;

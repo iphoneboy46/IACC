@@ -75,7 +75,7 @@
                 @include fz-16;
                 line-height: 1.5;
                 transition: all 0.3s linear;
-                font-family:"Roboto";
+
                 text-align: center;
 
                 color: $color-text;
@@ -130,26 +130,18 @@
 
     &.custom-bullet{
         .swiper-pagination{
-            margin: 1.5rem 0;
+            margin: 1rem 0;
         }
 
         .swiper-pagination-bullet{
            width: 1.6rem;
            height: 1.6rem;
-            border-color: rgba($color: $color-second, $alpha: 0.2);
-
-            &::before{
-                width: 0.8rem;
-                height: 0.8rem;
-                background-color: rgba($color: $color-second, $alpha: 0.2);
-            }
+            border-color: rgba($color: $color-second, $alpha: 0.5);
         }
 
         .swiper-pagination-bullet-active{
             border-color: rgba($color: $color-second, $alpha: 1);
-            &::before{
-                background-color: rgba($color: $color-second, $alpha: 1);
-            }
+
         }
     }
 }
@@ -169,8 +161,9 @@
 
             .poster {
                 overflow: hidden;
-                position: relative;
-               
+                position: sticky;
+                top: 15rem;
+                bottom: 0rem;
                 @media screen and (max-width: 800px) {
                     position: relative;
                     top: 0;
@@ -319,8 +312,6 @@
             .prolist-bott {
                 margin-bottom: 4.6rem;
             }
-
-          
         }
     }
 

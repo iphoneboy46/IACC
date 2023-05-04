@@ -75,7 +75,7 @@
                 @include fz-16;
                 line-height: 1.5;
                 transition: all 0.3s linear;
-                font-family:"Roboto";
+
                 text-align: center;
 
                 color: $color-text;
@@ -130,7 +130,7 @@
 
     &.custom-bullet{
         .swiper-pagination{
-            margin: 1.5rem 0;
+            margin: 2rem 0;
         }
 
         .swiper-pagination-bullet{
@@ -319,8 +319,6 @@
             .prolist-bott {
                 margin-bottom: 4.6rem;
             }
-
-          
         }
     }
 

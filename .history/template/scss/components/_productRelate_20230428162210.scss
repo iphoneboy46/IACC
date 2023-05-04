@@ -76,6 +76,7 @@
     display: block;
 
     @include hover {
+        
         .pro-img {
             &::before {
                 opacity: 1;
@@ -86,11 +87,10 @@
             }
         }
 
-        .pro-title {
+        & > .pro-title {
             color: $color-second;
         }
     }
-
 }
 
 .pro-img {

@@ -8,6 +8,7 @@
             padding-bottom: 4rem;
         }
     }
+
 }
 
 .product-relate-con {
@@ -18,7 +19,7 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 2.5rem;
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width:600px){
         flex-direction: column;
         margin-bottom: 1rem;
     }
@@ -30,7 +31,7 @@
             letter-spacing: 0.04em;
             color: $color-text;
         }
-        @media screen and (max-width: 600px) {
+        @media screen and (max-width:600px){
             margin-bottom: 0.5rem;
         }
     }
@@ -71,35 +72,42 @@
             width: 100%;
         }
     }
+
+    
 }
 .product-content {
     display: block;
 
     @include hover {
-        .pro-img {
-            &::before {
-                opacity: 1;
+        &-wrap {
+            .pro-img {
+                &::before {
+                    opacity: 1;
+                }
+    
+                .pro-img-con {
+                    transform: translate(-50%, -50%) scale(1);
+                }
             }
-
-            .pro-img-con {
-                transform: translate(-50%, -50%) scale(1);
+    
+            & > .pro-title {
+                color: $color-second;
             }
         }
-
-        .pro-title {
-            color: $color-second;
-        }
+        
+        
     }
-
 }
 
 .pro-img {
+    
     margin-bottom: 1.6rem;
     display: block;
     position: relative;
     padding-top: 100%;
     border-radius: 0.8rem;
     overflow: hidden;
+
 
     &::before {
         content: "";
@@ -121,12 +129,13 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%,-50%);
         object-fit: cover;
         border-radius: 0.8rem;
     }
 
     .pro-img-con {
+        
         width: 4.8rem;
         height: 4.8rem;
         background-color: $color-pri;
@@ -148,6 +157,7 @@
 }
 
 .pro-title {
+   
     font-weight: 600;
     @include fz-16;
     line-height: 1.5;
