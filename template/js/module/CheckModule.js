@@ -99,14 +99,14 @@ export default function CheckModule() {
       });
     });
 
-    btn.addEventListener("click", () => {
-      const active = whist.querySelectorAll(".recheck-item.active");
-      active.forEach((ele, i) => {
-        ele.closest(".pro-item").remove();
-        btn.classList.remove("active");
-        num.innerHTML = 0;
-        // console.log(ele.closest('.pro-item'))
-      });
-    });
+    // btn.addEventListener("click", () => {
+    //   const active = whist.querySelectorAll(".recheck-item.active");
+    //   active.forEach((ele, i) => {
+    //     ele.closest(".pro-item").remove();
+    //     btn.classList.remove("active");
+    //     num.innerHTML = 0;
+    //     // console.log(ele.closest('.pro-item'))
+    //   });
+    // });
   }
 }
