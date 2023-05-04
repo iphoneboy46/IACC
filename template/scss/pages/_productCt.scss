@@ -310,13 +310,18 @@
 .prodt {
     user-select: none;
     padding-bottom: 2rem;
+    --widthsl: 52.4rem;
+
+    @include max(1024px) {
+        --widthsl: 40rem;
+    }
+
+    @include max(800px) {
+        --widthsl: 30rem;
+    }
 
     &-left {
-        width: 52.4rem;
-
-        @include max(1024px) {
-            min-width: 32rem;
-        }
+        width: var(--widthsl);
 
         @include max(600px) {
             width: 100%;
@@ -326,7 +331,12 @@
     }
 
     &-right {
-        width: calc(100% - 52.4rem);
+        width: calc(100% - var(--widthsl));
+
+        @include max(600px) {
+            width: 100%;
+        }
+
     }
 
     &-img {
@@ -370,7 +380,8 @@
             }
         }
 
-        .swiper-navigation.pri.prev, .swiper-navigation.pri.next {
+        .swiper-navigation.pri.prev,
+        .swiper-navigation.pri.next {
             top: 50%;
             width: 2rem;
             height: 2rem;
@@ -417,6 +428,11 @@
             padding-right: 3rem;
             flex-shrink: 0;
 
+            @include max(800px) {
+                width: 14.5rem;
+                padding-right: 1rem;
+            }
+
             @include max(650px) {
                 font-size: 1.4rem;
             }
@@ -434,6 +450,11 @@
 
         .select2-container {
             height: 4rem;
+        }
+
+        .select2-container--default.select2-container--open.select2-container--below .select2-selection--single,
+        .select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple {
+            border-radius: 10rem;
         }
 
         .select2-container--default .select2-selection--single {
@@ -521,11 +542,20 @@
         padding: 0.7rem;
         cursor: pointer;
 
+        @include max(800px) {
+            padding: 0.3rem;
+        }
+
         &-check {
             width: 2.6rem;
             height: 2.6rem;
             @include mid-flex;
             border-radius: 50%;
+
+            @include max(800px) {
+                width: 2rem;
+                height: 2rem;
+            }
 
             i {
                 font-size: 1rem;
@@ -547,6 +577,10 @@
     &-wrap {
         margin: 0 -1.9rem;
         @include flex;
+
+        @include max(800px)  {
+            margin: 0 -0.6rem;
+        }
     }
 
     &-box {
@@ -561,12 +595,21 @@
     &-item {
         padding: 0 1.9rem;
 
+        @include max(800px) {
+            padding: 0 0.6rem;  
+        }
+
         &-inner {
             border-radius: 0.4rem;
             overflow: hidden;
             width: 6.4rem;
             height: 6.4rem;
             position: relative;
+
+            @include max(800px) {
+                width: 4.8rem;
+                height: 4.8rem;
+            }
 
             img {
                 object-fit: cover;

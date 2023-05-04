@@ -271,11 +271,7 @@
   }
 
   &-second {
-    background: $color-second;
-
-    &::before {
-      background: $color-pri;
-    }
+    background: $color-pri;
   }
 
   &-third {
