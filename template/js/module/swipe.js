@@ -59,4 +59,5 @@ export default function SwipeFun() {
   }
   creatSwipe(".scrollJS")
   creatSwipe(".uploadimg-box")
+  creatSwipe(".content-list-cart")
 }

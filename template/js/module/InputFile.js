@@ -90,49 +90,59 @@ export default function InputFile() {
       const wrap = Upload.querySelector(".uploadimg-wrap");
       const btnUpload = Upload.querySelector(".uploadimg-add");
       const input = Upload.querySelector("input");
+      const num = Upload.querySelector(".num");
+      const total = Upload.querySelector(".total");
+      const maxLength = total.getAttribute("data-max-quan")
+        ? total.getAttribute("data-max-quan")
+        : 64;
+      let fileCount = 0;
+
+      if (maxLength) {
+        total.innerHTML = maxLength;
+      }
 
       btnUpload.addEventListener("click", () => {
         input.click();
       });
-      var filesChangeable = [];
+
       const dataTransfer = new DataTransfer();
       input.addEventListener("change", (e) => {
-
         var files = e.target.files,
           file;
         for (var i = 0; i < files.length; i++) {
-          file = files[i];
-          dataTransfer.items.add(file);
-          filesChangeable.push(file);
+          if (fileCount < maxLength) {
+            file = files[i];
+            dataTransfer.items.add(file);
+            fileCount++;
 
-          $(wrap).append(`<div class="uploadimg-item">
-            <div class="uploadimg-item-inner">
-              <span class="close"><i class="fas fa-times"></i></span>
-              <img src="${URL.createObjectURL(file)}" alt="">
-            </div>
-          </div>`);
+            $(wrap).append(`<div class="uploadimg-item">
+              <div class="uploadimg-item-inner">
+                <span class="close"><i class="fas fa-times"></i></span>
+                <img src="${URL.createObjectURL(file)}" alt="">
+              </div>
+            </div>`);
+          }
         }
         input.files = dataTransfer.files;
 
-        console.log(input.files)
+        num.innerHTML = input.files.length;
 
         var removeItem = function (fileEle) {
           const listClose = Upload.querySelectorAll(".close");
           listClose.forEach((ele, i) => {
             ele.addEventListener("click", (e) => {
               $(ele).parent().closest(".uploadimg-item").remove();
-              filesChangeable.splice(filesChangeable.indexOf(fileEle), 1);
               const dataList = dataTransfer.items;
               for (let j = dataList.length - 1; j >= 0; j--) {
                 if (i === j) {
                   if (dataList[i].kind === "file") {
                     dataList.remove(i);
+                    fileCount--;
                   }
                 }
               }
               input.files = dataTransfer.files;
-
-              console.log(input.files);
+              num.innerHTML = input.files.length;
             });
           });
         };

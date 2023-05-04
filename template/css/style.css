@@ -16264,7 +16264,6 @@ input[type=number] {
 }
 
 .content-list-cart {
-  max-width: 50rem;
   width: 100%;
   overflow-x: auto;
   margin-bottom: 3.6rem;
