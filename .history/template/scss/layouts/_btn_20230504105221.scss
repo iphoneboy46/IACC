@@ -304,12 +304,6 @@
 
   &-remove {
     background: rgba(46, 50, 55, 0.22);
-    @include hover {
-      .btn-inner {
-        color: white;
-      }
-      box-shadow: 16rem 0 0 0 $color-second inset, -16rem 0 0 0 $color-second inset;
-    }
   }
 
   &.other-hv {

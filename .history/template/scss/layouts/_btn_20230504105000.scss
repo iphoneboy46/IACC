@@ -54,6 +54,11 @@
       font-size: 1.3rem;
       font-weight: 600;
     }
+
+    @include hover{
+      color: white;
+      box-shadow: 16rem 0 0 0 $color-second inset, -16rem 0 0 0 $color-second inset;
+    }
   }
 
   @media (min-width: 1201px) {
@@ -272,12 +277,6 @@
 
   &-second {
     background: $color-pri;
-    @include hover {
-      .btn-inner {
-        color: white;
-      }
-      box-shadow: 16rem 0 0 0 $color-second inset, -16rem 0 0 0 $color-second inset;
-    }
   }
 
   &-third {
@@ -304,19 +303,13 @@
 
   &-remove {
     background: rgba(46, 50, 55, 0.22);
-    @include hover {
-      .btn-inner {
-        color: white;
-      }
-      box-shadow: 16rem 0 0 0 $color-second inset, -16rem 0 0 0 $color-second inset;
-    }
   }
 
   &.other-hv {
     @media (min-width: 1201px) {
       &:hover {
         color: white;
-        box-shadow: 16rem 0 0 0 #0050b3 inset, -16rem 0 0 0 #0050b3 inset;
+        box-shadow: 16rem 0 0 0 #0050B3 inset, -16rem 0 0 0 #0050B3 inset;
         // box-shadow: 0 8rem 0 0 $color-second inset, 0 -8rem 0 0 $color-second  inset;
       }
     }
