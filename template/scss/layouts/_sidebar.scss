@@ -1,23 +1,12 @@
 .sidebar {
-  &-tit {
-    @include flex;
-    align-items: center;
-  }
-
   &-top {
-    background: $color-pri;
-    padding: 1.6rem 2.4rem;
+    background: $color-second;
+    padding: 2.7rem 4rem 2.6rem;
+    border-radius: 1.2rem 1.2rem 0px 0px;
 
     @include max(1201px) {
-      // padding: 2.4rem;
+      padding: 2.4rem;
       border-radius: 0;
-    }
-
-    .icon {
-      width: 2.4rem;
-      height: 2.4rem;
-      @include flex;
-      margin-right: 1rem;
     }
 
     &.other {
@@ -26,23 +15,24 @@
   }
 
   &-content {
-    padding: 1.6rem 2.4rem 0;
+    padding: 2rem 4rem 3.2rem;
     // display: none;
 
     @include max(1201px) {
       padding: 2.4rem;
     }
+
+    .btn {
+      &:nth-last-child(2) {
+        margin-top: 4rem;
+      }
+    }
   }
 
   &-wrap {
     background: #ffffff;
-    border: 0.1rem solid rgba(0, 0, 0, 0.2);
     border-radius: 1.2rem;
     overflow: hidden;
-
-    &-ct {
-      padding: 2.4rem;
-    }
 
     @include max(1201px) {
       border-radius: 0px;
@@ -51,19 +41,10 @@
     }
   }
 
-  &-box {
-    user-select: none;
-
-    &:not(:last-child) {
-      padding-bottom: 1.6rem;
-    }
-
-    .cate-list {
-      padding-bottom: 0;
-    }
-  }
-
   &-type {
+    padding: 1.6rem 4.4rem 1.5rem;
+    background: #FEF8EA;
+    font-weight: 600;
     @include flex;
     align-items: center;
     justify-content: space-between;
@@ -72,55 +53,34 @@
     .icon {
       width: 1.6rem;
       height: 1.6rem;
-      @include mid-flex;
+      display: block;
       position: relative;
       flex-shrink: 0;
-      transition: 0.3s ease-in-out;
-    }
 
-    &.show {
-      .icon {
-        transform: rotate(-180deg);
-      }
-    }
-
-    &-tit {
-      font-weight: 700;
-      padding-bottom: 0.8rem;
-      position: relative;
-
-      &::before {
+      &::before,
+      &::after {
         position: absolute;
         content: "";
-        width: 5.3rem;
-        height: 0.2rem;
-        background: $color-second;
-        top: 100%;
-        left: 0;
-      }
-    }
-
-
-    @include hover {
-
-      a {
-        color: $color-third;
-
+        width: 100%;
+        height: 0.1rem;
+        border-radius: 1rem;
+        background: $color-pri;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 0.3s ease-in-out;
       }
 
-      .icon {
-        color: $color-third;
+      &::after {
+        transform: translate(-50%, -50%) rotate(90deg);
       }
     }
 
     &.show {
-      a {
-        color: $color-third;
-
-      }
-
       .icon {
-        color: $color-third;
+        &::after {
+          transform: translate(-50%, -50%);
+        }
       }
     }
   }
@@ -129,7 +89,6 @@
     margin-top: 3.2rem;
 
     &-wrap {}
-
 
     .product-item {
       width: 100%;
@@ -175,10 +134,6 @@
     //   }
 
     // }
-  }
-
-  .range-price {
-    padding-bottom: 2.4rem;
   }
 }
 
@@ -311,11 +266,15 @@
 
 .proFilter-cate-open {
   cursor: pointer;
-  background: $color-third;
+  background: $color-second;
   height: 4rem;
-  border-radius: 12rem;
+  border-radius: 0.8rem;
   padding: 0 1.8rem 0 1.2rem;
   @include mid-flex;
+
+  @include min(1202px) {
+    display: none;
+  }
 
   @include max(800px) {
     height: 3.2rem;

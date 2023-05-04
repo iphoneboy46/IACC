@@ -26,6 +26,7 @@
         width: 100%;
         justify-content: space-between;
         position: relative;
+        flex-direction: column;
         &-item {
             display: flex;
             flex-direction: column;
@@ -142,20 +143,6 @@
                 width: 100%;
                 margin-bottom: 2rem;
             }
-
-            
-                .poster {
-                    overflow: hidden;
-                    position: sticky;
-                    top: 15rem;
-                    bottom: 0rem;
-                    @media screen and (max-width: 800px) {
-                        position: relative;
-                        top: 0;
-                        bottom: 0;
-                    }
-                }
-            
         }
 
         .con-right {
@@ -297,6 +284,12 @@
             .prolist-bott{
                 margin-bottom: 4.6rem;
             }
+        }
+    }
+
+    .side-fixed-wrap {
+        @include max(1201px) {
+            padding: 0;
         }
     }
 }
