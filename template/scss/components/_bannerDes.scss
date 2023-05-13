@@ -1,8 +1,8 @@
 .banner-description {
     margin-top: 6rem;
     margin-bottom: 6rem;
-
-    @media screen and (max-width:1200px) {
+    overflow: hidden;
+    @media screen and (max-width:1200px){
         margin-top: 3rem;
         margin-bottom: 3rem;
     }
