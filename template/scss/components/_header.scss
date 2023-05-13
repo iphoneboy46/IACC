@@ -96,6 +96,12 @@
       background: white;
     }
 
+    .header-cart {
+      @include min(1202px) {
+        display: none;
+      }
+    }
+
   }
 
   &-menu {
@@ -653,7 +659,8 @@
       width: 3.6rem;
       height: 3.6rem;
       border-radius: 0.6rem;
+      padding: 0;
+      justify-content: center;
     }
-
   }
 }
