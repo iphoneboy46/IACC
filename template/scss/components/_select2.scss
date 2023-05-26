@@ -177,4 +177,10 @@ body:has(.seclect2-seach-show) {
     .select2-results__options .select2-results__option:first-child {
         display: block;
     }
+
+    .select2-dropdown .select2-results ul {
+        width: 25rem;
+        right: -0.9rem;
+        // text-align: right;
+    }
 }

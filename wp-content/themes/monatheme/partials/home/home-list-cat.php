@@ -25,18 +25,18 @@ if ( content_exists( $mona_home_cat_products ) ) {
                         <div class="product-relate-con">
                             <div class="product-top-relate">
                                 <div class="title">
-                                    <p class="title-text text-effect">
+                                    <p class="title-text">
 										<?php echo $item_cat['product_category']->name; ?>
                                     </p>
                                 </div>
-                                <a href="<?php echo $item_cat['product_link']['url']; ?>" class="link-relate"  data-aos="fade-left">
+                                <a href="<?php echo $item_cat['product_link']['url']; ?>" class="link-relate" >
 									<?php echo $item_cat['product_link']['title']; ?>
                                     <span class="icon-relate">
                                              <i class="fas fa-angle-right"></i>
                                          </span>
                                 </a>
                             </div>
-                            <div class="product-bottom-relate d-wrap"  data-aos="fade-up">
+                            <div class="product-bottom-relate d-wrap">
 								<?php
 								$current_page = get_query_var( 'paged' );
 								$current_page = max( 1, $current_page );
@@ -70,7 +70,7 @@ if ( content_exists( $mona_home_cat_products ) ) {
 											while ( $loop->have_posts() ) {
 												$loop->the_post();
 												?>
-                                                <div class="swiper-slide d-item d-5" data-aos="fade-right" data-aos-delay="	<?php echo $delay; ?>">
+                                                <div class="swiper-slide d-item d-5">
 													<?php
 													/**
 													 * GET TEMPLATE PART
@@ -128,18 +128,18 @@ if ( content_exists( $mona_home_cat_products ) ) {
                     <div class="product-home-eight-con">
                         <div class="product-top-relate">
                             <div class="title">
-                                <p class="title-text text-effect">
+                                <p class="title-text">
 									<?php echo $item_cat['product_category']->name; ?>
                                 </p>
                             </div>
-                            <a href="<?php echo $item_cat['product_link']['url']; ?>" class="link-relate" data-aos="fade-left">
+                            <a href="<?php echo $item_cat['product_link']['url']; ?>" class="link-relate">
 								<?php echo $item_cat['product_link']['title']; ?>
                                 <span class="icon-relate">
                                              <i class="fas fa-angle-right"></i>
                                          </span>
                             </a>
                         </div>
-                        <div class="product-home-eight-content d-wrap"  data-aos="fade-up">
+                        <div class="product-home-eight-content d-wrap">
 							<?php
 
 							$current_page = get_query_var( 'paged' );

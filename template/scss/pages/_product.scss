@@ -9,6 +9,7 @@
 
     .title {
         margin-bottom: 6rem;
+
         &-text {
             font-weight: 600;
             @include fz-32;
@@ -26,6 +27,7 @@
         justify-content: space-between;
         position: relative;
         flex-direction: column;
+
         &-item {
             display: flex;
             flex-direction: column;
@@ -49,6 +51,7 @@
                 margin-bottom: 1.6rem;
                 position: relative;
                 border-radius: 50%;
+
                 &::before {
                     content: "";
                     width: 100%;
@@ -75,7 +78,7 @@
                 @include fz-16;
                 line-height: 1.5;
                 transition: all 0.3s linear;
-                font-family:"Roboto";
+                font-family: "Roboto";
                 text-align: center;
 
                 color: $color-text;
@@ -128,26 +131,27 @@
         }
     }
 
-    &.custom-bullet{
-        .swiper-pagination{
+    &.custom-bullet {
+        .swiper-pagination {
             margin: 1.5rem 0;
         }
 
-        .swiper-pagination-bullet{
-           width: 1.6rem;
-           height: 1.6rem;
+        .swiper-pagination-bullet {
+            width: 1.6rem;
+            height: 1.6rem;
             border-color: rgba($color: $color-second, $alpha: 0.2);
 
-            &::before{
+            &::before {
                 width: 0.8rem;
                 height: 0.8rem;
                 background-color: rgba($color: $color-second, $alpha: 0.2);
             }
         }
 
-        .swiper-pagination-bullet-active{
+        .swiper-pagination-bullet-active {
             border-color: rgba($color: $color-second, $alpha: 1);
-            &::before{
+
+            &::before {
                 background-color: rgba($color: $color-second, $alpha: 1);
             }
         }
@@ -159,6 +163,7 @@
         @media screen and (max-width: 800px) {
             flex-direction: column-reverse;
         }
+
         .con-left {
             width: calc(100% * 3 / 12);
 
@@ -170,7 +175,7 @@
             .poster {
                 overflow: hidden;
                 position: relative;
-               
+
                 @media screen and (max-width: 800px) {
                     position: relative;
                     top: 0;
@@ -182,6 +187,7 @@
         .con-right {
             flex: 1;
             width: 100%;
+
             .box-top {
                 width: 100%;
                 display: flex;
@@ -192,10 +198,12 @@
                 @media screen and (max-width: 600px) {
                     flex-direction: column;
                 }
+
                 .title-text {
                     @media screen and (max-width: 600px) {
                         margin-bottom: 1rem;
                     }
+
                     p {
                         font-weight: 600;
                         @include fz-18;
@@ -250,6 +258,7 @@
                 &.hot {
                     grid-column: auto/span 2;
                     grid-row: auto/span 2;
+
                     .product-content-wrap {
                         position: relative;
 
@@ -272,6 +281,7 @@
                         padding-left: 2rem;
                         padding-right: 2rem;
                         align-items: center;
+
                         &-text {
                             font-weight: 500;
                             @include fz-24;
@@ -303,6 +313,7 @@
 
                         .btn-inner {
                             padding: 0.8rem 6.3rem;
+
                             .text {
                                 color: $color-black;
 
@@ -319,7 +330,7 @@
                 margin-bottom: 4.6rem;
             }
 
-          
+
         }
     }
 
@@ -360,5 +371,16 @@
         line-height: 1.6;
         text-align: center;
         color: #ffffff;
+    }
+}
+
+.prodt-dropdown-menu {
+    .select2-results__options .select2-results__option:first-child {
+        display: block;
+    }
+
+    .select2-dropdown .select2-results ul {
+        right: -0.4rem;
+        width: 16.3rem;
     }
 }

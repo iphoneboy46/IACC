@@ -652,6 +652,8 @@
             .billdlvr-bill-item {
                 margin-bottom: 0;
             }
+
+
         }
 
         td {
@@ -828,6 +830,14 @@
         th {
             border: none !important;
         }
+
+        .order-total.billdlvr-bill.bottom {
+
+            th,
+            td {
+                border-top: 0.1rem solid #CECECE !important;
+            }
+        }
     }
 
     .price {
@@ -885,11 +895,16 @@
     }
 }
 
-#add_payment_method #payment, .woocommerce-cart #payment, .woocommerce-checkout #payment {
+#add_payment_method #payment,
+.woocommerce-cart #payment,
+.woocommerce-checkout #payment {
     background: transparent !important;
 }
 
-.woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt {
+.woocommerce #respond input#submit.alt,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce input.button.alt {
     position: relative;
     z-index: 4;
     text-align: center;
@@ -913,11 +928,22 @@
 
     @media (min-width: 1201px) {
         &:hover {
-          box-shadow: 16rem 0 0 0 $color-pri inset, -16rem 0 0 0 $color-pri inset;
+            box-shadow: 16rem 0 0 0 $color-pri inset, -16rem 0 0 0 $color-pri inset;
         }
-      }
+    }
 }
 
 .woocommerce table.shop_table {
-    padding: 1.2rem 0.3rem;
+    border: none !important;
+}
+
+.woocommerce-checkout-review-order {
+    padding: 1.9rem 2.6rem;
+    border: 0.1rem solid rgba(46, 50, 55, 0.2);
+    border-top: 0;
+    border-radius: 0 0 0.8rem 0.8rem;
+
+    @include max(600px) {
+        padding: 1.2rem 0.3rem;
+    }
 }

@@ -24,7 +24,7 @@ if ( content_exists( $mona_home_tab_products ) ) {
 						foreach ( $mona_home_tab_products as $key_product => $item_product ) {
 							?>
                             <div class="swiper-slide">
-                                <div class="protab-item tabBtn" data-aos="flip-down" data-aos-delay="<?php echo $delay ?>">
+                                <div class="protab-item tabBtn">
 									<?php echo $item_product['products_title']; ?>
                                 </div>
                             </div>
@@ -34,7 +34,7 @@ if ( content_exists( $mona_home_tab_products ) ) {
 						}
 						?>
                         <div class="swiper-slide">
-                            <a href="<?php echo get_permalink( MONA_WC_PRODUCTS ) ?>" class="protab-item"  data-aos="flip-down" data-aos-delay="1200">
+                            <a href="<?php echo get_permalink( MONA_WC_PRODUCTS ) ?>" class="protab-item">
 								<?php echo __( 'Xem thêm', 'monamedia' ); ?>
                             </a>
                         </div>
@@ -130,14 +130,14 @@ if ( content_exists( $mona_home_tab_products ) ) {
                 <div class="protab-ct-item tabPanel free-slide">
                     <div class="container">
 						<?php if ( $loop->have_posts() ): ?>
-                            <div class="product-bottom-relate d-wrap" data-aos="fade-up">
+                            <div class="product-bottom-relate d-wrap">
                                 <div class="swiper mySwiper --progressbar">
                                     <div class="swiper-wrapper">
 										<?php
 										while ( $loop->have_posts() ) {
 											$loop->the_post();
 											?>
-                                            <div class="swiper-slide d-item d-5" data-aos="fade-right" data-aos-delay="	<?php echo $delay; ?>">
+                                            <div class="swiper-slide d-item d-5">
 												<?php
 												/**
 												 * GET TEMPLATE PART

@@ -41,7 +41,7 @@
                 height: 100%;
                 bottom: 0;
                 border-bottom: 0.2rem solid $color-pri;
-                transition: all 0.5s linear;
+                // transition: all 0.5s linear;
             }
 
             &:hover {
@@ -307,6 +307,10 @@
     }
 }
 
+// .detail-productinstruct-image, .instruct-imageinstruct-image {
+//     animation: unset;
+// }
+
 .prodt {
     user-select: none;
     padding-bottom: 2rem;
@@ -401,6 +405,10 @@
             i {
                 font-size: 0.8rem;
             }
+        }
+
+        .swiper-slide {
+            width: calc(25% - 0.8rem);
         }
     }
 
@@ -497,6 +505,7 @@
     .swiper {
         &-slide {
             overflow: hidden;
+            
         }
     }
 
@@ -615,17 +624,18 @@
         &-inner {
             border-radius: 0.4rem;
             overflow: hidden;
-            width: 6.4rem;
-            height: 6.4rem;
+            width: 9.6rem;
+            height: 9.6rem;
             position: relative;
 
             @include max(800px) {
-                width: 4.8rem;
-                height: 4.8rem;
+                width: 5.6rem;
+                height: 5.6rem;
             }
 
             img {
                 object-fit: cover;
+                height: 100%
             }
         }
 

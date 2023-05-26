@@ -32,6 +32,11 @@ export default function Select2Module() {
         .data("select2")
         .$dropdown.addClass("filter-dropdown-menu");
     }
+
+    $(".prodt-select .select2choose")
+      .select2({})
+      .data("select2")
+      .$dropdown.addClass("prodt-dropdown-menu");
   } catch (error) {
     console.log(error);
   }

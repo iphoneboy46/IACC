@@ -4,26 +4,26 @@
   z-index: 20;
   position: relative;
 
-  &::before,
-  &::after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 50%;
-    left: 0;
-    right: 0;
-    background: rgba($color: #000000, $alpha: 0.3);
-    z-index: 70;
-    animation: changHeight 0.75s 0.4s forwards;
-  }
+  // &::before,
+  // &::after {
+  //   position: absolute;
+  //   content: "";
+  //   width: 100%;
+  //   height: 50%;
+  //   left: 0;
+  //   right: 0;
+  //   background: rgba($color: #000000, $alpha: 0.3);
+  //   z-index: 70;
+  //   animation: changHeight 0.75s 0.4s forwards;
+  // }
 
-  &::before {
-    top: 0;
-  }
+  // &::before {
+  //   top: 0;
+  // }
 
-  &::after {
-    bottom: 0;
-  }
+  // &::after {
+  //   bottom: 0;
+  // }
 
   .container,
   .swiper {
@@ -86,23 +86,24 @@
   }
 
   &-home {
-    height: calc(100vw * 604 / 1728);
+    // height: calc(100vw * 604 / 1728);
+    height: 24vw;
     max-height: 100vh;
 
-    @include max(1400px) {
-      height: 40vw;
+    @include max(1201px) {
+      height: 32vw;
     }
 
     @include max(1024px) {
-      height: 50vw;
+      height: 40vw;
     }
 
     @include max(800px) {
-      height: 60vw;
+      height: 50vw;
     }
 
     @include max(600px) {
-      height: 70vw;
+      height: 60vw;
     }
 
     @include max(450px) {

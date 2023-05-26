@@ -28,17 +28,19 @@ export default function CheckModule() {
         const input = reCheckItem.querySelector(".recheck-input");
 
         if (input.type == "radio") {
-          if (input.checked == true) {
-            input.checked = false;
-            reCheckItem.classList.remove("active");
-            return;
-          }
+          // if (input.checked == true) {
+          //   input.checked = false;
+          //   input.dispatchEvent(event);
+          //   reCheckItem.classList.remove("active");
+          //   return;
+          // }
 
           reCheckItems.forEach((item) => {
             item.classList.remove("active");
           });
           reCheckInputs.forEach((item) => {
             item.checked = false;
+            input.dispatchEvent(event);
           });
           input.checked = true;
           if (input.checked == true) {
@@ -48,6 +50,7 @@ export default function CheckModule() {
         if (input.type == "checkbox") {
           if (input.checked == true) {
             input.checked = false;
+            input.dispatchEvent(event);
             reCheckItem.classList.remove("active");
           } else {
             input.checked = true;
@@ -75,6 +78,14 @@ export default function CheckModule() {
       }
     }
   });
+
+  // $(".color-item input").each(function (i, ele) {
+  //   $(ele).change(function () {
+  //     if ($(ele).prop("checked") === true) {
+  //       console.log(ele);
+  //     }
+  //   });
+  // });
 
   const whist = document.querySelector(".whist");
 

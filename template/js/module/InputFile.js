@@ -98,7 +98,7 @@ export default function InputFile() {
       let fileCount = 0;
 
       if (maxLength) {
-        // total.innerHTML = maxLength;
+        total.innerHTML = maxLength;
       }
 
       btnUpload.addEventListener("click", () => {
@@ -113,7 +113,7 @@ export default function InputFile() {
           if (fileCount < maxLength) {
             file = files[i];
             dataTransfer.items.add(file);
-            // fileCount++;
+            fileCount++;
 
             $(wrap).append(`<div class="uploadimg-item">
               <div class="uploadimg-item-inner">
@@ -121,11 +121,12 @@ export default function InputFile() {
                 <img src="${URL.createObjectURL(file)}" alt="">
               </div>
             </div>`);
+            console.log(URL.createObjectURL(file))
           }
         }
         input.files = dataTransfer.files;
 
-        // num.innerHTML = input.files.length;
+        num.innerHTML = input.files.length;
 
         var removeItem = function (fileEle) {
           const listClose = Upload.querySelectorAll(".close");
@@ -141,10 +142,10 @@ export default function InputFile() {
                   }
                 }
               }
-              // fileCount--;
+              fileCount--;
               input.files = dataTransfer.files;
-              // num.innerHTML = input.files.length;
-              // console.log(input.files)
+              num.innerHTML = input.files.length;
+              console.log(input.files)
             });
           });
         };
